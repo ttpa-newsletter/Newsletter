@@ -1,1 +1,222 @@
-/* TTPA Digital Newsletter Styles */
+/* ===================================================
+   TTPA Digital Newsletter
+   Version 2.0
+   Global Styles
+   =================================================== */
+
+/* Remove default spacing from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic page settings */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f7fa;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+}
+/* ===================================================
+   Main Container
+   =================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* ===================================================
+   Hero Section
+   =================================================== */
+
+.hero {
+    background-color: #2f5d8c;
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.issue {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-top: 12px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+
+.hero h2 {
+    font-size: 2rem;
+}
+
+/* ===================================================
+   Welcome Section
+   =================================================== */
+
+.welcome {
+    margin-top: 40px;
+    background-color: #eef4fb;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.welcome h3{
+    color:#2f5d8c;
+    margin-bottom:15px;
+}
+
+/* ==========================
+   Content Cards
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:20px;
+    margin:30px 0;
+}
+
+.card{
+    background:#ffffff;
+    border-radius:12px;
+    padding:25px 20px;
+    text-align:center;
+    text-decoration:none;
+    color:#2f3a4a;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:transform .25s ease,
+               box-shadow .25s ease;
+}
+
+.card:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 12px 28px rgba(0,0,0,0.16);
+}
+
+.card .icon{
+    display:block;
+    font-size:2.5rem;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    font-size:1.25rem;
+    color:#2f5d8c;
+}
+
+.card p{
+    font-size:0.95rem;
+    line-height:1.5;
+    color:#6b7280;
+}
+
+.card .btn{
+    display:inline-block;
+    margin-top:18px;
+    padding:10px 20px;
+    background:#2f5d8c;
+    color:#ffffff;
+    border-radius:25px;
+    font-size:0.95rem;
+    font-weight:600;
+    text-decoration:none;
+    cursor:pointer;
+    transition:background 0.25s ease;
+}
+
+.card:hover .btn{
+    background:#244b72;
+}
+
+/* ===================================================
+   Breadcrumb Navigation
+   =================================================== */
+
+.breadcrumb{
+    margin:25px 0;
+    font-size:0.95rem;
+    color:#666;
+}
+
+.breadcrumb a{
+    color:#2f5d8c;
+    font-weight:600;
+}
+
+.breadcrumb span{
+    margin:0 6px;
+}
+
+/* ===================================================
+   Responsive Design
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 24px 18px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        line-height: 1.25;
+    }
+
+    .hero h2 {
+        font-size: 1.3rem;
+        margin-top: 18px;
+    }
+
+    .tagline {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 12px;
+    opacity: 0.95;
+}
+
+    .issue {
+        font-size: 1rem;
+        margin-top: 10px;
+    }
+    .cards{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .card{
+        padding:22px;
+    }
+
+    .card .icon{
+        font-size:2.2rem;
+    }
+}
