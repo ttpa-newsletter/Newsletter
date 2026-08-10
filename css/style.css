@@ -52,30 +52,71 @@ ul {
    =================================================== */
 
 .hero {
-    background-color: #2f5d8c;
+    position: relative;
+    background: linear-gradient(
+                rgba(20,45,80,0.70),
+                rgba(20,45,80,0.70)),
+                url("../images/front-page.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     color: white;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     text-align: center;
+
+    padding: 90px 40px;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 24px rgba(0,0,0,0.20);
 }
 
-.issue {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-top: 12px;
+.hero h1{
+    font-size:3.2rem;
+    font-weight:700;
+    margin-bottom:18px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 12px;
+.hero h2{
+    font-size:1.8rem;
+    font-weight:500;
+    margin-bottom:20px;
 }
 
-
-.hero h2 {
-    font-size: 2rem;
+.tagline{
+    font-size:1.3rem;
+    font-style:italic;
+    margin:22px 0;
+    opacity:0.95;
 }
 
+.issue{
+    font-size:1.35rem;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+
+.hero-action{
+    margin-top:30px;
+}
+
+.hero-button{
+    display:inline-block;
+    padding:14px 32px;
+    background:#d4af37;
+    color:#1f3f63;
+    font-weight:700;
+    border-radius:30px;
+    transition:all 0.3s ease;
+}
+
+.hero-button:hover{
+    background:white;
+    transform:translateY(-2px);
+}
 /* ===================================================
    Welcome Section
    =================================================== */
@@ -219,4 +260,823 @@ ul {
     .card .icon{
         font-size:2.2rem;
     }
+}/* ===================================================
+   Navigation Bar
+   =================================================== */
+
+.navbar{
+    background:#12345a;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,0.15);
+}
+
+.nav-container{
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 24px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-image{
+    width:64px;
+    height:64px;
+    object-fit:contain;
+    border-radius:50%;
+    background:white;
+    padding:4px;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+}
+
+.logo-text strong{
+    font-size:1.1rem;
+    color:white;
+}
+
+.logo-text span{
+    font-size:0.8rem;
+    color:#d9e6f2;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-menu a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffd166;
+}
+.nav-menu a.active {
+    color: #ffd166;
+    font-weight: 700;
+}
+
+/* Current Issue list */
+
+.container ul{
+    margin-top:20px;
+    margin-left:25px;
+    list-style:disc;
+}
+
+.container ul li{
+    margin-bottom:10px;
+}
+
+/* ===================================================
+   CURRENT ISSUE LANDING PAGE
+   July–August 2026
+   =================================================== */
+
+.issue-landing {
+    display: grid;
+    grid-template-columns: 42% 58%;
+    gap: 40px;
+    align-items: center;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    margin-bottom: 40px;
+}
+
+.issue-cover {
+    text-align: center;
+}
+
+.issue-cover img {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.issue-intro {
+    padding: 10px 20px;
+}
+
+.issue-label {
+    color: #2f5d8c;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+.issue-intro h1 {
+    color: #1f3f63;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
+}
+
+.issue-intro h2 {
+    color: #2f5d8c;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.issue-intro p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.issue-actions {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #e3b52b;
+    color: #17395f;
+    border-radius: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.hero-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #2f5d8c;
+    color: white;
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.secondary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.18);
+}
+
+
+/* ===================================================
+   TABLE OF CONTENTS
+   =================================================== */
+
+.contents-section {
+    margin: 40px 0;
+}
+
+.contents-section > h2 {
+    color: #2f5d8c;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
+
+.section-intro {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contents-card {
+    display: block;
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 12px;
+    border-left: 5px solid #2f5d8c;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.contents-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+}
+
+.contents-card span {
+    display: block;
+    color: #d49f19;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.contents-card h3 {
+    color: #2f5d8c;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.contents-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+
+/* ===================================================
+   MULTIMEDIA NOTE
+   =================================================== */
+
+.issue-note {
+    margin: 45px 0;
+    padding: 30px;
+    background: #eef4fb;
+    border-radius: 12px;
+    border-left: 6px solid #2f5d8c;
+}
+
+.issue-note h2 {
+    color: #2f5d8c;
+    margin-bottom: 15px;
+}
+
+.issue-note p {
+    margin-bottom: 10px;
+}
+
+
+/* ===================================================
+   ISSUE FOOTER NAVIGATION
+   =================================================== */
+
+.issue-footer {
+    text-align: center;
+    margin: 35px 0;
+}
+
+.issue-footer a {
+    display: inline-block;
+    color: #2f5d8c;
+    font-weight: 700;
+}
+
+
+/* ===================================================
+   RESPONSIVE — CURRENT ISSUE PAGE
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    .issue-landing {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .issue-cover img {
+        max-width: 420px;
+    }
+
+    .issue-intro {
+        padding: 5px;
+    }
+
+    .issue-intro h1 {
+        font-size: 2rem;
+    }
+
+    .issue-intro h2 {
+        font-size: 1.3rem;
+    }
+
+    .contents-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .issue-actions {
+        justify-content: center;
+    }
+
+}
+
+/* ===================================================
+   ARTICLE / SECTION TEMPLATE
+   =================================================== */
+
+.article-section {
+    background: #ffffff;
+    margin: 45px 0;
+    padding: 35px;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    scroll-margin-top: 90px;
+}
+
+.article-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 2px solid #eef4fb;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.article-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #2f5d8c;
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.article-header h2 {
+    color: #2f5d8c;
+    font-size: 1.7rem;
+    margin: 0;
+}
+
+.article-meta {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.article-body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-body p {
+    margin-bottom: 18px;
+}
+
+.article-media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.media-placeholder {
+    background: #eef4fb;
+    border: 1px dashed #9db4ca;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+    color: #2f5d8c;
+    font-weight: 600;
+}
+
+.article-back {
+    margin-top: 25px;
+    text-align: right;
+}
+
+.article-back a {
+    color: #2f5d8c;
+    font-weight: 700;
+}
+
+
+/* ===================================================
+   ARTICLE TEMPLATE — MOBILE
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    .article-section {
+        padding: 24px 20px;
+    }
+
+    .article-header h2 {
+        font-size: 1.4rem;
+    }
+
+    .article-body {
+        font-size: 1rem;
+    }
+
+    .article-media {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ===================================================
+   Article Pages
+   =================================================== */
+
+.article-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 25px 60px;
+}
+
+
+/* Article Header */
+
+.article-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.article-section {
+    color: #2f5d8c;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.article-header h1 {
+    color: #1f3f63;
+    font-size: 2.6rem;
+    margin: 0 0 12px;
+}
+
+.article-subtitle {
+    color: #666;
+    font-size: 1.2rem;
+    font-style: italic;
+    margin: 0;
+}
+
+
+/* Article Content */
+
+.article-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+}
+
+
+/* Person / Portrait Area */
+
+.article-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 35px;
+    margin-bottom: 35px;
+}
+
+/* ===================================================
+   Article Portrait
+   =================================================== */
+
+.article-portrait-container {
+    float: left;
+    width: 190px;
+    margin: 0 35px 20px 0;
+}
+
+.article-portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.article-person-text {
+    flex: 1;
+}
+
+.article-person-text h2 {
+    color: #1f3f63;
+    font-size: 1.8rem;
+    margin-top: 0;
+}
+.person-qualification {
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Main Article Text */
+
+.article-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-body p {
+    margin-bottom: 20px;
+}
+
+
+/* Article Navigation */
+
+.article-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.article-button {
+    display: inline-block;
+    background: #e4b52c;
+    color: #1f3f63;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 25px;
+}
+
+.article-button:hover {
+    background: #d4a91f;
+}
+
+.article-button.secondary {
+    background: #1f3f63;
+    color: white;
+}
+
+/* ===================================================
+   Article Portrait
+   =================================================== */
+
+.article-portrait-container {
+    float: left;
+    width: 190px;
+    margin: 0 35px 20px 0;
+}
+
+.article-portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* ===================================================
+   Mobile Layout
+   =================================================== */
+
+@media (max-width: 700px) {
+
+    .article-page {
+        padding: 20px 15px 40px;
+    }
+
+    .article-header h1 {
+        font-size: 2rem;
+    }
+
+    .article-content {
+        padding: 25px 20px;
+    }
+
+    .article-person {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+   .article-portrait-container {
+    float: none;
+    width: 160px;
+    margin: 0 auto 20px;
+}
+
+    .article-body {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+
+}
+
+/* ===================================================
+   Pensioners' Family — Member Cards
+   =================================================== */
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 35px;
+}
+
+.member-card:last-child {
+    grid-column: 2;
+}
+
+.member-card {
+    display: block;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+
+.member-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 20px rgba(0,0,0,0.15);
+}
+
+
+.member-card img {
+    width: 170px;
+    height: 210px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+
+.member-card h3 {
+    color: #1f3f63;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+
+.member-card span {
+    color: #2f5d8c;
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+
+/* ===================================================
+   Pensioners' Family — Mobile
+   =================================================== */
+
+@media (max-width: 768px) {
+
+    .member-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .member-card {
+        padding: 14px;
+    }
+
+    .member-card img {
+        width: 140px;
+        height: 175px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ===================================================
+   Spotlight Profile Photos
+   =================================================== */
+
+.spotlight-photo {
+    width: 160px;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 18px;
+    border-radius: 10px;
+}
+
+/* =========================================================
+   SENIOR-FRIENDLY ARTICLE LAYOUT
+   Text wraps around the portrait
+   ========================================================= */
+
+.article-content {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+
+/* Allow the portrait to float so article text
+   can occupy the remaining horizontal space */
+
+.article-person {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+/* Portrait floats to the left */
+
+.article-portrait-container {
+    float: left;
+    width: 220px;
+    margin: 0 30px 20px 0;
+}
+
+
+/* Keep the portrait responsive */
+
+.article-portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Person's name appears above the article text */
+
+.article-person-text {
+    margin-bottom: 15px;
+}
+
+
+/* Larger, more readable article text */
+
+.article-body {
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+
+/* Improve paragraph spacing */
+
+.article-body p {
+    margin-bottom: 1.2em;
+}
+
+
+/* Keep subsequent sections below the floated portrait */
+
+.article-media,
+.article-navigation {
+    clear: both;
+}
+
+
+/* =========================================================
+   Mobile layout
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .article-portrait-container {
+        float: none;
+        width: 220px;
+        max-width: 100%;
+        margin: 0 auto 25px auto;
+    }
+
+    .article-body {
+        font-size: 1.1rem;
+        line-height: 1.75;
+    }
+
+}
+
+
+/* Center the fourth webinar card beneath the first-row cards */
+
+.webinar-card-04 {
+    grid-column: 2;
+}
+/* Center single Family Milestone card */
+
+.family-milestone-card-01 {
+    grid-column: 2;
 }
