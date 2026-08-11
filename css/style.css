@@ -1193,3 +1193,101 @@ ul {
     }
 
 }
+/* ===================================================
+   WEBINAR CARDS — UNIFORM CARD LAYOUT
+   =================================================== */
+
+.webinar-grid .contents-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.webinar-grid .contents-card .spotlight-photo {
+    flex-shrink: 0;
+}
+
+.webinar-grid .contents-card strong {
+    margin-top: auto;
+    white-space: nowrap;
+    padding-top: 12px;
+}
+
+
+/* ===================================================
+   WEBINAR CARDS — MOBILE
+   =================================================== */
+
+@media (max-width: 700px) {
+
+    .webinar-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .webinar-grid .contents-card {
+        min-width: 0;
+        padding: 14px;
+    }
+
+    .webinar-grid .contents-card h3 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .webinar-grid .contents-card p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .webinar-grid .contents-card strong {
+        font-size: 0.95rem;
+    }
+
+    .webinar-grid .spotlight-photo {
+        width: 100%;
+        max-width: 160px;
+        height: 190px;
+        object-fit: cover;
+    }
+
+}
+/* ===================================================
+   EDITOR'S CARTOON
+   =================================================== */
+
+.cartoon-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 25px auto 35px;
+    text-align: center;
+}
+
+.cartoon-image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+
+/* ===================================================
+   EDITOR'S CARTOON — MOBILE
+   =================================================== */
+
+@media (max-width: 700px) {
+
+    .cartoon-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 20px auto 30px;
+    }
+
+    .cartoon-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+}
