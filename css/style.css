@@ -1291,3 +1291,862 @@ ul {
     }
 
 }
+/* ===================================================
+   ARCHIVES CARDS
+   =================================================== */
+
+.archive-card {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 28px;
+    margin: 25px 0;
+    border: 1px solid #d9e6ec;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.archive-card-content h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.45rem;
+    line-height: 1.3;
+}
+
+.archive-card-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* Active archive button */
+
+.archive-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #1f5f7a;
+    color: #ffffff;
+    transition: 0.2s ease;
+}
+
+.archive-button:hover {
+    opacity: 0.9;
+}
+
+
+/* Coming Soon label */
+
+.archive-coming-soon {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 20px;
+    background: #eef3f5;
+    color: #555555;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+/* Mobile optimisation */
+
+@media (max-width: 600px) {
+
+    .archive-card {
+        padding: 22px;
+        margin: 20px 0;
+    }
+
+    .archive-card-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .archive-card-content p {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .archive-button {
+        display: block;
+        text-align: center;
+        padding: 13px 18px;
+    }
+
+}
+/* ===================================================
+   STALWART PROFILE CARD
+   =================================================== */
+
+.stalwart-card {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.stalwart-card-image {
+    flex: 0 0 150px;
+    text-align: center;
+}
+
+..stalwart-card-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    object-position: center top;
+    border-radius: 10px;
+    border: 1px solid #d9e6ec;
+    background: #ffffff;
+}
+
+
+/* Mobile optimisation */
+
+@media (max-width: 600px) {
+
+    .stalwart-card {
+        display: block;
+    }
+
+    .stalwart-card-image {
+        margin-bottom: 20px;
+    }
+
+    .stalwart-card-image img {
+        width: 140px;
+        height: 140px;
+    }
+
+}
+/* ===================================================
+   Stalwarts Search
+   =================================================== */
+
+.stalwart-search {
+    margin: 30px 0;
+    padding: 22px;
+    background: #f5f8fb;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stalwart-search label {
+    display: block;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.stalwart-search input {
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    font-size: 1.05rem;
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+}
+
+.stalwart-search input:focus {
+    outline: 2px solid #2f5d8c;
+    outline-offset: 2px;
+}
+
+.stalwart-search p {
+    margin: 10px 0 0;
+    font-size: 0.95rem;
+}
+/* ===================================================
+   Stalwart Area of Contribution
+   =================================================== */
+
+.stalwart-field {
+    margin: 10px 0 14px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+/* ===================================================
+   Stalwart Profile Enhancements
+   =================================================== */
+
+.article-person {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.article-portrait-container {
+    flex: 0 0 180px;
+    text-align: center;
+}
+
+.article-portrait {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.article-person-text {
+    flex: 1;
+}
+
+.article-person-text h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.person-qualification {
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.article-body h2 {
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.article-body p,
+.article-body li {
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.article-body ul {
+    padding-left: 25px;
+}
+
+.article-source {
+    margin-top: 35px;
+    padding-top: 15px;
+    border-top: 1px solid #d5dce3;
+    font-size: 0.95rem !important;
+}
+
+.article-media {
+    margin-top: 35px;
+    display: grid;
+    gap: 15px;
+}
+
+.media-placeholder {
+    padding: 18px;
+    background: #f5f8fb;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.article-navigation {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+/* ===================================================
+   Stalwart Profiles - Mobile
+   =================================================== */
+
+@media (max-width: 700px) {
+
+    .article-person {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .article-portrait-container {
+        flex-basis: auto;
+    }
+
+    .article-portrait {
+        width: 160px;
+        height: 195px;
+    }
+
+    .article-person-text {
+        width: 100%;
+    }
+
+    .article-body p,
+    .article-body li {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .article-navigation {
+        flex-direction: column;
+    }
+
+    .article-navigation .article-button {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+}
+/* ===================================================
+   STALWART PROFILE HEADER — FIX
+   =================================================== */
+
+/* Override the general article-header flex layout */
+.article-page > .article-header {
+    display: block;
+    text-align: center;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+}
+
+/* Reset article-section when it is used as the archive label */
+.article-page > .article-header > .article-section {
+    display: block;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin: 0 0 10px 0;
+
+    color: #2f5d8c;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Main Stalwarts heading */
+.article-page > .article-header > h1 {
+    display: block;
+    margin: 0 0 12px;
+    color: #1f3f63;
+    font-size: 2.6rem;
+    line-height: 1.25;
+}
+
+/* Subtitle */
+.article-page > .article-header > .article-subtitle {
+    display: block;
+    margin: 0 auto;
+    max-width: 750px;
+    color: #666;
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .article-page > .article-header {
+        width: 100%;
+        padding-bottom: 18px;
+        margin-bottom: 25px;
+    }
+
+    .article-page > .article-header > h1 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .article-page > .article-header > .article-subtitle {
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0 5px;
+        white-space: normal;
+    }
+}
+/* ===================================================
+   STALWART — PROFILE AT A GLANCE
+   =================================================== */
+
+.profile-glance {
+    margin-top: 18px;
+    padding: 16px 14px;
+    background: #f5f8fb;
+    border: 1px solid #d9e3ec;
+    border-left: 4px solid #2f5d8c;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.profile-glance h3 {
+    margin: 0 0 12px;
+    color: #1f3f63;
+    font-size: 1rem;
+    line-height: 1.3;
+}
+
+.profile-glance p {
+    margin: 0 0 12px;
+    color: #444;
+    font-size: 0.88rem;
+    line-height: 1.45;
+}
+
+.profile-glance p:last-child {
+    margin-bottom: 0;
+}
+
+.profile-glance strong {
+    color: #2f5d8c;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .profile-glance {
+        width: 100%;
+        max-width: 320px;
+        margin: 18px auto 0;
+        padding: 18px;
+    }
+
+    .profile-glance h3 {
+        font-size: 1.05rem;
+        text-align: center;
+    }
+
+    .profile-glance p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+/* ===================================================
+   PROFILE AT A GLANCE — WIDTH REFINEMENT
+   =================================================== */
+
+/* Give portrait/glance column sufficient reading width */
+.article-person .article-portrait-container {
+    flex: 0 0 270px;
+    width: 270px;
+}
+
+/* Keep portrait itself at the intended size */
+.article-person .article-portrait {
+    width: 180px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+/* Allow the glance card to use the wider column */
+.profile-glance {
+    width: 100%;
+    max-width: 270px;
+    margin: 18px auto 0;
+    padding: 18px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .article-person .article-portrait-container {
+        flex-basis: auto;
+        width: 100%;
+        max-width: 320px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .article-person .article-portrait {
+        width: 160px;
+        height: 195px;
+        margin: 0 auto;
+    }
+
+    .profile-glance {
+        width: 100%;
+        max-width: 320px;
+        padding: 18px 20px;
+    }
+}
+/* ===================================================
+   STALWART PROFILE — PORTRAIT / GLANCE STACK FIX
+   =================================================== */
+
+.article-person .article-portrait-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    float: none;
+    flex: 0 0 270px;
+    width: 270px;
+
+    margin: 0;
+    text-align: center;
+}
+
+.article-person .article-portrait {
+    display: block;
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+
+    margin: 0 auto 18px;
+    position: static;
+}
+
+.article-person .profile-glance {
+    display: block;
+    position: static;
+
+    width: 100%;
+    max-width: 270px;
+
+    margin: 0;
+    padding: 18px;
+
+    box-sizing: border-box;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    .article-person .article-portrait-container {
+        width: 100%;
+        max-width: 320px;
+        flex-basis: auto;
+        margin: 0 auto;
+    }
+
+    .article-person .article-portrait {
+        width: 160px;
+        height: 195px;
+        margin: 0 auto 18px;
+    }
+
+    .article-person .profile-glance {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+/* ===================================================
+   STALWART PROFILE PORTRAITS — SHOW FULL HEAD
+   =================================================== */
+
+.article-person .article-portrait {
+    object-fit: contain;
+    object-position: center top;
+    background: #ffffff;
+}
+/* ===================================================
+   ABOUT PAGE – VISION
+   =================================================== */
+
+.about-vision {
+    margin: 30px 0 45px;
+    padding: 28px 32px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.about-vision h2 {
+    color: #173f68;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.about-vision h3 {
+    color: #173f68;
+    margin: 0 0 6px;
+
+    font-size: 1.25rem;
+    line-height: 1.4;
+}
+
+.vision-tagline {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    color: #555;
+
+    font-style: italic;
+    font-weight: 600;
+}
+
+.about-vision p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+
+    margin: 0 0 16px;
+
+    color: #333;
+}
+
+
+/* ===================================================
+   ABOUT PAGE – OFFICE BEARERS
+   =================================================== */
+
+.about-officebearers {
+    margin: 40px 0 50px;
+    text-align: center;
+}
+
+.about-officebearers h2 {
+    color: #173f68;
+    margin-bottom: 10px;
+}
+
+.about-officebearers > p {
+    max-width: 800px;
+
+    margin: 0 auto 24px;
+
+    line-height: 1.7;
+    color: #555;
+}
+
+.about-officebearers-image {
+    width: 100%;
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+.about-officebearers-image img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+}
+
+
+/* ===================================================
+   ABOUT PAGE – MOBILE
+   =================================================== */
+
+@media (max-width: 600px) {
+
+    .about-vision {
+        padding: 20px;
+    }
+
+    .about-vision p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .about-officebearers-image {
+        max-width: 100%;
+    }
+}
+/* ===================================================
+   ABOUT PAGE – WHAT THE NEWSLETTER OFFERS
+   =================================================== */
+
+.about-offers {
+    margin: 50px 0;
+}
+
+.about-offers > h2 {
+    text-align: center;
+    color: #173f68;
+    margin-bottom: 28px;
+}
+
+.about-offers-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.about-offer-card {
+    background: #ffffff;
+    border: 1px solid #d9e3ec;
+    border-radius: 12px;
+    padding: 24px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.about-offer-card h3 {
+    margin: 0 0 12px;
+    color: #173f68;
+    font-size: 1.15rem;
+}
+
+.about-offer-card p {
+    margin: 0;
+    color: #444;
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+
+    .about-offers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-offer-card {
+        padding: 20px;
+    }
+}
+/* ===================================================
+   HOME VISITOR COUNTER
+   =================================================== */
+
+.visitor-counter {
+    margin: 30px auto;
+    text-align: center;
+
+    font-size: 1rem;
+    color: #555;
+}
+
+.visitor-counter strong {
+    color: #173f68;
+    font-size: 1.15rem;
+}
+/* ===================================================
+   PAGE REACTIONS
+   =================================================== */
+
+.page-reactions {
+    margin: 35px auto;
+    padding: 18px 20px;
+
+    max-width: 650px;
+
+    text-align: center;
+
+    background: #f5f8fb;
+    border-radius: 10px;
+}
+
+.page-reactions p {
+    margin: 0 0 12px;
+    font-weight: 600;
+    color: #173f68;
+}
+
+.reaction-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+.reaction-button {
+    border: 1px solid #cbd5df;
+    background: #ffffff;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 1.4rem;
+
+    cursor: pointer;
+}
+
+.reaction-button.selected {
+    background: #dcecf5;
+    border-color: #176b87;
+}
+
+.reaction-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#reactionStatus {
+    margin-top: 10px;
+
+    color: #555;
+
+    font-size: 0.92rem;
+}
+/* ===================================================
+   PRIVATE FEEDBACK
+   =================================================== */
+
+.private-feedback {
+    max-width: 700px;
+    margin: 35px auto;
+    padding: 24px;
+
+    background: #ffffff;
+    border: 1px solid #d9e3ec;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.private-feedback h3 {
+    margin-top: 0;
+    color: #173f68;
+    text-align: center;
+}
+
+.private-feedback > p {
+    text-align: center;
+    color: #555;
+    line-height: 1.6;
+}
+
+.private-feedback label {
+    display: block;
+    margin: 16px 0 7px;
+
+    color: #173f68;
+    font-weight: 600;
+}
+
+.private-feedback select,
+.private-feedback textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border: 1px solid #cbd5df;
+    border-radius: 7px;
+
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.private-feedback textarea {
+    resize: vertical;
+}
+
+.private-feedback button {
+    margin-top: 16px;
+
+    background: #176b87;
+    color: #ffffff;
+
+    border: 0;
+    border-radius: 7px;
+
+    padding: 12px 18px;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.private-feedback button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+#feedbackStatus {
+    margin-top: 12px;
+    color: #555;
+    line-height: 1.5;
+}

@@ -1,0 +1,1537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>
+    In Fond Remembrance | TTPA Multimedia Newsletter
+</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+
+<style>
+
+/* =========================================================
+   IN FOND REMEMBRANCE
+   ========================================================= */
+
+.remembrance-page {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 60px;
+}
+
+
+/* ---------------------------------------------------------
+   PAGE HEADER
+   --------------------------------------------------------- */
+
+.remembrance-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.archive-label {
+    color: #2f5d8c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.remembrance-header h1 {
+    color: #173f68;
+    margin: 10px 0 12px;
+    font-size: 2.2rem;
+}
+
+.remembrance-header > p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.75;
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   ARCHIVE / AI DISCLOSURE
+   --------------------------------------------------------- */
+
+.archive-image-note {
+    margin: 32px auto 38px;
+    padding: 25px 28px;
+
+    max-width: 1000px;
+
+    background: #fff8df;
+
+    border-left: 6px solid #e5b52b;
+    border-radius: 10px;
+
+    line-height: 1.75;
+    color: #444;
+}
+
+.archive-image-note h2 {
+    margin: 0 0 15px;
+    color: #173f68;
+    font-size: 1.35rem;
+}
+
+.archive-image-note p {
+    margin: 0 0 14px;
+}
+
+.archive-image-note p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* ---------------------------------------------------------
+   SEARCH
+   --------------------------------------------------------- */
+
+.remembrance-search {
+    margin: 30px auto;
+    padding: 22px;
+
+    max-width: 850px;
+
+    background: #f5f8fb;
+    border-radius: 12px;
+
+    text-align: center;
+}
+
+.remembrance-search label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #173f68;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.remembrance-search input {
+    width: 100%;
+    max-width: 650px;
+
+    box-sizing: border-box;
+
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5df;
+    border-radius: 8px;
+
+    font-size: 1.05rem;
+}
+
+.remembrance-search input:focus {
+    outline: 2px solid #2f5d8c;
+    outline-offset: 2px;
+}
+
+#searchMessage {
+    margin: 12px 0 0;
+    color: #666;
+}
+
+
+/* ---------------------------------------------------------
+   DEPARTMENT / DISCIPLINE LANDING AREA
+   --------------------------------------------------------- */
+
+.department-section {
+    margin-top: 40px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.section-heading h2 {
+    margin-bottom: 8px;
+    color: #173f68;
+}
+
+.section-heading p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.department-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 18px;
+}
+
+.department-card {
+    border: 1px solid #d9e3ec;
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    padding: 22px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    box-shadow: 0 3px 9px rgba(0,0,0,0.05);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.department-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 13px rgba(0,0,0,0.09);
+}
+
+.department-card h3 {
+    margin: 0 0 8px;
+
+    color: #173f68;
+
+    font-size: 1.15rem;
+}
+
+.department-count {
+    color: #666;
+    font-size: 0.92rem;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTED DEPARTMENT
+   --------------------------------------------------------- */
+
+.selected-department {
+    display: none;
+
+    margin-top: 45px;
+}
+
+.selected-department.active {
+    display: block;
+}
+
+.selected-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 2px solid #d9e3ec;
+}
+
+.selected-heading h2 {
+    margin: 0;
+    color: #173f68;
+}
+
+.back-departments {
+    border: 0;
+
+    background: #173f68;
+    color: #ffffff;
+
+    padding: 10px 16px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   REMEMBRANCE CARDS
+   --------------------------------------------------------- */
+
+.remembrance-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+}
+
+.remembrance-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #d9e3ec;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.remembrance-photo {
+    width: 100%;
+    height: 270px;
+
+    object-fit: contain;
+    object-position: center;
+
+    display: block;
+
+    background: #f3f6f8;
+
+    cursor: zoom-in;
+}
+/* ---------------------------------------------------------
+   PHOTOGRAPH NOT AVAILABLE
+   --------------------------------------------------------- */
+
+.missing-photo {
+    width: 100%;
+    height: 270px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+    padding: 25px;
+
+    background: #f3f6f8;
+
+    color: #6a737d;
+
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.missing-photo span {
+    display: block;
+}
+
+.missing-photo .missing-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+.remembrance-content {
+    padding: 18px;
+}
+
+.remembrance-content h3 {
+    margin: 0 0 8px;
+
+    color: #173f68;
+
+    font-size: 1.15rem;
+    line-height: 1.4;
+}
+
+.remembrance-department {
+    margin: 0 0 15px;
+
+    color: #666;
+
+    font-size: 0.93rem;
+    line-height: 1.5;
+}
+
+.remembrance-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.remembrance-actions button,
+.remembrance-actions a {
+    display: inline-block;
+
+    border: 0;
+    border-radius: 6px;
+
+    padding: 9px 11px;
+
+    font-size: 0.88rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
+
+.enlarge-btn {
+    background: #eef4f8;
+    color: #173f68;
+}
+
+.download-btn {
+    background: #176b87;
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   SEARCH RESULTS
+   --------------------------------------------------------- */
+
+.search-results-section {
+    display: none;
+
+    margin-top: 40px;
+}
+
+.search-results-section.active {
+    display: block;
+}
+
+.search-results-section h2 {
+    color: #173f68;
+
+    padding-bottom: 12px;
+
+    border-bottom: 2px solid #d9e3ec;
+}
+
+
+/* ---------------------------------------------------------
+   FOOTNOTE
+   --------------------------------------------------------- */
+
+.image-disclosure {
+    margin-top: 40px;
+
+    padding: 18px 22px;
+
+    background: #f5f8fb;
+
+    border-radius: 8px;
+
+    line-height: 1.65;
+
+    color: #555;
+}
+
+
+/* ---------------------------------------------------------
+   NAVIGATION
+   --------------------------------------------------------- */
+
+.remembrance-navigation {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.remembrance-navigation a {
+    display: inline-block;
+
+    margin: 6px;
+
+    padding: 11px 18px;
+
+    border-radius: 22px;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    background: #173f68;
+    color: #ffffff;
+}
+
+
+/* ---------------------------------------------------------
+   LIGHTBOX
+   --------------------------------------------------------- */
+
+#imageLightbox {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 99999;
+
+    background: rgba(0,0,0,0.90);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+#imageLightbox.active {
+    display: flex;
+}
+
+#lightboxImage {
+    display: block;
+
+    max-width: 92vw;
+    max-height: 82vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+}
+
+#lightboxClose {
+    position: fixed;
+
+    top: 15px;
+    right: 25px;
+
+    z-index: 100000;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+#lightboxCaption {
+    position: fixed;
+
+    bottom: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 90%;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 600px) {
+.missing-photo {
+    min-height: 240px;
+    height: auto;
+}
+
+    .remembrance-page {
+        width: 94%;
+        padding-top: 25px;
+    }
+
+    .remembrance-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .archive-image-note {
+        padding: 20px;
+    }
+
+    .department-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .remembrance-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .remembrance-photo {
+        height: auto;
+        max-height: none;
+    }
+
+    .selected-heading {
+        display: block;
+    }
+
+    .back-departments {
+        margin-top: 14px;
+    }
+
+    .remembrance-actions button,
+    .remembrance-actions a {
+        padding: 11px 13px;
+    }
+
+    .remembrance-navigation a {
+        display: block;
+
+        margin: 10px 0;
+
+        padding: 14px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<main class="remembrance-page">
+
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
+<header class="remembrance-header">
+
+    <div class="archive-label">
+        TTPA ARCHIVES
+    </div>
+
+    <h1>
+        In Fond Remembrance
+    </h1>
+
+    <p>
+        Remembering with gratitude the teachers, colleagues
+        and members of our professional family who contributed
+        to the growth of veterinary education, research,
+        extension and service.
+    </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     ARCHIVE & IMAGE NOTE
+     ===================================================== -->
+
+<section class="archive-image-note">
+
+    <h2>
+        About the Photographs in This Archive
+    </h2>
+
+    <p>
+        Many of the photographs presented in this section have
+        been collected from very old archival records and other
+        available sources, some dating back more than six decades.
+        In several instances, the only photograph available was
+        one taken when the individual was much younger, sometimes
+        even during their teenage years.
+    </p>
+
+    <p>
+        To preserve these cherished memories and make the photographs
+        suitable for presentation in this digital archive, the
+        available images have been reconstructed and enhanced with
+        the assistance of Artificial Intelligence (AI). Every
+        reasonable effort has been made to retain the individual's
+        recognizable appearance and to present the person respectfully.
+        Nevertheless, owing to the age, quality and limitations of
+        the original source photographs, an AI-reconstructed image
+        may not reproduce every facial feature or detail with
+        complete accuracy.
+    </p>
+
+    <p>
+        <strong>
+            We welcome corrections and better photographs.
+        </strong>
+        If a family member, colleague or other person familiar with
+        the individual feels that a displayed photograph does not
+        adequately represent the person, they are requested to inform
+        the Editor in writing. On receiving such a request, the
+        photograph can be withdrawn or replaced with a more appropriate
+        photograph provided by the family or other reliable source.
+    </p>
+
+    <p>
+        Members are also warmly invited to share photographs of
+        departed members whose images are presently unavailable or
+        not displayed in this archive. Such contributions will help
+        us progressively build a more complete and authentic visual
+        record of those who were part of our institution and profession.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH
+     ===================================================== -->
+
+<section class="remembrance-search">
+
+    <label for="remembranceSearch">
+        Search by Name
+    </label>
+
+    <input
+        type="search"
+        id="remembranceSearch"
+        placeholder="Type a name..."
+        autocomplete="off">
+
+    <p id="searchMessage"></p>
+
+</section>
+
+
+
+<!-- =====================================================
+     DEPARTMENTS / DISCIPLINES
+     ===================================================== -->
+
+<section
+    class="department-section"
+    id="departmentSection">
+
+    <div class="section-heading">
+
+        <h2>
+            Browse by Department / Discipline
+        </h2>
+
+        <p>
+            Select a department or discipline to view
+            the members included in this memorial archive.
+        </p>
+
+    </div>
+
+    <div
+        class="department-grid"
+        id="departmentGrid">
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SELECTED DEPARTMENT RESULTS
+     ===================================================== -->
+
+<section
+    class="selected-department"
+    id="selectedDepartment">
+
+    <div class="selected-heading">
+
+        <h2 id="selectedDepartmentTitle"></h2>
+
+        <button
+            type="button"
+            class="back-departments"
+            id="backDepartments">
+
+            ← All Departments
+
+        </button>
+
+    </div>
+
+    <div
+        class="remembrance-grid"
+        id="departmentMembers">
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SEARCH RESULTS
+     ===================================================== -->
+
+<section
+    class="search-results-section"
+    id="searchResultsSection">
+
+    <h2>
+        Search Results
+    </h2>
+
+    <div
+        class="remembrance-grid"
+        id="searchResults">
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     IMAGE DISCLOSURE
+     ===================================================== -->
+
+<div class="image-disclosure">
+
+    <strong>Image Disclosure:</strong>
+    Photographs in this archive have been reconstructed and/or
+    enhanced using AI from available historical source images.
+    Corrections and replacement photographs from families and
+    members are welcome.
+
+</div>
+
+
+
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
+
+<nav class="remembrance-navigation">
+
+    <a href="archives.html">
+        ← Back to Archives
+    </a>
+
+    <a href="index.html">
+        🏠 Home
+    </a>
+
+</nav>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     LIGHTBOX
+     ===================================================== -->
+
+<div id="imageLightbox">
+
+    <span id="lightboxClose">
+        &times;
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Enlarged remembrance photograph">
+
+    <div id="lightboxCaption"></div>
+
+</div>
+
+
+
+<!-- =====================================================
+     MASTER DATA
+     IMPORTANT: THIS MUST COME BEFORE THE SCRIPT BELOW
+     ===================================================== -->
+
+<script src="js/remembrance-data.js"></script>
+
+
+
+<script>
+
+/* =========================================================
+   IN FOND REMEMBRANCE
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* -----------------------------------------------------
+       ELEMENTS
+       ----------------------------------------------------- */
+
+    const departmentGrid =
+        document.getElementById("departmentGrid");
+
+    const departmentSection =
+        document.getElementById("departmentSection");
+
+    const selectedDepartment =
+        document.getElementById("selectedDepartment");
+
+    const selectedDepartmentTitle =
+        document.getElementById("selectedDepartmentTitle");
+
+    const departmentMembers =
+        document.getElementById("departmentMembers");
+
+    const backDepartments =
+        document.getElementById("backDepartments");
+
+    const searchInput =
+        document.getElementById("remembranceSearch");
+
+    const searchMessage =
+        document.getElementById("searchMessage");
+
+    const searchResultsSection =
+        document.getElementById("searchResultsSection");
+
+    const searchResults =
+        document.getElementById("searchResults");
+
+    const lightbox =
+        document.getElementById("imageLightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+        document.getElementById("lightboxCaption");
+
+    const lightboxClose =
+        document.getElementById("lightboxClose");
+
+
+    /* -----------------------------------------------------
+       CHECK MASTER DATA
+       ----------------------------------------------------- */
+
+    if (
+        typeof remembranceData === "undefined" ||
+        !Array.isArray(remembranceData)
+    ) {
+
+        departmentGrid.innerHTML =
+            "<p>Remembrance data could not be loaded.</p>";
+
+        return;
+
+    }
+
+
+    /* -----------------------------------------------------
+       SORTING
+       ----------------------------------------------------- */
+
+    function sortMembers(members) {
+
+        return [...members].sort(function (a, b) {
+
+            return a.sortName.localeCompare(
+                b.sortName,
+                undefined,
+                {
+                    sensitivity: "base"
+                }
+            );
+
+        });
+
+    }
+
+
+    /* -----------------------------------------------------
+       CREATE MEMBER CARD
+       ----------------------------------------------------- */
+
+    function createMemberCard(member) {
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "remembrance-card";
+
+
+        const image =
+            document.createElement("img");
+
+        image.className =
+            "remembrance-photo";
+
+        image.src =
+            "images/remembrance/" + member.image;
+
+        image.alt =
+            "Photograph of " + member.displayName;
+
+        image.loading =
+            "lazy";
+image.addEventListener(
+    "error",
+    function () {
+
+        image.style.display = "none";
+
+        const placeholder =
+            document.createElement("div");
+
+        placeholder.className =
+            "missing-photo";
+
+        placeholder.innerHTML =
+            '<span>' +
+            '<span class="missing-icon">🖼️</span>' +
+            'Photograph not presently available<br>' +
+            '<small>Members and family are invited to share a photograph.</small>' +
+            '</span>';
+
+        card.insertBefore(
+            placeholder,
+            content
+        );
+
+        enlarge.style.display =
+            "none";
+
+        download.style.display =
+            "none";
+
+    },
+    { once: true }
+);
+
+        image.addEventListener(
+            "click",
+            function () {
+
+                openLightbox(member);
+
+            }
+        );
+
+
+        const content =
+            document.createElement("div");
+
+        content.className =
+            "remembrance-content";
+
+
+        const name =
+            document.createElement("h3");
+
+        name.textContent =
+            member.displayName;
+
+
+        const department =
+            document.createElement("p");
+
+        department.className =
+            "remembrance-department";
+
+        department.textContent =
+            member.department;
+
+
+        const actions =
+            document.createElement("div");
+
+        actions.className =
+            "remembrance-actions";
+
+
+        const enlarge =
+            document.createElement("button");
+
+        enlarge.type =
+            "button";
+
+        enlarge.className =
+            "enlarge-btn";
+
+        enlarge.textContent =
+            "🔍 Enlarge Photo";
+
+
+        enlarge.addEventListener(
+            "click",
+            function () {
+
+                openLightbox(member);
+
+            }
+        );
+
+
+        const download =
+            document.createElement("a");
+
+        download.className =
+            "download-btn";
+
+        download.textContent =
+            "⬇ Download Photo";
+
+        download.href =
+            "images/remembrance/downloads/" +
+            member.image;
+
+        download.setAttribute(
+            "download",
+            member.image
+        );
+
+
+        actions.appendChild(enlarge);
+        actions.appendChild(download);
+
+        content.appendChild(name);
+        content.appendChild(department);
+        content.appendChild(actions);
+
+        card.appendChild(image);
+card.appendChild(content);
+
+
+/* -----------------------------------------------------
+   Missing photograph fallback
+   ----------------------------------------------------- */
+
+image.addEventListener(
+    "error",
+    function () {
+
+        image.style.display =
+            "none";
+
+        const placeholder =
+            document.createElement("div");
+
+        placeholder.className =
+            "missing-photo";
+
+        placeholder.innerHTML =
+            '<span>' +
+            '<span class="missing-icon">🖼️</span>' +
+            'Photograph not presently available<br>' +
+            '<small>Members and family are invited to share a photograph.</small>' +
+            '</span>';
+
+        card.insertBefore(
+            placeholder,
+            content
+        );
+
+        enlarge.style.display =
+            "none";
+
+        download.style.display =
+            "none";
+
+    },
+    { once: true }
+);
+
+
+return card;
+
+    }
+
+
+    /* -----------------------------------------------------
+       DEPARTMENT CARDS
+       ----------------------------------------------------- */
+
+    function buildDepartmentCards() {
+
+        departmentGrid.innerHTML = "";
+
+
+        const departmentMap = {};
+
+
+        remembranceData.forEach(function (member) {
+
+            const department =
+                member.department.trim();
+
+
+            if (!departmentMap[department]) {
+
+                departmentMap[department] = [];
+
+            }
+
+
+            departmentMap[department].push(member);
+
+        });
+
+
+        const departments =
+            Object.keys(departmentMap)
+            .sort(function (a, b) {
+
+                return a.localeCompare(
+                    b,
+                    undefined,
+                    {
+                        sensitivity: "base"
+                    }
+                );
+
+            });
+
+
+        departments.forEach(function (department) {
+
+            const button =
+                document.createElement("button");
+
+            button.type =
+                "button";
+
+            button.className =
+                "department-card";
+
+
+            const title =
+                document.createElement("h3");
+
+            title.textContent =
+                department;
+
+
+            const count =
+                document.createElement("div");
+
+            count.className =
+                "department-count";
+
+
+            const number =
+                departmentMap[department].length;
+
+
+            count.textContent =
+                number +
+                (number === 1
+                    ? " member"
+                    : " members");
+
+
+            button.appendChild(title);
+            button.appendChild(count);
+
+
+            button.addEventListener(
+                "click",
+                function () {
+
+                    showDepartment(
+                        department,
+                        departmentMap[department]
+                    );
+
+                }
+            );
+
+
+            departmentGrid.appendChild(button);
+
+        });
+
+    }
+
+
+    /* -----------------------------------------------------
+       SHOW SELECTED DEPARTMENT
+       ----------------------------------------------------- */
+
+    function showDepartment(
+        department,
+        members
+    ) {
+
+        searchInput.value = "";
+
+        searchResultsSection.classList.remove(
+            "active"
+        );
+
+        searchMessage.textContent = "";
+
+
+        departmentSection.style.display =
+            "none";
+
+
+        selectedDepartment.classList.add(
+            "active"
+        );
+
+
+        selectedDepartmentTitle.textContent =
+            department;
+
+
+        departmentMembers.innerHTML = "";
+
+
+        sortMembers(members)
+        .forEach(function (member) {
+
+            departmentMembers.appendChild(
+                createMemberCard(member)
+            );
+
+        });
+
+
+        selectedDepartment.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+    }
+
+
+    /* -----------------------------------------------------
+       RETURN TO DEPARTMENTS
+       ----------------------------------------------------- */
+
+    backDepartments.addEventListener(
+        "click",
+        function () {
+
+            selectedDepartment.classList.remove(
+                "active"
+            );
+
+            departmentSection.style.display =
+                "block";
+
+
+            departmentSection.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       SEARCH
+       ----------------------------------------------------- */
+
+    searchInput.addEventListener(
+        "input",
+        function () {
+
+            const query =
+                this.value
+                .trim()
+                .toLowerCase();
+
+
+            if (query === "") {
+
+                searchResultsSection.classList.remove(
+                    "active"
+                );
+
+                searchResults.innerHTML = "";
+
+                searchMessage.textContent = "";
+
+                selectedDepartment.classList.remove(
+                    "active"
+                );
+
+                departmentSection.style.display =
+                    "block";
+
+                return;
+
+            }
+
+
+            departmentSection.style.display =
+                "none";
+
+            selectedDepartment.classList.remove(
+                "active"
+            );
+
+
+            const matches =
+                remembranceData.filter(
+                    function (member) {
+
+                        return (
+                            member.displayName
+                                .toLowerCase()
+                                .includes(query) ||
+
+                            member.sortName
+                                .toLowerCase()
+                                .includes(query)
+                        );
+
+                    }
+                );
+
+
+            searchResults.innerHTML = "";
+
+
+            sortMembers(matches)
+            .forEach(function (member) {
+
+                searchResults.appendChild(
+                    createMemberCard(member)
+                );
+
+            });
+
+
+            searchResultsSection.classList.add(
+                "active"
+            );
+
+
+            if (matches.length === 0) {
+
+                searchMessage.textContent =
+                    "No matching member found.";
+
+            } else {
+
+                searchMessage.textContent =
+                    matches.length +
+                    (matches.length === 1
+                        ? " matching member found."
+                        : " matching members found.");
+
+            }
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       LIGHTBOX
+       ----------------------------------------------------- */
+
+    function openLightbox(member) {
+
+        lightboxImage.src =
+            "images/remembrance/" +
+            member.image;
+
+        lightboxImage.alt =
+            member.displayName;
+
+        lightboxCaption.textContent =
+            member.displayName +
+            " — " +
+            member.department;
+
+        lightbox.classList.add(
+            "active"
+        );
+
+        document.body.style.overflow =
+            "hidden";
+
+    }
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove(
+            "active"
+        );
+
+        lightboxImage.src = "";
+
+        document.body.style.overflow =
+            "";
+
+    }
+
+
+    lightboxClose.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === lightbox) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (
+                event.key === "Escape" &&
+                lightbox.classList.contains(
+                    "active"
+                )
+            ) {
+
+                closeLightbox();
+
+            }
+
+        }
+    );
+
+
+    /* -----------------------------------------------------
+       INITIALISE
+       ----------------------------------------------------- */
+
+    buildDepartmentCards();
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

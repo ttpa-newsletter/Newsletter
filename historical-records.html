@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Historical Records & Documents | TTPA Multimedia Newsletter
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+/* ==========================================
+   Historical Section Headings
+   ========================================== */
+
+.historical-section-heading {
+    margin: 45px 0 25px;
+    text-align: center;
+}
+
+.historical-section-heading h2 {
+    margin-bottom: 10px;
+    color: #173f68;
+}
+
+.historical-section-heading p {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+    color: #555;
+}
+
+.historical-documents-section {
+    margin-bottom: 55px;
+}
+
+/* ==========================================
+   CLICK-TO-ENLARGE LIGHTBOX
+   ========================================== */
+
+.historical-image-wrap img {
+    cursor: zoom-in;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    max-width: 95%;
+    max-height: 90vh;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 28px;
+
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.lightbox-caption {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #ffffff;
+    font-size: 1rem;
+    text-align: center;
+
+    width: 90%;
+}
+
+    <style>
+
+        /* ==========================================
+           HISTORICAL RECORDS PAGE
+           ========================================== */
+
+        .historical-page {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0 60px;
+        }
+
+
+        /* Header */
+
+        .historical-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .historical-header .archive-label {
+            color: #2f5d8c;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .historical-header h1 {
+            color: #173f68;
+            margin: 10px 0 12px;
+        }
+
+        .historical-header p {
+            max-width: 780px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.7;
+        }
+
+
+        /* Section Heading */
+
+        .historical-section-heading {
+            margin: 35px 0 22px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #d9e3ec;
+        }
+
+        .historical-section-heading h2 {
+            margin: 0;
+            color: #173f68;
+            font-size: 1.6rem;
+        }
+
+        .historical-section-heading p {
+            margin: 8px 0 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* Gallery */
+
+        .historical-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(260px, 1fr));
+
+            gap: 24px;
+        }
+
+
+        /* Building Card */
+
+        .historical-card {
+            background: #ffffff;
+            border: 1px solid #d9e3ec;
+            border-radius: 12px;
+            overflow: hidden;
+
+            box-shadow:
+                0 3px 10px rgba(0,0,0,0.06);
+
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .historical-image-wrap {
+            width: 100%;
+            background: #f3f6f8;
+            overflow: hidden;
+        }
+
+
+        .historical-image-wrap img {
+            width: 100%;
+            height: 220px;
+
+            object-fit: contain;
+            object-position: center;
+
+            display: block;
+        }
+
+
+        .historical-card-content {
+            padding: 20px;
+        }
+
+
+        .historical-card h3 {
+            margin: 0 0 10px;
+
+            color: #173f68;
+
+            font-size: 1.25rem;
+            line-height: 1.35;
+        }
+
+
+        .historical-card p {
+            margin: 0;
+
+            color: #555;
+
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+
+        .historical-placeholder {
+            margin-top: 12px;
+
+            display: inline-block;
+
+            background: #eef4f8;
+            color: #2f5d8c;
+
+            padding: 6px 10px;
+            border-radius: 6px;
+
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+
+        /* Future Material */
+
+        .future-records {
+            margin-top: 35px;
+
+            padding: 22px;
+
+            background: #f5f8fb;
+
+            border: 2px dashed #c7d4df;
+            border-radius: 10px;
+
+            text-align: center;
+        }
+
+        .future-records h3 {
+            margin: 0 0 8px;
+            color: #555;
+        }
+
+        .future-records p {
+            margin: 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+
+        /* Note */
+
+        .historical-note {
+            margin-top: 35px;
+
+            padding: 18px 22px;
+
+            background: #fff8df;
+
+            border-left:
+                5px solid #e5b52b;
+
+            border-radius: 6px;
+
+            line-height: 1.65;
+        }
+
+
+        /* Navigation */
+
+        .historical-navigation {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .historical-navigation a {
+            display: inline-block;
+
+            margin: 6px;
+            padding: 11px 18px;
+
+            border-radius: 22px;
+
+            text-decoration: none;
+            font-weight: 600;
+
+            background: #173f68;
+            color: #ffffff;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .historical-page {
+                width: 94%;
+                padding-top: 25px;
+            }
+
+            .historical-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .historical-section-heading h2 {
+                font-size: 1.35rem;
+            }
+
+            .historical-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .historical-image-wrap img {
+                height: auto;
+                max-height: none;
+            }
+
+            .historical-card-content {
+                padding: 18px;
+            }
+
+            .historical-navigation a {
+                display: block;
+                margin: 10px 0;
+                padding: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<main class="historical-page">
+
+
+    <!-- ==========================================
+         Header
+         ========================================== -->
+
+    <header class="historical-header">
+
+        <div class="archive-label">
+            TTPA ARCHIVES
+        </div>
+
+        <h1>
+            Historical Records &amp; Documents
+        </h1>
+
+        <p>
+            Preserving photographs, records and institutional
+            memories associated with Madras Veterinary College
+            and the veterinary profession.
+        </p>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         Historic Buildings
+         ========================================== -->
+
+    <section>
+
+        <div class="historical-section-heading">
+
+            <h2>
+                Historic Buildings of Madras Veterinary College
+            </h2>
+
+            <p>
+                A visual record of important buildings and facilities
+                associated with the growth and development of
+                Madras Veterinary College.
+            </p>
+
+        </div>
+<!-- ==========================================
+     Foundational Records & Institutional Leadership
+     ========================================== -->
+
+<section class="historical-documents-section">
+
+    <div class="historical-section-heading">
+
+        <h2>
+            Foundational Records &amp; Institutional Leadership
+        </h2>
+
+        <p>
+            Selected historical records documenting the origins
+            and institutional leadership of Madras Veterinary College.
+        </p>
+
+    </div>
+
+
+    <div class="historical-grid">
+
+
+        <!-- Establishment of Veterinary Education - 1903 -->
+
+        <article class="historical-card">
+
+            <div class="historical-image-wrap">
+
+                <img
+                    src="images/historical/veterinary-institute-creation-1903-order.png"
+                    alt="Government Order relating to the establishment of veterinary education in Chennai">
+
+            </div>
+
+            <div class="historical-card-content">
+
+                <h3>
+                    Establishment of Veterinary Education — 1903
+                </h3>
+
+                <p>
+                    Historical Government record relating to the
+                    commencement of veterinary education in Chennai
+                    in 1903.
+                </p>
+
+                <span class="historical-placeholder">
+                    Foundational Historical Record
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- Principals and Deans of MVC -->
+
+        <article class="historical-card">
+
+            <div class="historical-image-wrap">
+
+                <img
+                    src="images/historical/principals-of-mvc.png"
+                    alt="Principals and Deans of Madras Veterinary College">
+
+            </div>
+
+            <div class="historical-card-content">
+
+                <h3>
+                    Principals and Deans of Madras Veterinary College
+                </h3>
+
+                <p>
+                    A historical record of the Principals and Deans
+                    who provided academic and administrative leadership
+                    to Madras Veterinary College over the years.
+                </p>
+
+                <span class="historical-placeholder">
+                    Institutional Leadership Record
+                </span>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+<!-- ==========================================
+     Historic Buildings
+     ========================================== -->
+
+<div class="historical-section-heading">
+
+    <h2>
+        Historic Buildings of Madras Veterinary College
+    </h2>
+
+    <p>
+        A photographic record of buildings associated with the
+        growth, teaching, research, clinical services and
+        administration of Madras Veterinary College.
+    </p>
+
+</div>
+
+        <div class="historical-grid">
+
+
+            <!-- 01 Administrative Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/administrative-block.png"
+                        alt="Administrative Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Administrative Block
+                    </h3>
+
+                    <p>
+                        Administrative building associated with
+                        the institutional functioning of
+                        Madras Veterinary College.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 02 Dobbin Hall -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/dobbin-hall.png"
+                        alt="Dobbin Hall">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Dobbin Hall
+                    </h3>
+
+                    <p>
+                        A building remembered in the academic
+                        history of Madras Veterinary College.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 03 Anatomy Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/anatomy-block.png"
+                        alt="Anatomy Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Anatomy Block
+                    </h3>
+
+                    <p>
+                        Building associated with teaching and
+                        academic activities in Veterinary Anatomy.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 04 A. L. Mudaliar Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/a-l-mudaliar-block.png"
+                        alt="A. L. Mudaliar Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        A. L. Mudaliar Block
+                    </h3>
+
+                    <p>
+                        One of the important buildings in the
+                        Madras Veterinary College campus.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 05 Animal Husbandry Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/animal-husbandry-block.png"
+                        alt="Animal Husbandry Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Animal Husbandry Block
+                    </h3>
+
+                    <p>
+                        A major academic building associated with
+                        teaching and research in animal sciences.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 06 Small Animal Inpatient Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/small-animal-inpatient-block.png"
+                        alt="Small Animal Inpatient Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Small Animal Inpatient Block
+                    </h3>
+
+                    <p>
+                        Building associated with clinical services
+                        and care of small animal patients.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 07 Clinical Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/clinical-block.png"
+                        alt="Clinical Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Clinical Block
+                    </h3>
+
+                    <p>
+                        Clinical teaching and service facility
+                        associated with Madras Veterinary College.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 08 Radioisotope Laboratory -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/radio-isotope-laboratory.png"
+                        alt="Radioisotope Laboratory">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Radioisotope Laboratory
+                    </h3>
+
+                    <p>
+                        Laboratory facility associated with
+                        specialised research and scientific studies.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 09 Large Animal Clinical Complex -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/large-animal-clinical-complex.png"
+                        alt="Large Animal Clinical Complex">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Large Animal Clinical Complex
+                    </h3>
+
+                    <p>
+                        Clinical facility devoted to the diagnosis,
+                        treatment and teaching of large animal medicine
+                        and surgery.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 10 Periyar Centenary Block -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/periyar-centenary-block.png"
+                        alt="Periyar Centenary Block">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Periyar Centenary Block
+                    </h3>
+
+                    <p>
+                        An important campus building forming part
+                        of the expanding institutional infrastructure.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 11 Semen Bank -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/semen-bank.png"
+                        alt="Semen Bank">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Semen Bank
+                    </h3>
+
+                    <p>
+                        Facility associated with animal reproduction,
+                        breeding and related veterinary services.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 12 Cafeteria Cum Recreation Club -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/cafeteria-cum-recreation-club.png"
+                        alt="Cafeteria Cum Recreation Club">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Cafeteria Cum Recreation Club
+                    </h3>
+
+                    <p>
+                        Campus facility serving as a social and
+                        recreational space for the college community.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 13 Postmortem Building -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/postmortem-building.png"
+                        alt="Postmortem Building">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Postmortem Building
+                    </h3>
+
+                    <p>
+                        Facility associated with postmortem
+                        examination, diagnosis and pathology teaching.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- 14 Student Day Care -->
+
+            <article class="historical-card">
+
+                <div class="historical-image-wrap">
+
+                    <img
+                        src="images/historical/student-day-care.png"
+                        alt="Student Day Care">
+
+                </div>
+
+                <div class="historical-card-content">
+
+                    <h3>
+                        Student Day Care
+                    </h3>
+
+                    <p>
+                        Facility associated with student welfare
+                        and campus support services.
+                    </p>
+
+                    <span class="historical-placeholder">
+                        Historical details to be added
+                    </span>
+
+                </div>
+
+            </article>
+<!-- 15 Microbiology Block -->
+
+<article class="historical-card">
+
+    <div class="historical-image-wrap">
+
+        <img
+            src="images/historical/microbiology-block.png"
+            alt="Microbiology Block">
+
+    </div>
+
+    <div class="historical-card-content">
+
+        <h3>
+            Microbiology Block
+        </h3>
+
+        <p>
+            Facility associated with research on
+            microorganisms-related services.
+        </p>
+
+        <span class="historical-placeholder">
+            Historical details to be added
+        </span>
+
+    </div>
+
+</article>
+
+
+<!-- 16 Office of the Faculty Dean -->
+
+<article class="historical-card">
+
+    <div class="historical-image-wrap">
+
+        <img
+            src="images/historical/office-of-faculty-dean.png"
+            alt="Office of the Faculty Dean">
+
+    </div>
+
+    <div class="historical-card-content">
+
+        <h3>
+            Office of the Faculty Dean
+        </h3>
+
+        <p>
+            Facility associated with academic and
+            administrative services of the Faculty.
+        </p>
+
+        <span class="historical-placeholder">
+            Historical details to be added
+        </span>
+
+    </div>
+
+</article>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         Future Records
+         ========================================== -->
+
+    <div class="future-records">
+
+        <h3>
+            More Historical Records Will Be Added
+        </h3>
+
+        <p>
+            Additional photographs, institutional documents,
+            certificates, notices and other historical records
+            will be incorporated into this archive progressively.
+        </p>
+
+    </div>
+
+
+
+    <!-- ==========================================
+         Note
+         ========================================== -->
+
+    <div class="historical-note">
+
+        <strong>Archive Note:</strong>
+        The building names shown here are based on the available
+        photographic records. Historical dates, construction details,
+        former uses and other verified information will be added
+        progressively as reliable records become available.
+
+    </div>
+
+
+
+    <!-- ==========================================
+         Navigation
+         ========================================== -->
+
+    <nav class="historical-navigation">
+
+        <a href="archives.html">
+            ← Back to Archives
+        </a>
+
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+    </nav>
+
+
+</main>
+
+</main>
+
+<!-- ==========================================
+     CLICK-TO-ENLARGE HISTORICAL PHOTOGRAPHS
+     ========================================== -->
+
+<style>
+
+    .historical-image-wrap img {
+        cursor: zoom-in;
+    }
+
+    #imageLightbox {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+
+        background: rgba(0, 0, 0, 0.90);
+
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    #imageLightbox.active {
+        display: flex;
+    }
+
+    #lightboxImage {
+        display: block;
+
+        max-width: 92vw;
+        max-height: 82vh;
+
+        width: auto;
+        height: auto;
+
+        object-fit: contain;
+
+        background: white;
+        border-radius: 8px;
+    }
+
+    #lightboxClose {
+        position: fixed;
+
+        top: 15px;
+        right: 25px;
+
+        color: white;
+
+        font-size: 42px;
+        font-weight: bold;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+        z-index: 100000;
+    }
+
+    #lightboxCaption {
+        position: fixed;
+
+        bottom: 18px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        width: 90%;
+
+        color: white;
+
+        text-align: center;
+
+        font-size: 1.05rem;
+        font-weight: 600;
+    }
+
+</style>
+
+
+<div id="imageLightbox">
+
+    <span id="lightboxClose">
+        &times;
+    </span>
+
+    <img
+        id="lightboxImage"
+        src=""
+        alt="Enlarged historical photograph">
+
+    <div id="lightboxCaption"></div>
+
+</div>
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const historicalImages =
+        document.querySelectorAll(".historical-image-wrap img");
+
+    const lightbox =
+        document.getElementById("imageLightbox");
+
+    const lightboxImage =
+        document.getElementById("lightboxImage");
+
+    const lightboxCaption =
+        document.getElementById("lightboxCaption");
+
+    const closeButton =
+        document.getElementById("lightboxClose");
+
+
+    historicalImages.forEach(function (image) {
+
+        image.addEventListener("click", function () {
+
+            lightboxImage.src =
+                this.getAttribute("src");
+
+            lightboxImage.alt =
+                this.getAttribute("alt");
+
+            lightboxCaption.textContent =
+                this.getAttribute("alt");
+
+            lightbox.classList.add("active");
+
+            document.body.style.overflow =
+                "hidden";
+
+        });
+
+    });
+
+
+    function closeLightbox() {
+
+        lightbox.classList.remove("active");
+
+        lightboxImage.src = "";
+
+        document.body.style.overflow = "";
+
+    }
+
+
+    closeButton.addEventListener(
+        "click",
+        closeLightbox
+    );
+
+
+    lightbox.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+
+        }
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+
+        }
+    );
+
+});
+
+</script>
+
+
+</body>
+
+</html>

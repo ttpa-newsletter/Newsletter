@@ -184,7 +184,100 @@ Preserving Memories • Sharing Knowledge • Celebrating Lives
         </p>
 
     </section>
+   <div class="page-reactions">
 
+    <p>
+        Was this page useful?
+    </p>
+
+    <div class="reaction-buttons">
+
+        <button
+            type="button"
+            id="reactionUp"
+            class="reaction-button"
+            aria-label="Useful">
+            👍
+        </button>
+
+        <button
+            type="button"
+            id="reactionDown"
+            class="reaction-button"
+            aria-label="Not useful">
+            👎
+        </button>
+
+    </div>
+
+    <div id="reactionStatus"></div>
+
+</div>
+ <section class="private-feedback">
+
+    <h3>
+        Comments / Corrections / Suggestions
+    </h3>
+
+    <p>
+        Your message will be submitted privately to the Editor
+        and will not be displayed publicly on this page.
+    </p>
+
+    <form id="privateFeedbackForm">
+
+        <label for="feedbackType">
+            Type of Feedback
+        </label>
+
+        <select id="feedbackType" required>
+
+            <option value="general">
+                General Comment
+            </option>
+
+            <option value="addition">
+                Addition
+            </option>
+
+            <option value="correction">
+                Correction
+            </option>
+
+            <option value="deletion">
+                Deletion
+            </option>
+
+        </select>
+
+
+        <label for="feedbackComment">
+            Your Message
+        </label>
+
+        <textarea
+            id="feedbackComment"
+            rows="5"
+            placeholder="Please enter your comment, correction or suggestion..."
+            required></textarea>
+
+
+        <button
+            type="submit"
+            id="feedbackSubmit">
+            Submit Privately
+        </button>
+
+
+        <div id="feedbackStatus"></div>
+
+    </form>
+
+</section>
+<div class="visitor-counter">
+    👥 Visitors:
+    <strong id="homeVisitorCount">—</strong>
+</div>
 
     <!-- Footer -->
 
@@ -205,7 +298,7 @@ Preserving Memories • Sharing Knowledge • Celebrating Lives
     </footer>
 
 </div>
-
+<script src="js/engagement.js"></script>
 </body>
 
 </html>

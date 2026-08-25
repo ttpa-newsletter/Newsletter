@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Government Orders | TTPA Multimedia Newsletter
+    </title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+
+    <style>
+
+        /* ==========================================
+           GOVERNMENT ORDERS ARCHIVE
+           ========================================== */
+
+        .go-page {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 0 60px;
+        }
+
+
+        /* Header */
+
+        .go-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .go-header .archive-label {
+            color: #2f5d8c;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .go-header h1 {
+            color: #173f68;
+            margin: 10px 0;
+        }
+
+        .go-header p {
+            max-width: 780px;
+            margin: 0 auto;
+            line-height: 1.7;
+            color: #555;
+        }
+
+
+        /* Search */
+
+        .go-search {
+            margin: 30px auto 20px;
+            max-width: 750px;
+            text-align: center;
+        }
+
+        .go-search label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #173f68;
+        }
+
+        .go-search input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 16px;
+            font-size: 1rem;
+            border: 1px solid #cbd5df;
+            border-radius: 8px;
+        }
+
+        .go-search input:focus {
+            outline: 2px solid #2f5d8c;
+            outline-offset: 2px;
+        }
+
+
+        /* Category Filters */
+
+        .go-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin: 22px 0 15px;
+        }
+
+        .go-filter {
+            border: none;
+            border-radius: 20px;
+            padding: 10px 17px;
+            background: #eaf1f6;
+            color: #173f68;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .go-filter.active {
+            background: #176b87;
+            color: #ffffff;
+        }
+
+        .go-count {
+            text-align: center;
+            margin: 15px 0 28px;
+            color: #555;
+            font-weight: 600;
+        }
+
+
+        /* Government Order Cards */
+
+        .go-list {
+            display: grid;
+            gap: 25px;
+        }
+
+        .go-card {
+            background: #ffffff;
+            border: 1px solid #d9e3ec;
+            border-radius: 12px;
+            padding: 28px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+        }
+
+        .go-category {
+            display: inline-block;
+            background: #eef4f8;
+            color: #2f5d8c;
+            padding: 6px 11px;
+            border-radius: 16px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .go-card h2 {
+            margin: 0 0 8px;
+            color: #173f68;
+            font-size: 1.35rem;
+            line-height: 1.4;
+        }
+
+        .go-date {
+            color: #666;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .go-details {
+            margin: 18px 0;
+        }
+
+        .go-details p {
+            margin: 9px 0;
+            line-height: 1.6;
+        }
+
+        .go-summary {
+            margin-top: 20px;
+            padding: 18px;
+            background: #f6f9fb;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .go-summary h3 {
+            margin: 0 0 8px;
+            color: #173f68;
+            font-size: 1.05rem;
+        }
+
+
+        /* Buttons */
+
+        .go-actions {
+            margin-top: 22px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .go-button {
+            display: inline-block;
+            padding: 11px 18px;
+            border-radius: 7px;
+            text-decoration: none;
+            font-weight: 600;
+            background: #176b87;
+            color: #ffffff;
+        }
+
+        .go-button.secondary {
+            background: #173f68;
+        }
+
+
+        /* Note */
+
+        .go-note {
+            margin-top: 35px;
+            padding: 18px 22px;
+            background: #fff8df;
+            border-left: 5px solid #e5b52b;
+            border-radius: 6px;
+            line-height: 1.65;
+        }
+
+
+        /* Navigation */
+
+        .go-navigation {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .go-navigation a {
+            display: inline-block;
+            margin: 6px;
+            padding: 11px 18px;
+            border-radius: 22px;
+            text-decoration: none;
+            font-weight: 600;
+            background: #173f68;
+            color: #ffffff;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            .go-page {
+                width: 94%;
+                padding-top: 25px;
+            }
+
+            .go-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .go-card {
+                padding: 20px;
+            }
+
+            .go-filters {
+                gap: 8px;
+            }
+
+            .go-filter {
+                padding: 10px 13px;
+            }
+
+            .go-actions {
+                flex-direction: column;
+            }
+
+            .go-button {
+                display: block;
+                text-align: center;
+                padding: 14px;
+            }
+
+            .go-navigation a {
+                display: block;
+                margin: 10px 0;
+                padding: 14px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<main class="go-page">
+
+
+    <!-- ==========================================
+         Header
+         ========================================== -->
+
+    <header class="go-header">
+
+        <div class="archive-label">
+            TTPA ARCHIVES
+        </div>
+
+        <h1>
+            Government Orders &amp; Clarifications
+        </h1>
+
+        <p>
+            A reference collection of selected Government Orders,
+            clarification letters and policy documents relevant to
+            pensioners and family pensioners.
+        </p>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         Search
+         ========================================== -->
+
+    <div class="go-search">
+
+        <label for="goSearch">
+            Search Government Orders
+        </label>
+
+        <input
+            type="search"
+            id="goSearch"
+            placeholder="Search by G.O. number, subject, department or keyword">
+
+    </div>
+
+
+
+    <!-- ==========================================
+         Filters
+         ========================================== -->
+
+    <div class="go-filters">
+
+        <button class="go-filter active"
+                data-category="all">
+            All
+        </button>
+
+        <button class="go-filter"
+                data-category="pension-benefits">
+            Pension Benefits
+        </button>
+
+        <button class="go-filter"
+                data-category="pension-policy">
+            Pension Policy
+        </button>
+
+        <button class="go-filter"
+                data-category="health-insurance">
+            Health Insurance
+        </button>
+
+    </div>
+
+
+    <p class="go-count" id="goCount">
+        5 documents found
+    </p>
+
+
+
+    <!-- ==========================================
+         Government Orders
+         ========================================== -->
+
+    <section class="go-list">
+
+
+        <!-- ======================================
+             GO 1
+             ====================================== -->
+
+        <article class="go-card"
+                 data-category="pension-benefits">
+
+            <div class="go-category">
+                Pension Benefits
+            </div>
+
+            <h2>
+                Letter No. 7277 / Pension / 2018
+            </h2>
+
+            <div class="go-date">
+                21 February 2018
+            </div>
+
+            <div class="go-details">
+
+                <p>
+                    <strong>Department:</strong><br>
+                    Finance (Pension) Department,
+                    Government of Tamil Nadu
+                </p>
+
+                <p>
+                    <strong>Document Type:</strong><br>
+                    Government Clarification Letter / Circular
+                </p>
+
+                <p>
+                    <strong>Subject:</strong><br>
+                    Pensioners / Family Pensioners – Request for
+                    clarification regarding Additional Pension and
+                    Additional Family Pension
+                </p>
+
+            </div>
+
+            <div class="go-summary">
+
+                <h3>At a Glance</h3>
+
+                This clarification addresses procedural delays in
+                sanctioning additional pension and additional family
+                pension to beneficiaries aged 80 years and above.
+
+                Where the date of birth is not recorded in the original
+                Pension Payment Order, age may be verified through
+                accepted identity documents such as PAN Card, SSLC,
+                Passport, Driving Licence, Voter ID or other accepted
+                identity proof.
+
+                It also provides for applications through Form 14,
+                where applicable, to facilitate sanction without
+                avoidable procedural delay.
+
+            </div>
+
+            <div class="go-actions">
+
+                <a href="government-orders/go-file-1.pdf"
+                   target="_blank"
+                   class="go-button">
+                    👁 View Document
+                </a>
+
+                <a href="government-orders/go-file-1.pdf"
+                   download
+                   class="go-button secondary">
+                    ⬇ Download PDF
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ======================================
+             GO 2
+             ====================================== -->
+
+        <article class="go-card"
+                 data-category="pension-policy">
+
+            <div class="go-category">
+                Pension Policy
+            </div>
+
+            <h2>
+                G.O.(Ms).No.165
+            </h2>
+
+            <div class="go-date">
+                31 May 2023
+            </div>
+
+            <div class="go-details">
+
+                <p>
+                    <strong>Department:</strong><br>
+                    Finance (Pension) Department
+                </p>
+
+                <p>
+                    <strong>Document Type:</strong><br>
+                    Government Order (Ms)
+                </p>
+
+                <p>
+                    <strong>Subject:</strong><br>
+                    Pension / Family Pension – Simplification of
+                    mustering process – Tamil Nadu State Government
+                    Pensioners – Annual Mustering of Pensioners /
+                    Family Pensioners during the month of their
+                    retirement / commencement – Orders issued
+                </p>
+
+            </div>
+
+            <div class="go-summary">
+
+                <h3>At a Glance</h3>
+
+                The Government revised the annual mustering process
+                for State Government pensioners and family pensioners.
+
+                With effect from 1 July 2023, annual mustering is
+                conducted during the month corresponding to the
+                pensioner's retirement or commencement of family
+                pension instead of restricting mustering to a fixed
+                July–September period.
+
+                A one-month grace period is provided before pension
+                payment is stopped for non-mustering.
+
+            </div>
+
+            <div class="go-actions">
+
+                <a href="government-orders/go-file-2.pdf"
+                   target="_blank"
+                   class="go-button">
+                    👁 View Document
+                </a>
+
+                <a href="government-orders/go-file-2.pdf"
+                   download
+                   class="go-button secondary">
+                    ⬇ Download PDF
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ======================================
+             GO 3
+             ====================================== -->
+
+        <article class="go-card"
+                 data-category="pension-policy">
+
+            <div class="go-category">
+                Pension Policy
+            </div>
+
+            <h2>
+                G.O. (Ms) No. 42
+            </h2>
+
+            <div class="go-date">
+                7 February 2011
+            </div>
+
+            <div class="go-details">
+
+                <p>
+                    <strong>Department:</strong><br>
+                    Finance (Pension) Department,
+                    Government of Tamil Nadu
+                </p>
+
+                <p>
+                    <strong>Document Type:</strong><br>
+                    Government Order (Ms)
+                </p>
+
+                <p>
+                    <strong>Subject:</strong><br>
+                    Pension / Family Pension – Sanction of Additional
+                    Pension and Additional Family Pension – Orders issued
+                </p>
+
+            </div>
+
+            <div class="go-summary">
+
+                <h3>At a Glance</h3>
+
+                This order sanctions additional pension and additional
+                family pension for State Government pensioners and
+                family pensioners aged 80 years and above, with monetary
+                benefit from 1 January 2011.
+
+                The additional pension is prescribed at 20% for
+                80–84 years, 30% for 85–89 years, 40% for 90–94 years,
+                50% for 95–99 years and 100% for persons aged
+                100 years and above.
+
+                The order also contains provisions relating to age
+                verification and financial accounting.
+
+            </div>
+
+            <div class="go-actions">
+
+                <a href="government-orders/go-file-3.pdf"
+                   target="_blank"
+                   class="go-button">
+                    👁 View Document
+                </a>
+
+                <a href="government-orders/go-file-3.pdf"
+                   download
+                   class="go-button secondary">
+                    ⬇ Download PDF
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ======================================
+             GO 4
+             ====================================== -->
+
+        <article class="go-card"
+                 data-category="health-insurance">
+
+            <div class="go-category">
+                Health Insurance
+            </div>
+
+            <h2>
+                G.O.Ms.No.123
+            </h2>
+
+            <div class="go-date">
+                24 June 2026
+            </div>
+
+            <div class="go-details">
+
+                <p>
+                    <strong>Department:</strong><br>
+                    Finance [Health Insurance] Department
+                </p>
+
+                <p>
+                    <strong>Document Type:</strong><br>
+                    Government Order
+                </p>
+
+                <p>
+                    <strong>Subject:</strong><br>
+                    Implementation of the New Health Insurance Scheme,
+                    2026 for Pensioners (including spouse) / Family
+                    Pensioners through United India Insurance Company
+                    Limited, Chennai
+                </p>
+
+            </div>
+
+            <div class="go-summary">
+
+                <h3>At a Glance</h3>
+
+                The order implements the New Health Insurance Scheme,
+                2026 for eligible pensioners and family pensioners for
+                the five-year block period from
+                <strong>1 July 2026 to 30 June 2031</strong>.
+
+                It provides cashless healthcare assistance up to
+                <strong>₹7.50 lakh</strong> for approved treatments and
+                surgeries and up to <strong>₹12 lakh</strong> for
+                specified enhanced illnesses on a floater basis.
+
+                The annual premium is ₹7,728 per pensioner, with
+                ₹644 recovered monthly from pension from July 2026.
+                The scheme covers 2,992 approved treatments/surgeries
+                through empanelled hospitals, subject to the provisions
+                of the Government Order.
+
+            </div>
+
+            <div class="go-actions">
+
+                <a href="government-orders/go-file-4.pdf"
+                   target="_blank"
+                   class="go-button">
+                    👁 View Document
+                </a>
+
+                <a href="government-orders/go-file-4.pdf"
+                   download
+                   class="go-button secondary">
+                    ⬇ Download PDF
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ======================================
+             GO 5
+             ====================================== -->
+
+        <article class="go-card"
+                 data-category="health-insurance">
+
+            <div class="go-category">
+                Health Insurance
+            </div>
+
+            <h2>
+                G.O.Ms.No.204
+            </h2>
+
+            <div class="go-date">
+                30 June 2022
+            </div>
+
+            <div class="go-details">
+
+                <p>
+                    <strong>Department:</strong><br>
+                    Finance [Health Insurance] Department
+                </p>
+
+                <p>
+                    <strong>Document Type:</strong><br>
+                    Government Order
+                </p>
+
+                <p>
+                    <strong>Subject:</strong><br>
+                    Medical Aid – New Health Insurance Scheme, 2022
+                    for Pensioners (including spouse) / Family Pensioners –
+                    Provision of Health Care Assistance through United
+                    India Insurance Company Limited, Chennai –
+                    Implementation – Orders issued
+                </p>
+
+            </div>
+
+            <div class="go-summary">
+
+                <h3>At a Glance</h3>
+
+                This order implemented the New Health Insurance Scheme,
+                2022 for Tamil Nadu State pensioners and family
+                pensioners for the four-year block period from
+                <strong>1 July 2022 to 30 June 2026</strong>.
+
+                It provided cashless medical assistance up to
+                <strong>₹5 lakh</strong> generally and up to
+                <strong>₹10 lakh</strong> for specified critical
+                illnesses.
+
+                The scheme covered 203 approved procedures and
+                1,221 empanelled hospitals. The annual premium was
+                ₹5,472 plus GST per pensioner, with a monthly recovery
+                of ₹497 from pension beginning July 2022.
+
+            </div>
+
+            <div class="go-actions">
+
+                <a href="government-orders/go-file-5.pdf"
+                   target="_blank"
+                   class="go-button">
+                    👁 View Document
+                </a>
+
+                <a href="government-orders/go-file-5.pdf"
+                   download
+                   class="go-button secondary">
+                    ⬇ Download PDF
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- Important Note -->
+
+    <div class="go-note">
+
+        <strong>Important:</strong>
+        The summaries provided on this page are intended only for
+        convenient reference. For interpretation, eligibility,
+        entitlement and implementation, readers should refer to the
+        complete Government Order or official document.
+
+    </div>
+
+
+
+    <!-- Navigation -->
+
+    <nav class="go-navigation">
+
+        <a href="archives.html">
+            ← Back to Archives
+        </a>
+
+        <a href="index.html">
+            🏠 Home
+        </a>
+
+    </nav>
+
+
+</main>
+
+
+
+<!-- ==========================================
+     SEARCH AND CATEGORY FILTER
+     ========================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const searchInput =
+        document.getElementById("goSearch");
+
+    const filterButtons =
+        document.querySelectorAll(".go-filter");
+
+    const cards =
+        document.querySelectorAll(".go-card");
+
+    const count =
+        document.getElementById("goCount");
+
+    let activeCategory = "all";
+
+
+    function filterDocuments() {
+
+        const searchTerm =
+            searchInput.value.toLowerCase().trim();
+
+        let visibleCount = 0;
+
+
+        cards.forEach(function (card) {
+
+            const cardText =
+                card.textContent.toLowerCase();
+
+            const cardCategory =
+                card.dataset.category;
+
+
+            const matchesSearch =
+                searchTerm === "" ||
+                cardText.includes(searchTerm);
+
+
+            const matchesCategory =
+                activeCategory === "all" ||
+                cardCategory === activeCategory;
+
+
+            if (matchesSearch && matchesCategory) {
+
+                card.style.display = "block";
+                visibleCount++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        if (visibleCount === 1) {
+
+            count.textContent =
+                "1 document found";
+
+        } else {
+
+            count.textContent =
+                visibleCount +
+                " documents found";
+
+        }
+
+    }
+
+
+    searchInput.addEventListener(
+        "input",
+        filterDocuments
+    );
+
+
+    filterButtons.forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            filterButtons.forEach(function (btn) {
+                btn.classList.remove("active");
+            });
+
+
+            button.classList.add("active");
+
+            activeCategory =
+                button.dataset.category;
+
+            filterDocuments();
+
+        });
+
+    });
+
+
+    filterDocuments();
+
+});
+
+</script>
+
+
+</body>
+
+</html>
