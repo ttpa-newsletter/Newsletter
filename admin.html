@@ -520,60 +520,109 @@
 
     <!-- SUMMARY CARDS -->
 
-    <section class="admin-summary">
+<section class="admin-summary">
 
-        <article class="admin-summary-card">
+    <article class="admin-summary-card">
 
-            <span class="admin-summary-icon">👥</span>
+        <span class="admin-summary-icon">👥</span>
 
-            <h2>Unique Visitors</h2>
+        <h2>Unique Visitors</h2>
 
-            <strong id="adminVisitorCount">
-                —
-            </strong>
+        <strong id="adminVisitorCount">
+            —
+        </strong>
 
-        </article>
-
-
-        <article class="admin-summary-card">
-
-            <span class="admin-summary-icon">👍</span>
-
-            <h2>Useful</h2>
-
-            <strong id="adminUpCount">
-                —
-            </strong>
-
-        </article>
+    </article>
 
 
-        <article class="admin-summary-card">
+    <article class="admin-summary-card">
 
-            <span class="admin-summary-icon">👎</span>
+        <span class="admin-summary-icon">📅</span>
 
-            <h2>Not Useful</h2>
+        <h2>Visitor-Days</h2>
 
-            <strong id="adminDownCount">
-                —
-            </strong>
+        <strong id="adminVisitDayCount">
+            —
+        </strong>
 
-        </article>
+    </article>
 
 
-        <article class="admin-summary-card">
+    <article class="admin-summary-card">
 
-            <span class="admin-summary-icon">💬</span>
+        <span class="admin-summary-icon">⏱️</span>
 
-            <h2>Private Feedback</h2>
+        <h2>Total Active Reading Time</h2>
 
-            <strong id="adminFeedbackCount">
-                —
-            </strong>
+        <strong id="adminTotalReadingTime">
+            —
+        </strong>
 
-        </article>
+    </article>
 
-    </section>
+
+    <article class="admin-summary-card">
+
+        <span class="admin-summary-icon">📖</span>
+
+        <h2>Average Active Reading Time</h2>
+
+        <strong id="adminAverageReadingTime">
+            —
+        </strong>
+
+    </article>
+
+
+    <article class="admin-summary-card">
+
+        <span class="admin-summary-icon">👍</span>
+
+        <h2>Useful</h2>
+
+        <strong id="adminUpCount">
+            —
+        </strong>
+
+    </article>
+
+
+    <article class="admin-summary-card">
+
+        <span class="admin-summary-icon">👎</span>
+
+        <h2>Not Useful</h2>
+
+        <strong id="adminDownCount">
+            —
+        </strong>
+
+    </article>
+
+
+    <article class="admin-summary-card">
+
+        <span class="admin-summary-icon">💬</span>
+
+        <h2>Private Feedback</h2>
+
+        <strong id="adminFeedbackCount">
+            —
+        </strong>
+
+    </article>
+<article class="admin-summary-card">
+
+    <span class="admin-summary-icon">⏳</span>
+
+    <h2>Pending Feedback</h2>
+
+    <strong id="adminPendingFeedbackCount">
+        –
+    </strong>
+
+</article>
+</section>
 
 <!-- PAGE-WISE VISITS -->
 
@@ -590,19 +639,23 @@
             <thead>
 
                 <tr>
-                    <th>Page</th>
-                    <th>Unique Visitors</th>
-                    <th>Total Visit Days</th>
-                </tr>
+    <th>Page</th>
+    <th>Unique Visitors</th>
+    <th>Visitor-Days</th>
+    <th>Total Active Reading Time</th>
+    <th>Average Active Reading Time</th>
+</tr>
 
             </thead>
 
             <tbody id="adminVisitorTable">
 
                 <tr>
-                    <td colspan="3">
-                        Visitor statistics will appear here.
-                    </td>
+                    <tr>
+    <td colspan="5">
+        Visitor statistics will appear here.
+    </td>
+</tr>
                 </tr>
 
             </tbody>
@@ -668,9 +721,10 @@
 
                     <tr>
                         <th>Date</th>
-                        <th>Page</th>
-                        <th>Type</th>
-                        <th>Feedback</th>
+<th>Page</th>
+<th>Type</th>
+<th>Feedback</th>
+<th>Status</th>
                     </tr>
 
                 </thead>
@@ -678,7 +732,7 @@
                 <tbody id="adminFeedbackTable">
 
                     <tr>
-                        <td colspan="4">
+                        <td colspan="5">
                             Feedback will appear here.
                         </td>
                     </tr>

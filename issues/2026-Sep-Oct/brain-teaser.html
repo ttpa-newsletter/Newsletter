@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Brain Teaser | TTPA Multimedia Newsletter
+    </title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+</head>
+
+<body>
+
+<!-- ===================================================
+     Navigation Bar
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="index.html"
+               class="active">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<main class="article-page"
+      id="top">
+
+
+    <!-- Breadcrumb -->
+
+    <div class="breadcrumb">
+
+        <a href="../../index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="index.html">
+            September–October 2026
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Brain Teaser
+        </span>
+
+    </div>
+
+
+    <!-- Page Header -->
+
+    <div class="article-header">
+
+        <div class="article-section">
+            BRAIN TEASER
+        </div>
+
+        <h1>
+            Spot the 4 Differences
+        </h1>
+
+       <p class="article-subtitle">
+    Compare Image A and Image B carefully.
+    Find the four differences and tap or click them
+    <strong>on the regular Image B below</strong>.
+    Use the Enlarge buttons only for a closer look.
+</p>
+
+    </div>
+
+
+    <!-- Game Status -->
+
+    <div class="brain-status">
+
+        <strong id="brainScore">
+            0 of 4 found
+        </strong>
+
+        <p id="brainMessage"
+           aria-live="polite">
+            Take your time and look closely.
+        </p>
+
+    </div>
+
+<div class="brain-play-instruction">
+
+    <strong>How to Play:</strong>
+
+    Compare both images carefully. You may enlarge either image
+    for closer examination, but the enlarged images are
+    <strong>for viewing only</strong>.
+
+    To record your answer, return to the regular
+    <strong>Image B</strong> and tap or click directly on the
+    difference you have spotted.
+
+</div>
+    <!-- ===================================================
+     BRAIN TEASER IMAGES
+     =================================================== -->
+
+<div class="brain-comparison">
+
+    <!-- IMAGE A -->
+
+    <section class="brain-image-section">
+
+        <h2 class="brain-image-label">
+            Image A
+        </h2>
+
+        <div class="brain-image-frame">
+
+            <img src="../../images/administrative-block.jpg"
+                 alt="Administrative Block - Image A"
+                 class="brain-image">
+
+        </div>
+
+        <button type="button"
+                class="brain-enlarge-btn"
+                data-image="../../images/administrative-block.jpg"
+                data-title="Image A">
+            🔍 Enlarge Image A
+        </button>
+
+    </section>
+
+
+    <!-- IMAGE B -->
+
+    <section class="brain-image-section">
+
+        <h2 class="brain-image-label">
+            Image B
+        </h2>
+
+        <div class="brain-image-frame brain-click-area"
+             id="brainImageB">
+
+            <img src="../../images/administrative-block-copy.jpg"
+                 alt="Administrative Block - Image B"
+                 class="brain-image brain-image-b"
+                 draggable="false">
+
+        </div>
+
+        <button type="button"
+                class="brain-enlarge-btn"
+                data-image="../../images/administrative-block-copy.jpg"
+                data-title="Image B">
+            🔍 Enlarge Image B
+        </button>
+
+    </section>
+
+</div>
+
+
+
+
+    <!-- ===================================================
+         Completion Panel
+         =================================================== -->
+
+    <div class="brain-complete"
+         id="brainComplete"
+         hidden>
+
+        <h2>
+            🎉 Excellent! You found all 4 differences.
+        </h2>
+
+        <p>
+            Your observation is as sharp as your memories of MVC!
+        </p>
+
+        <div class="brain-buttons">
+
+            <button type="button"
+                    class="btn"
+                    id="brainPlayAgain">
+                🔄 Play Again
+            </button>
+
+            <a href="index.html"
+               class="btn">
+                ➡️ Back to Contents
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================================
+         Feedback Panel
+         =================================================== -->
+
+    <div class="brain-feedback"
+         id="brainFeedback"
+         hidden>
+
+        <h2>
+            Did you enjoy this Brain Teaser?
+        </h2>
+
+        <div class="feedback-options">
+
+            <button type="button">
+                😀 Very much
+            </button>
+
+            <button type="button">
+                🙂 Yes
+            </button>
+
+            <button type="button">
+                😐 Not much
+            </button>
+
+        </div>
+
+
+        <h3>
+            Would you like more such games?
+        </h3>
+
+        <div class="feedback-options">
+
+            <button type="button">
+                Yes
+            </button>
+
+            <button type="button">
+                No
+            </button>
+
+        </div>
+
+
+        <label for="brainComment">
+            Optional comment:
+        </label>
+
+        <textarea id="brainComment"
+                  rows="4"
+                  placeholder="Share your suggestion or memory about this building."></textarea>
+
+        <p class="feedback-note">
+            Feedback collection will be activated when an external
+            submission service is connected.
+        </p>
+
+    </div>
+
+
+    <!-- Page Navigation -->
+
+    <div class="article-navigation">
+
+        <a href="index.html"
+           class="btn">
+            ← Back to Contents
+        </a>
+
+        <a href="#top"
+           class="btn">
+            ↑ Back to Top
+        </a>
+
+    </div>
+<!-- ===================================================
+     IMAGE ENLARGEMENT
+     =================================================== -->
+
+<div class="brain-lightbox"
+     id="brainLightbox"
+     hidden>
+
+    <div class="brain-lightbox-content">
+
+        <button type="button"
+                class="brain-lightbox-close"
+                id="brainLightboxClose"
+                aria-label="Close enlarged image">
+            ×
+        </button>
+
+        <h2 id="brainLightboxTitle">
+            Enlarged Image
+        </h2>
+
+        <img id="brainLightboxImage"
+             src=""
+             alt="Enlarged Brain Teaser image">
+
+        <div class="brain-view-only-note">
+
+    🔍 <strong>VIEW ONLY</strong>
+
+    <p>
+        Use this enlarged image only for closer examination.
+        Clicking or tapping here will not record an answer.
+    </p>
+
+    <p>
+        Close this view using <strong>×</strong>, then tap or
+        click the difference on the regular <strong>Image B</strong>
+        to play the game.
+    </p>
+
+</div>
+
+    </div>
+
+</div>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/script.js"></script>
+<script src="../../js/engagement.js"></script>
+</body>
+
+</html>
