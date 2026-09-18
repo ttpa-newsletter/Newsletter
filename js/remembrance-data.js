@@ -546,9 +546,9 @@ const remembranceData = [
         department: "Pathology"
     },
 
-    {
-        image: "late-dr-s-viswanathan.png",
-        displayName: "Late Dr S. Viswanathan",
+       {
+        image: "late-dr-s-viswanathan-pathology.jpg",
+        displayName: "Late Dr. S. Viswanathan",
         sortName: "Viswanathan",
         department: "Pathology"
     },
@@ -604,10 +604,10 @@ const remembranceData = [
         department: "Pharmacology"
     },
 
-    {
-        image: "late-dr-s-selvasubramaniam.png",
-        displayName: "Late Dr S. Selvasubramaniam",
-        sortName: "Selvasubramaniam",
+       {
+        image: "late-dr-s-selvasubramanian.jpg",
+        displayName: "Late Dr. S. Selvasubramanian",
+        sortName: "Selvasubramanian",
         department: "Pharmacology"
     },
 
@@ -954,10 +954,17 @@ const remembranceData = [
         department: "Animal Husbandry Extension"
     },
 
-    {
+     {
         image: "late-dr-g-rajagopal.png",
         displayName: "Late Dr G. Rajagopal",
         sortName: "Rajagopal",
         department: "Animal Nutrition"
+    },
+
+    {
+        image: "late-mr-t-radhakrishnan.jpg",
+        displayName: "Late Mr. T. Radhakrishnan",
+        sortName: "Radhakrishnan",
+        department: "Statistics"
     }
 ];

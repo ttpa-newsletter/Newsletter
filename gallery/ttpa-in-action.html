@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        TTPA in Action: Meetings & Milestones| TTPA Multimedia Newsletter
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        .gallery-introduction {
+            max-width: 850px;
+            margin: 0 auto 32px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 30px;
+        }
+
+        .milestone-card {
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d7e0e8;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px
+                        rgba(18, 52, 90, 0.12);
+        }
+
+        .event-photo-link {
+            display: block;
+            background: #eef3f7;
+        }
+
+       .event-photo {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
+        /* Annual General Body Meeting photo layout */
+
+        .agm-card {
+            grid-column: 1 / -1;
+        }
+
+        .meeting-photo-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            padding: 14px;
+            background: #eef3f7;
+        }
+
+        .meeting-photo-item {
+            margin: 0;
+        }
+
+        .meeting-photo-grid .event-photo {
+            width: 100%;
+            height: 310px;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .meeting-photo-caption {
+            margin: 8px 0 0;
+            color: #42566a;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+
+            .meeting-photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-photo-grid .event-photo {
+                height: 260px;
+            }
+        }
+        .milestone-content {
+            padding: 22px;
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: #ffffff;
+            background: #246b85;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .milestone-content h2 {
+            margin: 4px 0 16px;
+            color: #12345a;
+            font-size: 1.35rem;
+            line-height: 1.35;
+        }
+
+        .couple-names {
+            margin: 0 0 18px;
+            color: #263746;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .qualification {
+            font-size: 0.84em;
+            font-weight: 400;
+        }
+
+        .member-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+            padding: 14px;
+            background: #f2f7fa;
+            border-radius: 10px;
+        }
+
+        .member-portrait {
+            width: 78px;
+            height: 78px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 7px
+                        rgba(18, 52, 90, 0.18);
+        }
+
+        .member-label {
+            margin: 0 0 3px;
+            color: #5b6874;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .member-name {
+            margin: 0;
+            color: #12345a;
+            font-weight: 700;
+        }
+
+        .greeting {
+            margin: 18px 0 0;
+            padding-top: 15px;
+            border-top: 1px solid #d7e0e8;
+            color: #334a5f;
+            line-height: 1.6;
+        }
+
+        .gallery-note {
+            margin: 35px auto 10px;
+            padding: 18px;
+            max-width: 850px;
+            color: #30475b;
+            background: #eef6f9;
+            border-left: 5px solid #246b85;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+.photo-viewer {
+    width: min(94%, 1100px);
+    max-height: 94vh;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px
+                rgba(0, 0, 0, 0.35);
+}
+
+.photo-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.photo-viewer-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 94vh;
+}
+
+.photo-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    color: #ffffff;
+    background: #12345a;
+}
+
+.photo-viewer-instruction {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.photo-viewer-close {
+    min-height: 46px;
+    padding: 10px 16px;
+    color: #12345a;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enlarged-photo {
+    display: block;
+    width: 100%;
+    max-height: calc(94vh - 78px);
+    object-fit: contain;
+    background: #111111;
+}
+        @media (max-width: 600px) {
+
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+
+         .event-photo {
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+            .milestone-content {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../archives.html">
+                Archives
+            </a>
+
+            <a href="../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../videos.html">
+                Videos &amp; Links
+            </a>
+
+            <a href="../pdf.html">
+                PDF
+            </a>
+
+            <a href="../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        TTPA in Action: Meetings & Milestones
+    </h1>
+
+    <p>
+        Sharing joyful occasions and proud achievements
+        from the families of TTPA members
+    </p>
+
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+    <div class="breadcrumb">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="../gallery.html">
+            Gallery
+        </a>
+
+        <span>›</span>
+
+        <span>
+            TTPA in Action: Meetings & Milestones
+        </span>
+
+    </div>
+
+
+    <p class="gallery-introduction">
+
+    This collection documents Executive Committee meetings,
+    Annual General Body meetings, felicitation programmes
+    and other significant activities of the Teachers
+    Pensioners' Association.
+
+</p>
+<h2 class="activity-section-title"
+    id="executive-committee-meetings">
+    Executive Committee Meetings
+</h2>
+<section class="milestone-grid"
+         aria-labelledby="executive-committee-meetings">
+    <!-- ===================================================
+     Executive Committee Meeting — 2 October 2023
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-tiruchirappalli-02-10-2023.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-tiruchirappalli-02-10-2023.jpg"
+             alt="TTPA Executive Committee Meeting at Tiruchirappalli"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            2 October 2023
+        </span>
+
+        <h2>
+            TTPA Executive Committee Meets
+            at Tiruchirappalli
+        </h2>
+
+        <p class="couple-names">
+            Executive Committee Meeting • Tiruchirappalli
+        </p>
+
+
+        <p>
+            The TTPA Executive Committee met at Tiruchirappalli
+            under the chairmanship of President Dr. N. Natarajan.
+            Dr. M. Babu welcomed the members, and General Secretary
+            Dr. K. S. Palaniswami presented the agenda and the
+            minutes of the previous meeting for confirmation.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. M. Babu</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. V. Balakrishnan</li>
+            <li>Dr. S. Sivaselvam</li>
+            <li>Dr. N. Punniamurthy</li>
+
+        </ol>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                Guidelines were approved for voluntary donations
+                and the establishment and administration of
+                endowments.
+            </li>
+
+            <li>
+                The TTPA Excellence Award was proposed to recognise
+                deserving TANUVAS students in academics, sports,
+                games and other talents.
+            </li>
+
+            <li>
+                The objectives and format of the first quarterly
+                TTPA Newsletter were presented by Editor
+                Dr. V. Balakrishnan. The draft issue was released
+                by the President and received by the Editor.
+            </li>
+
+            <li>
+                The handbook <em>Veterinary Herbal Medicine</em>,
+                authored and compiled by
+                Rtn. Prof. N. Punniamurthy, was put into circulation.
+            </li>
+
+            <li>
+                Financial accounts, investment arrangements,
+                voluntary annual contributions and the proposed
+                TTPA Directory 2023 were discussed.
+            </li>
+
+            <li>
+                Members discussed furnishing the TTPA office,
+                NHIS and Life Certificate matters, and conducting
+                alternate Executive Committee meetings outside
+                Chennai.
+            </li>
+
+        </ul>
+
+
+        <p class="greeting">
+            The meeting concluded with obituary references,
+            two minutes of silence in remembrance of departed
+            pensioners, and a vote of thanks to the organisers.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 16 December 2023
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-16-12-23.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-16-12-23.jpg"
+             alt="TTPA Executive Committee Meeting at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            16 December 2023
+        </span>
+
+        <h2>
+            Honouring Leadership and Planning Ahead:
+            TTPA Executive Committee Meeting
+        </h2>
+
+        <p class="couple-names">
+            Dr. M. R. Srinivasulu Block,
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            President Dr. N. Natarajan welcomed the members.
+            The Executive Committee felicitated him as he entered
+            his ninetieth year and respectfully sought his blessings.
+            The minutes of the previous meeting held at
+            Tiruchirappalli were approved.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. A. Koteeswaran</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. V. Balakrishnan</li>
+            <li>Dr. S. Gomathinayagam</li>
+
+        </ol>
+
+
+        <h3>
+            Special Invitees
+        </h3>
+
+        <ul>
+
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. A. V. Omprakash</li>
+
+        </ul>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                Recently retired professors Dr. G. Dhinakar Raj
+                and Dr. A. V. Omprakash were welcomed and enrolled
+                as TTPA members.
+            </li>
+
+            <li>
+                It was decided to felicitate pensioners following
+                their superannuation at subsequent Executive
+                Committee or General Body meetings.
+            </li>
+
+            <li>
+                The Editor presented the proposed contents of the
+                e-newsletter, which were accepted by the Committee.
+            </li>
+
+            <li>
+                The Committee proposed including New Year greetings
+                from the President, General Secretary and
+                Vice-Chancellor.
+            </li>
+
+            <li>
+                It was decided to publish brief accounts of former
+                doyens of the profession, beginning with
+                Professor Mariappa, former Head of Veterinary Anatomy.
+            </li>
+
+            <li>
+                The audited statement for 2022–23 was presented
+                by the Treasurer and approved.
+            </li>
+
+            <li>
+                The Committee discussed renewal of TTPA,
+                distribution of new NHIS cards and arrangements
+                for the General Body Meeting scheduled for
+                3 February 2024.
+            </li>
+
+            <li>
+                The proposed TTPA Excellence Award and its
+                application and selection procedures were reviewed.
+            </li>
+
+            <li>
+                Dr. G. Dhinakar Raj was nominated to fill the
+                existing vacancy in the Executive Committee.
+            </li>
+
+        </ul>
+
+
+        <p class="greeting">
+            The meeting concluded on a cordial note with a vote
+            of thanks proposed by Dr. P. Ramadass.
+        </p>
+
+    </div>
+
+</article>
+<!-- ===================================================
+     10th Executive Committee Meeting — 11 May 2024
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-11-05-24.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-11-05-24.jpg"
+             alt="TTPA Executive Committee Meeting held at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            11 May 2024
+        </span>
+
+        <h2>
+            Strengthening Institutional Recognition
+            and Member Welfare
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The Executive Committee Meeting of TTPA
+            commenced at 10.30 a.m. with Tamil Thai Vazhthu.
+            President Dr. N. Natarajan welcomed the Executive
+            Committee members, special invitees and newly
+            retired faculty members.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. A. Koteeswaran</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. D. Kathiresan</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. V. Venkataramanujam</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. V. Balakrishnan</li>
+
+        </ol>
+
+
+        <h3>
+            Special Invitees
+        </h3>
+
+        <ul>
+
+            <li>Dr. P. Kumarasami</li>
+            <li>Dr. K. Shanthi</li>
+            <li>Dr. Cecilia Joseph</li>
+
+        </ul>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                The contributions of six recently retired faculty
+                members were recorded for publication in the
+                forthcoming TTPA e-newsletter.
+            </li>
+
+            <li>
+                A committee was constituted to pursue formal
+                recognition of TTPA by TANUVAS and subsequently
+                by the Government of Tamil Nadu.
+            </li>
+
+            <li>
+                The accounts for 2023–24 were presented, and
+                Dr. Cecilia Joseph was nominated as Joint Treasurer.
+            </li>
+
+            <li>
+                Dr. N. Natarajan received a standing ovation for
+                contributing ₹1 lakh towards the Association’s
+                core fund.
+            </li>
+
+            <li>
+                The Committee discussed obtaining 80G status,
+                statutory returns and the administration of
+                voluntary contributions and endowments.
+            </li>
+
+            <li>
+                Family pensioners may be enrolled as members
+                following the demise of regular pensioners,
+                subject to their consent and payment of the
+                prescribed admission fee.
+            </li>
+
+            <li>
+                The Committee considered legal support for
+                unresolved audit objections and emergency
+                financial assistance for pensioners and
+                family pensioners.
+            </li>
+
+            <li>
+                Experiences relating to NHIS benefits and easier
+                Life Certificate submission were discussed for
+                the guidance of pensioners.
+            </li>
+
+            <li>
+                The next General Body Meeting was proposed to be
+                held at Veterinary College and Research Institute,
+                Namakkal, during August 2024.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Obituary References
+        </h3>
+
+        <p>
+            The Committee mourned the passing of
+            Dr. T. S. S. Rajan and Dr. Karl Marx.
+        </p>
+
+
+        <p class="greeting">
+            Dr. D. Kathiresan, Joint Secretary, proposed the
+            vote of thanks to the Dean, Madras Veterinary College,
+            all participating members and host Dr. D. Sundararaj.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 11 July 2024
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-11-07-24.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-11-07-24.jpg"
+             alt="TTPA Executive Committee Meeting held at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            11 July 2024
+        </span>
+
+        <h2>
+            Welcoming New Members and Preparing
+            for the Namakkal General Body Meeting
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The meeting commenced at 10.30 a.m. with
+            Tamil Thai Vazhthu. Dr. S. A. Asokan welcomed
+            the gathering, including members who had recently
+            retired from TANUVAS and joined the Association.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. V. Balakrishnan</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. P. Sridevi</li>
+            <li>Dr. Cecilia Joseph</li>
+
+        </ol>
+
+
+        <h3>
+            Special Invitees
+        </h3>
+
+        <ul>
+
+            <li>Dr. Geetha Ramesh</li>
+            <li>Dr. Baskaran Ravi Latha</li>
+            <li>Dr. Ezakaiel Napolean</li>
+            <li>Dr. A. Natarajan</li>
+            <li>Dr. G. A. Balasubramaniam</li>
+            <li>Dr. S. Vairamuthu</li>
+            <li>Dr. G. V. Sudhakar Rao</li>
+
+        </ul>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                President Dr. N. Natarajan assured recently
+                retired members of the Association’s support
+                in addressing meaningful retirement and
+                welfare matters.
+            </li>
+
+            <li>
+                The General Secretary highlighted the service
+                and achievements of the new members, and the
+                minutes of the previous meeting were confirmed.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the audited
+                statement of accounts.
+            </li>
+
+            <li>
+                The Committee discussed consolidation of its
+                bank deposits and creation of a Flexi Fixed
+                Deposit with Union Bank of India.
+            </li>
+
+            <li>
+                Preparatory arrangements for the General Body
+                Meeting at Veterinary College and Research
+                Institute, Namakkal, were reviewed.
+            </li>
+
+            <li>
+                Committees were assigned responsibilities for
+                accommodation, food, hospitality and logistics
+                for the Namakkal meeting.
+            </li>
+
+            <li>
+                The Committee decided to prepare the Annual
+                Report and update the directory of pensioners.
+            </li>
+
+            <li>
+                Members appreciated the content and presentation
+                of the TTPA Newsletter and suggested collecting
+                additional copies of earlier issues for circulation.
+            </li>
+
+            <li>
+                Audit-related representations and an individual
+                pension matter were considered for appropriate
+                follow-up.
+            </li>
+
+            <li>
+                Members were invited to contribute accounts of
+                departed doyens who had distinguished themselves
+                in academic, research and extension activities.
+            </li>
+
+        </ul>
+
+
+        <p class="greeting">
+            The General Secretary concluded the meeting following
+            the deliberations. Lunch was co-hosted by
+            Dr. P. Ramadass and Dr. L. Gunaseelan.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 16 August 2024
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-16-08-24.jpeg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-16-08-24.jpeg"
+             alt="TTPA Executive Committee Meeting at VCRI Namakkal"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            16 August 2024
+        </span>
+
+        <h2>
+            Preparing for the Third Annual General Body Meeting:
+            TTPA Executive Committee at Namakkal
+        </h2>
+
+        <p class="couple-names">
+            Executive Committee Meeting •
+            Veterinary College and Research Institute, Namakkal
+        </p>
+
+
+        <p>
+            The TTPA Executive Committee met at 9.00 a.m.
+            at the Veterinary College and Research Institute,
+            Namakkal, to finalise arrangements for the Third
+            Annual General Body Meeting.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. M. Babu</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. D. Kathiresan</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Sridevi</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. Cecilia Joseph</li>
+
+        </ol>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                General Secretary Dr. K. S. Palaniswami welcomed
+                the members and informed them that the President
+                was unable to attend the Third Annual General
+                Body Meeting.
+            </li>
+
+            <li>
+                Vice-President Dr. M. Babu was requested to
+                preside over the General Body Meeting.
+            </li>
+
+            <li>
+                The agenda for the Annual General Body Meeting
+                was approved with necessary corrections.
+            </li>
+
+            <li>
+                Joint Secretary Dr. D. Kathiresan was requested
+                to present the Annual Report in the Secretary’s
+                absence.
+            </li>
+
+            <li>
+                It was decided to invite Dr. M. Selvaraju,
+                Dean, Veterinary College and Research Institute,
+                Namakkal, to deliver the inaugural address.
+            </li>
+
+            <li>
+                The Secretary’s and Treasurer’s reports proposed
+                for presentation were reviewed and approved.
+            </li>
+
+            <li>
+                Executive Committee Member Dr. P. Sridevi was
+                requested to serve as the Master of Ceremonies.
+            </li>
+
+            <li>
+                In view of the anticipated attendance, the
+                Committee decided that the General Body Meeting
+                could be reconvened after an interval of
+                30 minutes if required.
+            </li>
+
+        </ul>
+
+
+        <p class="greeting">
+            The preparatory meeting ensured that the programme,
+            reports and procedural arrangements for the Third
+            Annual General Body Meeting were finalised.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 31 August 2024
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-31-08-24.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-31-08-24.jpg"
+             alt="TTPA Executive Committee Meeting at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            31 August 2024
+        </span>
+
+        <h2>
+            Reviewing AGM Outcomes and
+            Advancing Pensioner Services
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            President Dr. N. Natarajan welcomed the Executive
+            Committee members and reviewed the successful conduct
+            of the Annual General Body Meeting at Veterinary
+            College and Research Institute, Namakkal.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. A. Koteeswaran</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. V. Balakrishnan</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. Cecilia Joseph</li>
+
+        </ol>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                The Committee recorded its appreciation to
+                Dr. M. Selvaraju, Dean, VCRI Namakkal, and the
+                organising team for the successful conduct of
+                the Annual General Body Meeting.
+            </li>
+
+            <li>
+                The faculty members and student volunteers of
+                VCRI Namakkal were thanked for their support
+                and hospitality.
+            </li>
+
+            <li>
+                Dr. Cecilia Joseph reported on the university’s
+                recognition of TTPA and the need to seek suitable
+                amendments to certain conditions in the
+                recognition order.
+            </li>
+
+            <li>
+                Pension-related audit objections concerning
+                Principal Investigators and schemes were
+                considered for resolution in consultation
+                with the University.
+            </li>
+
+            <li>
+                Secretary Dr. P. Sriram reported that the
+                Association’s Income Tax Return had been filed
+                and that documents were being assembled for
+                renewal of the Association.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the expenditure
+                incurred for the Annual General Body Meeting,
+                which was approved.
+            </li>
+
+            <li>
+                The Committee appreciated the services of
+                Dr. S. Gomathinayagam and Dr. P. Sriram and
+                approved reimbursement of expenses incurred
+                for official TTPA work.
+            </li>
+
+            <li>
+                Progress towards implementation of the Digital
+                Life Certificate facility was reviewed.
+            </li>
+
+        </ul>
+
+
+        <p class="greeting">
+            Dr. L. Gunaseelan, Executive Committee Member,
+            proposed the vote of thanks.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 4 January 2025
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-04-01-25.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-04-01-25.jpg"
+             alt="TTPA Executive Committee Meeting at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            4 January 2025
+        </span>
+
+        <h2>
+            A New Year Agenda for Welfare,
+            Recognition and Growth
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The meeting commenced at 10.30 a.m. with
+            Tamil Thai Vazhthu and New Year greetings.
+            Dr. G. Dhinakar Raj welcomed the gathering.
+            President Dr. N. Natarajan called for continued
+            collective efforts to strengthen the Association’s
+            welfare activities for faculty pensioners and
+            family pensioners.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. V. Balakrishnan</li>
+
+        </ol>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                The General Secretary reviewed TTPA’s progress
+                and obtained approval of the previous meeting’s
+                minutes.
+            </li>
+
+            <li>
+                The Secretary reported progress concerning
+                benefits for family pensioners and reconsideration
+                of the university recognition order.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the Association’s
+                current financial position and proposals for
+                consolidating fixed deposits.
+            </li>
+
+            <li>
+                The next General Body Meeting was tentatively
+                proposed for July 2025 at Mahabalipuram.
+            </li>
+
+            <li>
+                TTPA proposed to provide accommodation and food
+                for participating faculty pensioners, subject
+                to a reasonable ceiling, and allocate ₹1 lakh
+                for conducting the meeting.
+            </li>
+
+            <li>
+                Former Vice-Chancellor Dr. C. Balachandran was
+                requested to assist in revising the university
+                recognition proposal based on the Committee’s
+                suggestions.
+            </li>
+
+            <li>
+                The Committee discussed the planned bimonthly
+                publication of the TTPA Newsletter. Editor
+                Dr. V. Balakrishnan explained the compilation
+                of the e-newsletter.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Obituary References
+        </h3>
+
+        <p>
+            The Committee mourned the passing of
+            Dr. V. R. Kosalaraman, Dr. D. Mangal Raj,
+            Dr. D. Janakiram, Dr. R. Narasimhan and
+            Dr. S. R. Pattabiraman. Two minutes of silence
+            were observed as a mark of respect.
+        </p>
+
+
+        <p class="greeting">
+            Dr. D. Kathiresan, Joint Secretary, proposed the
+            vote of thanks and concluded the meeting.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 21 June 2025
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-21-6-25.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-21-6-25.jpg"
+             alt="TTPA Executive Committee Meeting at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            21 June 2025
+        </span>
+
+        <h2>
+            Welfare in Action, Service Honoured
+            and the Future Planned
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The meeting commenced at 10.30 a.m. with an
+            invocation. Dr. G. Dhinakar Raj welcomed the
+            gathering. President Dr. N. Natarajan appreciated
+            the active participation of members and sought their
+            continued support for the Association’s future
+            welfare initiatives.
+        </p>
+
+
+        <h3>
+            Members and Invitees Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan, President</li>
+            <li>Dr. K. S. Palaniswami, General Secretary</li>
+            <li>Dr. P. Sriram, Secretary</li>
+            <li>Dr. M. Sekar, Treasurer</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. V. Balakrishnan</li>
+            <li>Dr. Cecilia Joseph</li>
+            <li>Dr. C. Balachandran, Former Vice-Chancellor</li>
+            <li>Dr. K. N. Selvakumar, Former Vice-Chancellor</li>
+            <li>Dr. Asha Rajini Roberts, Special Invitee</li>
+            <li>Dr. T. N. Ganesh, Special Invitee</li>
+            <li>Dr. M. Thirunavukkarasu</li>
+            <li>Dr. C. Valli</li>
+            <li>Dr. K. Vijayarani</li>
+
+        </ol>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                A commemorative souvenir recording the personal
+                and professional journey of President
+                Dr. N. Natarajan was released by
+                Dr. K. N. Selvakumar and distributed to those
+                assembled.
+            </li>
+
+            <li>
+                Recently retired TANUVAS faculty members were
+                welcomed and felicitated. Their citations were
+                prepared and presented by Dr. V. Balakrishnan.
+            </li>
+
+            <li>
+                Secretary Dr. P. Sriram presented a detailed
+                report on the Association’s activities, and the
+                previous meeting’s minutes were approved.
+            </li>
+
+            <li>
+                TTPA’s assistance concerning Digital Life
+                Certificates, pension continuation, family
+                pensions, income-tax statements and Form 16
+                was reviewed.
+            </li>
+
+            <li>
+                Members were requested to report changes in
+                their postal addresses to ensure effective
+                communication with the Association.
+            </li>
+
+            <li>
+                TTPA provided financial assistance of ₹1.25 lakh
+                to the family of a faculty member who died while
+                in service and resolved to seek compassionate
+                employment support from the University.
+            </li>
+
+            <li>
+                It was resolved to assist needy pensioners and
+                family pensioners during compassionate and
+                emergency situations through members’
+                contributions and TTPA funds.
+            </li>
+
+            <li>
+                The next Annual General Body Meeting was scheduled
+                for 13 September 2025 at the Conference Hall,
+                Madras Veterinary College.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the financial
+                position and proposed a separate corpus fund for
+                voluntary contributions of ₹10,000 and above.
+            </li>
+
+            <li>
+                The Committee reviewed pending audit objections
+                affecting retired pensioners and the possible
+                need for legal representation.
+            </li>
+
+            <li>
+                Former Vice-Chancellor Dr. C. Balachandran
+                emphasised protection of members’ personal
+                information and timely issue of Form 16.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Remembrance
+        </h3>
+
+        <p>
+            Two minutes of silence were observed in memory of
+            departed members of the professional and pensioners’
+            families.
+        </p>
+
+
+        <p class="greeting">
+            Dr. P. Ramadass proposed the vote of thanks.
+            The meeting concluded with the National Anthem,
+            followed by lunch hosted by Secretary
+            Dr. P. Sriram.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 16 August 2025
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-16-8-25.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-16-8-25.jpg"
+             alt="TTPA Executive Committee Meeting at Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            16 August 2025
+        </span>
+
+        <h2>
+            Strengthening Grievance Redressal and
+            Preparing for the General Body Meeting
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The proceedings commenced with an invocation.
+            President Dr. N. Natarajan reflected on the
+            establishment and growth of TTPA and appreciated
+            the contributions of its office-bearers and
+            Executive Committee members.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. Cecilia Joseph</li>
+            <li>Dr. V. Balakrishnan</li>
+
+        </ol>
+
+
+        <h3>
+            Special Invitees
+        </h3>
+
+        <ul>
+
+            <li>Dr. R. Suresh Subramoniam</li>
+            <li>Dr. V. Leela</li>
+            <li>Dr. B. Mohan</li>
+
+        </ul>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                The progress of TTPA and the services rendered
+                by its office-bearers and Executive Committee
+                members were reviewed and appreciated.
+            </li>
+
+            <li>
+                Arrangements for the General Body Meeting
+                scheduled for 13 September 2025 at the
+                Conference Hall, Madras Veterinary College,
+                were discussed.
+            </li>
+
+            <li>
+                Communication arrangements for members and
+                family pensioners were planned through email,
+                post and telephone.
+            </li>
+
+            <li>
+                Committees were constituted for catering,
+                mementoes, reception and registration for
+                the General Body Meeting.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the available
+                funds and proposed expenditure for the General
+                Body Meeting and participant mementoes.
+            </li>
+
+            <li>
+                The audited financial statement for the period
+                ending 31 March 2025 was presented and approved.
+            </li>
+
+            <li>
+                Recently retired faculty members
+                Dr. R. Suresh Subramoniam, Dr. V. Leela and
+                Dr. B. Mohan were welcomed and felicitated.
+            </li>
+
+            <li>
+                A standing Grievance Redressal Committee was
+                constituted to examine matters affecting
+                pensioners and recommend appropriate action.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Grievance Redressal Committee
+        </h3>
+
+        <ul>
+
+            <li>
+                Dr. T. Shivakumar — Chairman
+            </li>
+
+            <li>
+                Dr. P. Sriram — Convener
+            </li>
+
+            <li>
+                Dr. S. Gomathinayagam — Member
+            </li>
+
+            <li>
+                Dr. M. Sekar — Member
+            </li>
+
+        </ul>
+
+        <p>
+            Members may submit grievances to the Convener
+            by email or post at least 15 days before a sitting.
+            Meeting dates will be announced in the TANUVAS
+            Pensioners Forum.
+        </p>
+
+
+        <h3>
+            Obituary References
+        </h3>
+
+        <p>
+            Obituary references were made for
+            Dr. U. S. Krishnamurthy, Dr. M. G. Richard,
+            Dr. M. Govindarajalu and
+            Dr. S. Rajagopalan of Agronomy.
+        </p>
+
+
+        <p class="greeting">
+            Lunch was jointly hosted by the President and
+            General Secretary.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 13 September 2025
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-13-9-25.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-13-9-25.jpg"
+             alt="TTPA Executive Committee Meeting at the Pharmacology Block, Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            13 September 2025
+        </span>
+
+        <h2>
+            Final Preparations for the Fourth
+            Annual General Body Meeting
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Pharmacology Block, Madras Veterinary College, Chennai
+        </p>
+
+
+        <p>
+            The Executive Committee met at the Pharmacology
+            Block, Madras Veterinary College, to discuss and
+            review the arrangements made for the ensuing
+            Fourth Annual General Body Meeting.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. A. Koteeswaran</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. V. Balakrishnan</li>
+
+        </ol>
+
+
+        <p class="greeting">
+            The meeting ensured that the programme and
+            organisational arrangements for the Fourth Annual
+            General Body Meeting were reviewed before its
+            commencement.
+        </p>
+
+    </div>
+
+</article>
+
+<!-- ===================================================
+     Executive Committee Meeting — 13 December 2025
+     =================================================== -->
+
+<article class="milestone-card">
+
+    <a class="event-photo-link"
+       href="../images/gallery/ttpa-in-action/ec-meeting-13-12-25.jpg"
+       target="_blank">
+
+        <img class="event-photo"
+             src="../images/gallery/ttpa-in-action/ec-meeting-13-12-25.jpg"
+             alt="TTPA Executive Committee Meeting at the Bioinformatics Centre, Madras Veterinary College"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="milestone-content">
+
+        <span class="event-date">
+            13 December 2025
+        </span>
+
+        <h2>
+            Planning Leadership Transition and
+            Recognising Dedicated Service
+        </h2>
+
+        <p class="couple-names">
+            TTPA Executive Committee Meeting •
+            Bioinformatics Centre, Madras Veterinary College
+        </p>
+
+
+        <p>
+            The Executive Committee met at 10.00 a.m. in the
+            Seminar Hall of the Bioinformatics Centre.
+            President Dr. N. Natarajan presided, greeted the
+            gathering and appreciated the members for the
+            efficient functioning of the Association.
+        </p>
+
+
+        <h3>
+            Members Present
+        </h3>
+
+        <ol>
+
+            <li>Dr. N. Natarajan</li>
+            <li>Dr. K. S. Palaniswami</li>
+            <li>Dr. P. Sriram</li>
+            <li>Dr. S. A. Asokan</li>
+            <li>Dr. L. Gunaseelan</li>
+            <li>Dr. S. Gomathinayagam</li>
+            <li>Dr. P. Ramadass</li>
+            <li>Dr. D. Sundararaj</li>
+            <li>Dr. G. Dhinakar Raj</li>
+            <li>Dr. M. Sekar</li>
+            <li>Dr. Cecilia Joseph</li>
+
+        </ol>
+
+
+        <h3>
+            Special Invitees
+        </h3>
+
+        <ul>
+
+            <li>Dr. R. Prabakaran</li>
+            <li>Dr. S. Thilagar</li>
+            <li>Dr. N. Daniel Joy Chandran</li>
+
+        </ul>
+
+
+        <h3>
+            Important Proceedings
+        </h3>
+
+        <ul>
+
+            <li>
+                The Committee appreciated Dr. S. Thilagar for
+                initiating the TTPA 2026 calendar and
+                Dr. R. Prabakaran for designing and arranging
+                its printing and distribution.
+            </li>
+
+            <li>
+                The General Secretary informed members that the
+                tenure of the existing office-bearers would end
+                on 23 March 2026 and outlined arrangements for
+                selecting the office-bearers and Executive
+                Committee for 2026–29.
+            </li>
+
+            <li>
+                Dr. N. Daniel Joy Chandran was appointed as the
+                Returning Officer to receive expressions of
+                willingness from members.
+            </li>
+
+            <li>
+                TTPA’s continuing assistance with pension
+                settlements, service matters and unresolved
+                audit objections was reviewed.
+            </li>
+
+            <li>
+                Dr. G. Dhinakar Raj was requested to pursue
+                recognition of TTPA by the Government.
+            </li>
+
+            <li>
+                Treasurer Dr. M. Sekar presented the financial
+                statement and was requested to remind members
+                about annual voluntary contributions and
+                outstanding amounts.
+            </li>
+
+            <li>
+                Progress concerning renewal of the Association
+                was reviewed.
+            </li>
+
+            <li>
+                Dr. L. Gunaseelan was requested to explore the
+                possibility of organising a family tour for
+                TTPA members.
+            </li>
+
+            <li>
+                The President and General Secretary proposed
+                honouring Dr. P. Sriram and
+                Dr. V. Balakrishnan as
+                “Stars of 2025” for their services to TTPA.
+            </li>
+
+        </ul>
+
+
+        <h3>
+            Remembrance
+        </h3>
+
+        <p>
+            Two minutes of silence were observed in memory of
+            members of the pensioners’ community and their
+            families who had passed away.
+        </p>
+
+
+        <p class="greeting">
+            Dr. S. A. Asokan proposed the vote of thanks.
+            TTPA thanked Dr. D. Kathiresan for hosting lunch.
+        </p>
+
+    </div>
+
+</article>
+
+        <!-- 12: 7 February 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/ttpa-in-action/ec-meeting-7-2-26.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/ttpa-in-action/ec-meeting-7-2-26.jpg"
+                     alt="TTPA Executive Committee meeting held at Madras Veterinary College on 7 February 2026"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    7 February 2026
+                </span>
+
+                <h2>
+                    Leadership Transition, Member Recognition
+                    and Preparations for the Annual General Body Meeting
+                </h2>
+
+                <p class="couple-names">
+                    Conference Hall, Madras Veterinary College,
+                    Chennai
+                </p>
+
+                <p>
+                    The Executive Committee reviewed the progress
+                    of TTPA activities and confirmed the Annual
+                    General Body Meeting scheduled for 26 April 2026.
+                    The election results for the 2026–2029 term were
+                    presented, and changes in the responsibilities of
+                    office-bearers were discussed and accepted.
+                </p>
+
+                <p>
+                    The committee reviewed the distribution of the
+                    TTPA 2026 calendar, financial matters, government
+                    recognition, audit-related representations and
+                    arrangements for recognising distinguished service
+                    and professional achievements.
+                </p>
+
+                <p>
+                    Dr. N. K. Sudeep Kumar, who retired on
+                    31 January 2026, was felicitated and welcomed as
+                    a member of TTPA. Newly appointed TANUVAS officers
+                    were also felicitated in recognition of their
+                    leadership responsibilities.
+                </p>
+
+                <p class="greeting">
+                    The meeting concluded with a vote of thanks
+                    proposed by Dr. P. Ramadass, followed by a
+                    commemorative group photograph.
+                </p>
+
+            </div>
+
+        </article>
+
+          <!-- 13: 26 April 2026 -->
+
+        <article class="milestone-card"
+         id="ec-meeting-2026-04-26">
+
+            <a class="event-photo-link"
+               href="../images/gallery/ttpa-in-action/ec-meeting-26-4-26.png"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/ttpa-in-action/ec-meeting-26-4-26.png"
+                     alt="TTPA Executive Committee meeting held at Madras Veterinary College on 26 April 2026"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    26 April 2026
+                </span>
+
+                <h2>
+                    Final Preparations for the General Body Meeting
+                    and New Newsletter Initiatives
+                </h2>
+
+                <p class="couple-names">
+                    Seminar Hall, Bioinformatics Centre,
+                    Madras Veterinary College, Chennai
+                </p>
+
+                <p>
+                    Dr. N. Natarajan, President, TTPA, presided
+                    over the meeting and appreciated the members
+                    for the efficient functioning of the Association.
+                </p>
+
+                <p>
+                    Dr. K. S. Palaniswami, General Secretary,
+                    announced the renewal of the Association’s
+                    registration and reviewed the arrangements for
+                    the General Body Meeting.
+                </p>
+
+                <p>
+                    The committee discussed registration, distribution
+                    of gifts, catering arrangements and the financial
+                    position of the Association. New initiatives for
+                    making the TTPA newsletter more accessible and
+                    user-friendly were also presented.
+                </p>
+
+                <p class="greeting">
+                    The members considered suitable recognition
+                    of voluntary contributors. The meeting concluded
+                    with a vote of thanks proposed by
+                    Dr. D. Kathiresan.
+                </p>
+
+            </div>
+
+        </article>
+        
+              <!-- 14: 13 June 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/ttpa-in-action/ec-meeting-13-6-26.png"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/ttpa-in-action/ec-meeting-13-6-26.png"
+                     alt="TTPA Executive Committee meeting held at Madras Veterinary College on 13 June 2026"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    13 June 2026
+                </span>
+
+                <h2>
+                    Strengthening Pensioner Support and
+                    Advancing Newsletter Initiatives
+                </h2>
+
+                <p class="couple-names">
+                    Bioinformatics Seminar Hall,
+                    Madras Veterinary College, Chennai
+                </p>
+
+                <p>
+                    Dr. N. Natarajan, President, presided over
+                    the meeting and welcomed the recently retired
+                    members. The minutes of the Executive Committee
+                    meeting held on 26 April 2026 were confirmed.
+                </p>
+
+                <p>
+                    The committee discussed measures to assist senior
+                    pensioners with life-certificate requirements,
+                    strengthen communication with family pensioners
+                    through the WhatsApp forum and complete the TTPA
+                    pensioners’ directory.
+                </p>
+
+                <p>
+                    Members considered relocating the TTPA office to
+                    the renovated main building of Madras Veterinary
+                    College. Dr. D. Kathiresan was nominated as
+                    Chairman of the Grievance Committee.
+                </p>
+
+                <p>
+                    A committee chaired by Dr. V. Balakrishnan, with
+                    Dr. L. Gunaseelan and Dr. P. Sriram as members,
+                    was constituted to recommend suitable recipients
+                    for the STAR of TTPA 2026 award.
+                </p>
+
+                <p>
+                    Plans were outlined for a bilingual,
+                    graphics-supported newsletter featuring the
+                    contributions of distinguished former faculty.
+                    Medical-insurance guidance for pensioners will
+                    also be included in a forthcoming issue.
+                </p>
+
+                <p>
+                    The financial position and audit of the
+                    Association were reviewed. The committee decided
+                    to consolidate its fixed deposits and savings
+                    account with Union Bank of India, Madras
+                    Veterinary College branch.
+                </p>
+
+                <p class="greeting">
+                    Recently retired members were felicitated.
+                    The meeting concluded with a vote of thanks
+                    proposed by Dr. S. Gomathinayagam.
+                </p>
+
+            </div>
+
+        </article>
+        
+              <!-- 15: 12 August 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/ttpa-in-action/ec-meeting-12-8-26.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/ttpa-in-action/ec-meeting-12-8-26.jpg"
+                     alt="Special TTPA Executive Committee meeting held at Madras Veterinary College on 12 August 2026"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    12 August 2026
+                </span>
+
+                <h2>
+                    Special Executive Committee Meeting
+                    on Member Grievance Redressal
+                </h2>
+
+                <p class="couple-names">
+                    Bioinformatics Seminar Hall,
+                    Madras Veterinary College, Chennai
+                </p>
+
+                <p>
+                    A special meeting of the TTPA Executive Committee
+                    was convened to examine important grievances
+                    represented by members. Dr. N. Natarajan,
+                    President, presided over the meeting.
+                </p>
+
+                <p>
+                    The committee reviewed differences in the
+                    implementation of relevant government orders
+                    and discussed measures to ensure that eligible
+                    pensioners receive the benefits applicable to
+                    them.
+                </p>
+
+                <p>
+                    A special Grievance Committee was constituted
+                    with Dr. P. S. Rahumathulla as Chairman and
+                    Dr. C. Balachandran, Dr. N. Daniel Joy Chandran
+                    and Dr. M. Thirunavukkarasu as members.
+                </p>
+
+                <p>
+                    The committee will compile the representations
+                    received from members in a clear tabular format,
+                    examine their eligibility and prepare a
+                    consolidated submission to the University.
+                </p>
+
+                <p>
+                    Members also reviewed pending audit objections
+                    affecting pensioners and considered appropriate
+                    administrative and legal measures for achieving
+                    a satisfactory resolution.
+                </p>
+
+                <p class="greeting">
+                    The meeting concluded with a vote of thanks
+                    proposed by Dr. P. Sriram, Secretary, TTPA.
+                </p>
+
+            </div>
+
+        </article>  
+
+
+        <!-- End of Executive Committee Meeting cards -->
+
+</section>
+
+
+<h2 class="activity-section-title"
+    id="annual-general-body-meetings">
+    Annual General Body Meetings
+</h2>
+
+<section class="milestone-grid"
+         aria-labelledby="annual-general-body-meetings">
+
+           <!-- ===================================================
+         Second Annual General Body Meeting — 3 February 2024
+         =================================================== -->
+
+    <article class="milestone-card agm-card">
+
+        <div class="meeting-photo-grid">
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/dias-24.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/dias-24.jpg"
+                         alt="Dais at the Second Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Dais
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/participants-24.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/participants-24.jpg"
+                         alt="Participants at the Second Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Members participating in the meeting
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="milestone-content">
+
+            <span class="event-date">
+                3 February 2024
+            </span>
+
+            <h2>
+                Building a Stronger Foundation for
+                Welfare and Benevolent Service
+            </h2>
+
+            <p class="couple-names">
+                Second Annual General Body Meeting •
+                Conference Hall, Madras Veterinary College, Chennai
+            </p>
+
+            <p>
+                The Second Annual General Body Meeting of TTPA
+                was held following the Alumni Meet and was attended
+                by 47 members. Dr. N. Natarajan, President, welcomed
+                the gathering and presided over the meeting.
+            </p>
+
+            <p>
+                The General Body reviewed the Association’s financial
+                position and discussed strengthening its resources
+                to support deserving veterinary students and provide
+                assistance to pensioners during emergencies.
+            </p>
+
+            <p>
+                Dr. N. Natarajan instituted an endowment of
+                ₹1 lakh as a corpus fund, with its interest designated
+                for the benevolent activities of TTPA. The General
+                Body also approved voluntary annual and five-year
+                contribution options for members.
+            </p>
+
+            <p>
+                Members discussed publication of Association
+                proceedings through the TTPA Newsletter and the
+                collection of an alternate family contact number
+                to facilitate communication during urgent situations.
+            </p>
+
+            <p class="greeting">
+                Floral tributes and obituary references honoured
+                departed members. The meeting concluded with a
+                vote of thanks proposed by Dr. S. A. Asokan.
+            </p>
+
+        </div>
+
+    </article>  
+    
+        <!-- ===================================================
+         Third Annual General Body Meeting — 16 August 2024
+         =================================================== -->
+
+    <article class="milestone-card agm-card">
+
+        <div class="meeting-photo-grid">
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/dais-24b.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/dais-24b.jpg"
+                         alt="Dais at the Third Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Dais
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/participants-24b.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/participants-24b.jpg"
+                         alt="Participants at the Third Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Members participating in the meeting
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="milestone-content">
+
+            <span class="event-date">
+                16 August 2024
+            </span>
+
+            <h2>
+                Connecting Past, Present and Future:
+                Third TTPA General Body Meeting at Namakkal
+            </h2>
+
+            <p class="couple-names">
+                Third Annual General Body Meeting •
+                Veterinary College and Research Institute, Namakkal
+            </p>
+
+            <p>
+                The Third Annual General Body Meeting of TTPA
+                was held in the newly refurbished auditorium of
+                Veterinary College and Research Institute, Namakkal.
+                In the absence of the President, Dr. M. Babu,
+                Vice-President, presided over the meeting.
+            </p>
+
+            <p>
+                Dr. M. Selvaraju, Dean, VC&amp;RI, Namakkal,
+                inaugurated the meeting. The transformation of the
+                auditorium into a modern facility was presented,
+                and the team responsible for its development was
+                congratulated.
+            </p>
+
+            <p>
+                The annual report and audited financial statement
+                for 2023–2024 were presented and approved. Members
+                also discussed streamlining the Association’s banking
+                arrangements and reviewed the conditions connected
+                with University recognition of TTPA.
+            </p>
+
+            <p>
+                A subcommittee was constituted to examine the
+                recognition order and submit recommendations to the
+                Executive Committee. General pensioner grievances,
+                audit-related matters and facilities for submitting
+                Digital Life Certificates were also discussed.
+            </p>
+
+            <p>
+                The students and staff of VC&amp;RI presented a
+                cultural programme. The Dean and the local organising
+                team were felicitated for their hospitality and
+                successful conduct of the meeting.
+            </p>
+
+            <p>
+                After lunch, TTPA members interacted with students
+                through a motivational programme titled
+                <strong>“Connect Past, Present and Future.”</strong>
+                The session enabled pensioners to share their
+                professional experience with the younger generation.
+            </p>
+
+            <p class="greeting">
+                Thirty-four pensioners, including two family
+                pensioners, participated in the programme. The
+                meeting concluded with a vote of thanks proposed
+                by Dr. Cecilia Joseph and the National Anthem.
+            </p>
+
+        </div>
+
+    </article>
+
+        <!-- ===================================================
+         Fourth Annual General Body Meeting — 13 September 2025
+         =================================================== -->
+
+    <article class="milestone-card agm-card">
+
+        <div class="meeting-photo-grid">
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/dais-25.JPG"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/dais-25-web.jpg"
+                         alt="Dais at the Fourth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Dais
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/participants-25.JPG"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/participants-25-web.jpg"
+                         alt="Participants at the Fourth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Members participating in the meeting
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="milestone-content">
+
+            <span class="event-date">
+                13 September 2025
+            </span>
+
+            <h2>
+                Growing Together, Serving Better:
+                Fourth TTPA Annual General Body Meeting
+            </h2>
+
+            <p class="couple-names">
+                Fourth Annual General Body Meeting •
+                Conference Hall, Madras Veterinary College, Chennai
+            </p>
+
+            <p>
+                Dr. N. Natarajan, President, presided over the
+                Fourth Annual General Body Meeting. Sixty-three
+                pensioners, including seven family pensioners,
+                participated in the programme.
+            </p>
+
+            <p>
+                The gathering was enriched by the presence of senior
+                nonagenarian members. The President appreciated the
+                Association’s growth and thanked members for their
+                sustained cooperation and participation.
+            </p>
+
+            <p>
+                The annual report and audited accounts were presented
+                and approved. Members were informed that TTPA had
+                grown to include 236 pensioners and 95 family
+                pensioners.
+            </p>
+
+            <p>
+                The General Body reviewed assistance provided in
+                pension, family-pension, health-insurance and
+                life-certificate matters. The functioning of the
+                Grievance Committee and its role in representing
+                common pensioner concerns were also explained.
+            </p>
+
+            <p>
+                The successful implementation of the Digital Life
+                Certificate was highlighted, with nearly 200
+                pensioners and family pensioners having used the
+                facility. Its importance for senior members with
+                mobility limitations was particularly recognised.
+            </p>
+
+            <p>
+                Dr. V. Balakrishnan, Editor, presented the progress
+                of the bimonthly TTPA Newsletter and invited
+                suggestions for improving its content and usefulness.
+            </p>
+
+            <p>
+                Dr. N. Daniel Joy Chandran was nominated as Returning
+                Officer for the forthcoming selection of office-bearers.
+                The General Body also welcomed the proposal to
+                distribute a TTPA calendar to members.
+            </p>
+
+            <p class="greeting">
+                The contributions and services of senior members
+                were gratefully acknowledged. Following remembrance
+                of departed members, the meeting concluded with a
+                vote of thanks proposed by Dr. D. Kathiresan and
+                the National Anthem.
+            </p>
+
+        </div>
+
+    </article>
+
+        <!-- ===================================================
+         Fifth Annual General Body Meeting — 26 April 2026
+         =================================================== -->
+
+    <article class="milestone-card agm-card">
+
+        <div class="meeting-photo-grid">
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/dais-26.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/dais-26.jpg"
+                         alt="Dais at the Fifth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Dais
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../images/gallery/ttpa-in-action/participants-26.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../images/gallery/ttpa-in-action/participants-26.jpg"
+                         alt="Participants at the Fifth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Members participating in the meeting
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="milestone-content">
+
+            <span class="event-date">
+                26 April 2026
+            </span>
+
+            <h2>
+                Honouring Excellence, Embracing Innovation:
+                Fifth TTPA Annual General Body Meeting
+            </h2>
+
+            <p class="couple-names">
+                Fifth Annual General Body Meeting •
+                Conference Hall, Dr. Bertie D’Souza Block,
+                Madras Veterinary College, Chennai
+            </p>
+
+            <p>
+                Dr. N. Natarajan, President, presided over the
+                Fifth Annual General Body Meeting. Eighty-four
+                participants, including a family pensioner,
+                attended the programme.
+            </p>
+
+            <p>
+                The General Body reviewed the growth and welfare
+                activities of the Association. The renewal of
+                TTPA’s registration was announced, and the minutes
+                of the Fourth Annual General Body Meeting were
+                confirmed.
+            </p>
+
+            <p>
+                The Association’s financial position and accounts
+                were presented and approved. Members were reminded
+                that contributions to TTPA are voluntary and support
+                its welfare and service activities.
+            </p>
+
+            <p>
+                Padma Shri Dr. N. Punniamurthy, Dr. P. Thangaraju,
+                Dr. P. Mathialagan and Dr. G. Dhinakar Raj were
+                recognised for distinguished professional and
+                public service.
+            </p>
+
+            <p>
+                The <strong>Star of the Year 2025</strong> awards
+                were conferred on Dr. V. Balakrishnan and
+                Dr. P. Sriram in recognition of their dedicated
+                and distinguished service to TTPA.
+            </p>
+
+            <p>
+                Nonagenarian and octogenarian members were
+                felicitated in appreciation of their lifelong
+                contributions to the veterinary profession and
+                the Association.
+            </p>
+
+            <p>
+                Members were briefed on Digital Life Certificates,
+                additional pension, family-pension communication
+                and other welfare provisions. The importance of
+                keeping family pensioners informed about TTPA
+                activities was emphasised.
+            </p>
+
+            <p>
+                Dr. V. Balakrishnan presented plans to develop the
+                bimonthly newsletter into a user-friendly multimedia
+                platform with searchable archives, text-to-speech
+                support and hyperlinks for easy navigation.
+            </p>
+
+            <p>
+                The Association thanked its sponsors, student
+                volunteers and members whose support contributed
+                to the successful conduct of the programme.
+            </p>
+
+            <p class="greeting">
+                Following remembrance of departed pensioners and
+                family pensioners, the meeting concluded with a
+                vote of thanks proposed by Dr. P. Ramadass and
+                the National Anthem.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- Annual General Body Meeting cards will be added here. -->
+
+</section>
+
+
+<p class="gallery-note">
+
+        Select any event photograph to view it in its
+        original enlarged form.
+
+    </p>
+
+
+    <div class="page-actions">
+
+        <a href="../gallery.html"
+           class="btn">
+            ← Back to Gallery
+        </a>
+
+        <a href="#top"
+           class="btn">
+            ↑ Back to Top
+        </a>
+
+    </div>
+
+</main>
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+                View the enlarged photograph, then select
+                “Close and Return to Gallery” to resume browsing.
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Gallery
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged Gallery photograph">
+
+    </div>
+
+</dialog>
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../js/engagement.js"></script>
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+    const eventPhotoLinks =
+        document.querySelectorAll(".event-photo-link");
+
+
+    eventPhotoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const selectedPhoto =
+                photoLink.querySelector(".event-photo");
+
+            enlargedPhoto.src =
+                photoLink.getAttribute("href");
+
+            enlargedPhoto.alt =
+                selectedPhoto.alt;
+
+            photoViewer.showModal();
+
+        });
+
+    });
+
+
+    closePhotoViewer.addEventListener("click", function () {
+
+        photoViewer.close();
+
+    });
+
+
+    photoViewer.addEventListener("click", function (event) {
+
+        if (event.target === photoViewer) {
+
+            photoViewer.close();
+
+        }
+
+    });
+
+
+    photoViewer.addEventListener("close", function () {
+
+        enlargedPhoto.src = "";
+
+    });
+
+</script>
+</body>
+
+</html>

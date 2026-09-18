@@ -282,7 +282,76 @@
             }
 
         }
+.go-document-viewer {
+    width: min(96%, 1100px);
+    height: 94vh;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px
+                rgba(0, 0, 0, 0.35);
+}
 
+.go-document-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.go-viewer-content {
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+}
+
+.go-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    color: #ffffff;
+    background: #12345a;
+}
+
+.go-viewer-instruction {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.go-viewer-close {
+    min-height: 46px;
+    padding: 10px 16px;
+    color: #12345a;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.go-pdf-frame {
+    width: 100%;
+    flex: 1;
+    border: none;
+    background: #eeeeee;
+}
+
+@media (max-width: 600px) {
+
+    .go-viewer-header {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .go-viewer-close {
+        width: 100%;
+    }
+
+}
     </style>
 
 </head>
@@ -329,7 +398,7 @@
 
             <a href="gallery.html">Gallery</a>
 
-            <a href="videos.html">Videos</a>
+            <a href="videos.html">Videos &amp; Links</a>
 
             <a href="pdf.html">PDF</a>
 
@@ -493,11 +562,10 @@
 
             <div class="go-actions">
 
-                <a href="government-orders/go-file-1.pdf"
-                   target="_blank"
-                   class="go-button">
-                    👁 View Document
-                </a>
+             <a href="government-orders/go-file-1.pdf"
+   class="go-button go-view-button">
+    👁 View Document
+</a>   
 
                 <a href="government-orders/go-file-1.pdf"
                    download
@@ -574,8 +642,8 @@
             <div class="go-actions">
 
                 <a href="government-orders/go-file-2.pdf"
-                   target="_blank"
-                   class="go-button">
+                   
+                   class="go-button go-view-button"
                     👁 View Document
                 </a>
 
@@ -653,8 +721,8 @@
             <div class="go-actions">
 
                 <a href="government-orders/go-file-3.pdf"
-                   target="_blank"
-                   class="go-button">
+                   
+                   class="go-button go-view-button"
                     👁 View Document
                 </a>
 
@@ -736,8 +804,7 @@
             <div class="go-actions">
 
                 <a href="government-orders/go-file-4.pdf"
-                   target="_blank"
-                   class="go-button">
+                   class="go-button go-view-button"
                     👁 View Document
                 </a>
 
@@ -819,8 +886,7 @@
             <div class="go-actions">
 
                 <a href="government-orders/go-file-5.pdf"
-                   target="_blank"
-                   class="go-button">
+                   class="go-button go-view-button"
                     👁 View Document
                 </a>
 
@@ -870,7 +936,44 @@
 
 </main>
 
+<!-- ===================================================
+     Government Order PDF Viewer
+     =================================================== -->
 
+<dialog id="goDocumentViewer"
+        class="go-document-viewer">
+
+    <div class="go-viewer-content">
+
+        <div class="go-viewer-header">
+
+            <p class="go-viewer-instruction">
+
+                Read the Government Order, then select
+                “Close and Return” to resume browsing.
+
+            </p>
+
+            <button type="button"
+                    id="closeGoViewer"
+                    class="go-viewer-close">
+
+                ✕ Close and Return to Government Orders
+
+            </button>
+
+        </div>
+
+        <iframe id="goPdfFrame"
+                class="go-pdf-frame"
+                src=""
+                title="Government Order PDF document">
+
+        </iframe>
+
+    </div>
+
+</dialog>
 
 <!-- ==========================================
      SEARCH AND CATEGORY FILTER
@@ -986,6 +1089,62 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <script src="js/engagement.js"></script>
+<script>
+
+    const goDocumentViewer =
+        document.getElementById("goDocumentViewer");
+
+    const goPdfFrame =
+        document.getElementById("goPdfFrame");
+
+    const closeGoViewer =
+        document.getElementById("closeGoViewer");
+
+    const goViewButtons =
+        document.querySelectorAll(".go-view-button");
+
+
+    goViewButtons.forEach(function (viewButton) {
+
+        viewButton.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            goPdfFrame.src =
+                viewButton.getAttribute("href");
+
+            goDocumentViewer.showModal();
+
+        });
+
+    });
+
+
+    closeGoViewer.addEventListener("click", function () {
+
+        goDocumentViewer.close();
+
+    });
+
+
+    goDocumentViewer.addEventListener("click", function (event) {
+
+        if (event.target === goDocumentViewer) {
+
+            goDocumentViewer.close();
+
+        }
+
+    });
+
+
+    goDocumentViewer.addEventListener("close", function () {
+
+        goPdfFrame.src = "";
+
+    });
+
+</script>
 </body>
 
 </html>

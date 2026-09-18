@@ -12,6 +12,62 @@
 
     <link rel="stylesheet"
           href="css/style.css">
+    <style>
+    .portal-card {
+        display: block;
+        padding: 28px;
+        border: 3px solid #e8b84b;
+        border-radius: 16px;
+        background: #17385d;
+        color: #ffffff;
+        text-decoration: none;
+        box-shadow: 0 8px 22px rgba(20, 48, 78, 0.2);
+    }
+
+    .portal-card:hover,
+    .portal-card:focus-visible {
+        background: #214a76;
+        transform: translateY(-2px);
+    }
+
+    .portal-card:focus-visible {
+        outline: 3px solid #e8b84b;
+        outline-offset: 4px;
+    }
+
+    .portal-label {
+        display: inline-block;
+        margin-bottom: 14px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        background: #e8b84b;
+        color: #17385d;
+        font-weight: 700;
+    }
+
+    .portal-card h3 {
+        margin: 0 0 12px;
+        color: #ffffff;
+        font-size: 1.65rem;
+    }
+
+    .portal-card p {
+        margin: 0 0 22px;
+        color: #ffffff;
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    .portal-action {
+        display: inline-block;
+        padding: 12px 18px;
+        border-radius: 8px;
+        background: #ffffff;
+        color: #17385d;
+        font-weight: 700;
+    }
+</style>
+
 </head>
 
 <body>
@@ -67,7 +123,7 @@
 
             <a href="videos.html"
                class="active">
-                Videos
+                Videos &amp; Links
             </a>
 
             <a href="pdf.html">
@@ -120,67 +176,64 @@
         <span>›</span>
 
         <span>
-            Videos
+            Videos &amp; Links
         </span>
 
     </div>
 
 
-    <section class="content">
+    
 
-        <h2>
-            Video Library
-        </h2>
+        <h2>Useful Links for Pensioners</h2>
 
-        <p>
-            This section will feature videos that document the
-            activities, achievements and rich heritage of the
-            TANUVAS Teachers Pensioners' Association.
-        </p>
+<section class="cards" aria-label="Useful links">
 
-        <ul>
+    <a class="card"
+       href="https://pension.tanuvas.ac.in/"
+       target="_blank"
+       rel="noopener noreferrer">
 
-            <li>
-                Recorded Webinars
-            </li>
+        <span class="icon" aria-hidden="true">🔗</span>
 
-            <li>
-                Special Lectures
-            </li>
-
-            <li>
-                Member Interviews
-            </li>
-
-            <li>
-                Annual General Meetings
-            </li>
-
-            <li>
-                Golden Jubilee Reunion Highlights
-            </li>
-
-            <li>
-                Award Functions
-            </li>
-
-            <li>
-                Historical Documentaries
-            </li>
-
-            <li>
-                Training and Educational Videos
-            </li>
-
-        </ul>
+        <h3>TANUVAS Pensioners Portal</h3>
 
         <p>
-            <strong>
-                Coming Soon...
-            </strong>
+            Visit the official portal for pensioner notices,
+            registration and sign-in.
         </p>
 
+        <span>Open Pensioners Portal ↗</span>
 
+    </a>
+
+</section>
+
+        <section class="content" aria-labelledby="video-library-heading">
+
+    <h2 id="video-library-heading">
+        Video Library
+    </h2>
+
+    <p>
+        This section will feature videos that document the
+        activities, achievements, and rich heritage of the
+        TANUVAS Teachers Pensioners' Association.
+    </p>
+
+    <ul>
+        <li>Recorded Webinars</li>
+        <li>Special Lectures</li>
+        <li>Member Interviews</li>
+        <li>Annual General Meetings</li>
+        <li>Golden Jubilee Reunion Highlights</li>
+        <li>Award Functions</li>
+        <li>Historical Documentaries</li>
+        <li>Training and Educational Videos</li>
+    </ul>
+
+    <p><strong>Coming Soon...</strong></p>
+
+</section>
         <!-- ===================================================
              Back to Home
              =================================================== -->

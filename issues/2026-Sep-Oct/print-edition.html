@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        September–October 2026 Print Edition |
+        TTPA Multimedia Newsletter
+    </title>
+
+
+    <style>
+
+        /* ==========================================
+           Basic print-edition design
+           ========================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #eef2f5;
+            color: #222222;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+            font-size: 17px;
+            line-height: 1.65;
+        }
+
+
+        /* ==========================================
+           Control panel
+           ========================================== */
+
+        .print-controls {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 14px;
+            background: #12345a;
+            padding: 16px;
+        }
+
+        .print-controls button,
+        .print-controls a {
+            display: inline-block;
+            min-height: 48px;
+            padding: 13px 22px;
+            background: #ffffff;
+            color: #12345a;
+            border: none;
+            border-radius: 8px;
+            font: inherit;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+        /* ==========================================
+           Publication container
+           ========================================== */
+
+        .print-publication {
+            width: 94%;
+            max-width: 900px;
+            margin: 30px auto;
+            background: #ffffff;
+            box-shadow:
+                0 5px 18px
+                rgba(0, 0, 0, 0.12);
+        }
+
+
+        /* ==========================================
+           Cover page
+           ========================================== */
+
+        .print-cover {
+            min-height: 95vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 55px 40px;
+            background: #12345a;
+            color: #ffffff;
+            text-align: center;
+            page-break-after: always;
+            break-after: page;
+        }
+
+        .print-cover img {
+            display: block;
+            width: 120px;
+            height: auto;
+            margin-bottom: 28px;
+        }
+
+        .print-cover h1 {
+            margin: 0 0 18px;
+            font-size: 2.5rem;
+            line-height: 1.25;
+        }
+
+        .print-cover h2 {
+            margin: 0 0 22px;
+            color: #ffd84d;
+            font-size: 1.9rem;
+        }
+
+        .print-cover p {
+            margin: 6px 0;
+            font-size: 1.15rem;
+        }
+
+        .print-tagline {
+            margin-top: 35px !important;
+            color: #e4edf5;
+            font-weight: bold;
+        }
+
+
+        /* ==========================================
+           Loading and error messages
+           ========================================== */
+
+        .loading-message,
+        .print-error {
+            padding: 30px;
+            text-align: center;
+        }
+
+        .loading-message {
+            color: #12345a;
+            font-weight: bold;
+        }
+
+        .print-error {
+            margin: 20px;
+            background: #fff0f0;
+            color: #992222;
+            border: 1px solid #d9aaaa;
+        }
+
+
+        /* ==========================================
+           Imported sections
+           ========================================== */
+
+        .print-section {
+            padding: 38px 42px;
+            page-break-before: always;
+            break-before: page;
+        }
+
+        .print-section:first-child {
+            page-break-before: auto;
+            break-before: auto;
+        }
+
+        .print-section h1,
+        .print-section h2,
+        .print-section h3 {
+            color: #12345a;
+            break-after: avoid;
+            page-break-after: avoid;
+        }
+
+        .print-section p,
+        .print-section li {
+            orphans: 3;
+            widows: 3;
+        }
+
+        .print-section article,
+        .print-section figure,
+        .print-section .card {
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .print-section img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .print-section figcaption {
+            margin-top: 8px;
+            color: #555555;
+            font-size: 0.92rem;
+            text-align: center;
+        }
+
+
+        /* ==========================================
+           Elements excluded from the PDF
+           ========================================== */
+
+        .print-section .navbar,
+        .print-section .breadcrumb,
+        .print-section .page-actions,
+        .print-section .article-navigation,
+        .print-section .back-to-top,
+        .print-section .visitor-counter,
+        .print-section .page-reactions,
+        .print-section .reaction-buttons,
+        .print-section .private-feedback,
+        .print-section .feedback-panel,
+        .print-section .feedback-section,
+        .print-section footer,
+        .print-section script,
+        .print-section audio,
+        .print-section video {
+            display: none !important;
+        }
+
+
+        /* ==========================================
+           Mobile display
+           ========================================== */
+
+        @media (max-width: 700px) {
+
+            body {
+                font-size: 16px;
+            }
+
+            .print-publication {
+                width: 100%;
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .print-cover {
+                padding: 40px 22px;
+            }
+
+            .print-cover h1 {
+                font-size: 2rem;
+            }
+
+            .print-cover h2 {
+                font-size: 1.55rem;
+            }
+
+            .print-section {
+                padding: 28px 20px;
+            }
+
+        }
+
+
+        /* ==========================================
+           PDF and printer rules
+           ========================================== */
+
+        @page {
+            size: A4;
+            margin: 16mm;
+        }
+
+        @media print {
+
+            body {
+                background: #ffffff;
+                color: #000000;
+                font-size: 11pt;
+            }
+
+            .print-controls,
+            .loading-message,
+            .print-error {
+                display: none !important;
+            }
+
+            .print-publication {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .print-cover {
+                min-height: 250mm;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .print-section {
+                padding: 0;
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            img {
+                max-height: 220mm;
+                object-fit: contain;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     Screen controls — excluded from PDF
+     ========================================== -->
+
+<div class="print-controls">
+
+    <a href="index.html">
+        ← Back to Issue Contents
+    </a>
+
+    <button type="button"
+            id="printButton"
+            disabled>
+
+        Preparing Print Edition…
+
+    </button>
+
+</div>
+
+
+<!-- ==========================================
+     Complete publication
+     ========================================== -->
+
+<div class="print-publication">
+
+
+    <!-- Cover -->
+
+    <header class="print-cover">
+
+        <img src="../../images/ttpa-logo.png"
+             alt="TTPA Logo">
+
+        <h1>
+            TTPA Multimedia Newsletter
+        </h1>
+
+        <h2>
+            September–October 2026
+        </h2>
+
+        <p>
+            TANUVAS Teachers Pensioners' Association
+        </p>
+
+        <p class="print-tagline">
+            Preserving Memories • Sharing Knowledge •
+            Celebrating Lives
+        </p>
+
+    </header>
+
+
+    <!-- Loading status -->
+
+    <p class="loading-message"
+       id="loadingMessage">
+
+        Preparing the complete issue.
+        Please wait…
+
+    </p>
+
+
+    <!-- Imported pages appear here -->
+
+    <main id="printContent">
+    </main>
+
+
+</div>
+
+
+<script>
+
+    /* ==========================================
+       Pages to be included in the PDF
+       ========================================== */
+
+    const issuePages = [
+
+        {
+            file: "president-foreword.html",
+            title: "President’s Foreword"
+        },
+
+        {
+            file: "general-secretary-message.html",
+            title: "General Secretary’s Message"
+        },
+
+        {
+            file: "dr-r-ramamurthi.html",
+            title: "Reminiscence of a Dedicated Stalwart"
+        },
+
+        {
+            file: "activities.html",
+            title: "Activities of TTPA at a Glance"
+        },
+
+        {
+            file: "minutes.html",
+            title: "Minutes of Meetings"
+        },
+
+        {
+            file: "family.html",
+            title: "Welcome to Our Pensioners’ Family"
+        },
+
+        {
+            file: "spotlight.html",
+            title: "Pensioners in the Spotlight"
+        },
+
+        {
+            file: "lead.html",
+            title: "Called to Lead Once More"
+        },
+
+        {
+            file: "webinars.html",
+            title: "Distinguished Voices in Webinars"
+        },
+
+        {
+            file: "athletes.html",
+            title: "Athletes Are Made, Not Born"
+        },
+
+        {
+            file: "together-again.html",
+            title: "Together Again: Memories & Milestones"
+        },
+
+        {
+            file: "family-milestones.html",
+            title: "Celebrating Family Milestones"
+        },
+
+        {
+            file: "remembrance.html",
+            title: "In Fond Remembrance"
+        },
+
+        {
+            file: "community-hub.html",
+            title: "Community Hub"
+        },
+
+        {
+            file: "editors-message.html",
+            title: "Editor’s Message"
+        },
+
+        {
+            file: "cartoon-corner.html",
+            title: "Cartoon Corner"
+        },
+
+        {
+            file: "brain-teaser.html",
+            title: "Brain Teaser"
+        },
+
+        {
+            file: "acknowledgement.html",
+            title: "Acknowledgement"
+        },
+
+        {
+            file: "newsletter-objectives.html",
+            title: "Newsletter Objectives"
+        }
+
+    ];
+
+
+    const printContent =
+        document.getElementById(
+            "printContent"
+        );
+
+    const loadingMessage =
+        document.getElementById(
+            "loadingMessage"
+        );
+
+    const printButton =
+        document.getElementById(
+            "printButton"
+        );
+
+
+    /* ==========================================
+       Remove interactive and repeated elements
+       ========================================== */
+
+    function cleanImportedContent(container) {
+
+        const elementsToRemove =
+            container.querySelectorAll(
+
+                ".navbar," +
+                ".breadcrumb," +
+                ".page-actions," +
+                ".article-navigation," +
+                ".back-to-top," +
+                ".visitor-counter," +
+                ".page-reactions," +
+                ".reaction-buttons," +
+                ".private-feedback," +
+                ".feedback-panel," +
+                ".feedback-section," +
+                "footer," +
+                "script," +
+                "audio," +
+                "video"
+
+            );
+
+        elementsToRemove.forEach(
+            function (element) {
+
+                element.remove();
+
+            }
+        );
+
+    }
+
+
+    /* ==========================================
+       Load one issue page
+       ========================================== */
+
+    async function loadIssuePage(page) {
+
+        const response =
+            await fetch(page.file);
+
+        if (!response.ok) {
+
+            throw new Error(
+                page.file +
+                " could not be loaded."
+            );
+
+        }
+
+        const html =
+            await response.text();
+
+        const parser =
+            new DOMParser();
+
+        const documentCopy =
+            parser.parseFromString(
+                html,
+                "text/html"
+            );
+
+        const originalMain =
+            documentCopy.querySelector(
+                "main"
+            );
+
+        if (!originalMain) {
+
+            throw new Error(
+                page.file +
+                " does not contain a main element."
+            );
+
+        }
+
+        const section =
+            document.createElement(
+                "section"
+            );
+
+        section.className =
+            "print-section";
+
+        section.dataset.source =
+            page.file;
+
+        const importedContent =
+            originalMain.cloneNode(true);
+
+        cleanImportedContent(
+            importedContent
+        );
+
+        section.appendChild(
+            importedContent
+        );
+
+        printContent.appendChild(
+            section
+        );
+
+    }
+
+
+    /* ==========================================
+       Load the pages in the correct order
+       ========================================== */
+
+    async function preparePrintEdition() {
+
+        let errorCount = 0;
+
+        for (const page of issuePages) {
+
+            try {
+
+                await loadIssuePage(page);
+
+            } catch (error) {
+
+                errorCount =
+                    errorCount + 1;
+
+                const errorBox =
+                    document.createElement(
+                        "div"
+                    );
+
+                errorBox.className =
+                    "print-error";
+
+                errorBox.textContent =
+                    page.title +
+                    ": " +
+                    error.message;
+
+                printContent.appendChild(
+                    errorBox
+                );
+
+            }
+
+        }
+
+        loadingMessage.remove();
+
+        printButton.disabled = false;
+
+        if (errorCount === 0) {
+
+            printButton.textContent =
+                "Print or Save as PDF";
+
+        } else {
+
+            printButton.textContent =
+                "Review Errors Before Printing";
+
+        }
+
+    }
+
+
+    /* ==========================================
+       Print command
+       ========================================== */
+
+    printButton.addEventListener(
+        "click",
+        function () {
+
+            window.print();
+
+        }
+    );
+
+
+    preparePrintEdition();
+
+</script>
+
+
+</body>
+
+</html>

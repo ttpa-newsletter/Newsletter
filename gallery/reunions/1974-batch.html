@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+    Madras Veterinary College 1974 Batch Reunions |
+    TTPA Multimedia Newsletter
+</title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+    <style>
+
+        .reunion-introduction {
+            max-width: 850px;
+            margin: 0 auto 32px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .reunion-list {
+            display: grid;
+            gap: 38px;
+            margin-top: 30px;
+        }
+
+        .reunion-card {
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d7e0e8;
+            border-radius: 14px;
+            box-shadow: 0 4px 16px
+                        rgba(18, 52, 90, 0.13);
+        }
+
+        .group-photo-link {
+            display: block;
+            background: #e8eef3;
+        }
+
+        .group-photo {
+            display: block;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .reunion-content {
+            padding: 28px;
+        }
+
+        .reunion-date {
+            display: inline-block;
+            margin-bottom: 12px;
+            padding: 6px 12px;
+            color: #ffffff;
+            background: #246b85;
+            border-radius: 20px;
+            font-weight: 700;
+        }
+
+        .reunion-content h2 {
+            margin: 4px 0 12px;
+            color: #12345a;
+            font-size: 1.7rem;
+            line-height: 1.35;
+        }
+
+        .reunion-information {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 25px;
+            margin: 15px 0;
+            color: #3c4f60;
+        }
+
+        .reunion-description {
+            margin: 18px 0;
+            color: #334a5f;
+            line-height: 1.7;
+        }
+
+        .reunion-clarification {
+            margin: 22px 0;
+            padding: 16px 18px;
+            background: #eef6f9;
+            border-left: 5px solid #246b85;
+            border-radius: 7px;
+            color: #334a5f;
+            line-height: 1.65;
+        }
+
+        .member-section-title {
+            margin: 28px 0 18px;
+            color: #12345a;
+            text-align: center;
+        }
+
+        .reunion-member-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(150px, 1fr));
+            gap: 18px;
+        }
+
+        .reunion-member {
+            padding: 18px 12px;
+            background: #f4f8fa;
+            border: 1px solid #dde7ed;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .reunion-member img {
+            display: block;
+            width: 105px;
+            height: 105px;
+            margin: 0 auto 12px;
+            object-fit: cover;
+            object-position: top center;
+            background: #ffffff;
+            border: 4px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 8px
+                        rgba(18, 52, 90, 0.18);
+        }
+
+        .reunion-member p {
+            margin: 0;
+            color: #12345a;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .photo-viewer {
+            width: min(94%, 1200px);
+            max-height: 94vh;
+            padding: 0;
+            overflow: hidden;
+            background: #ffffff;
+            border: none;
+            border-radius: 14px;
+            box-shadow: 0 10px 40px
+                        rgba(0, 0, 0, 0.35);
+        }
+
+        .photo-viewer::backdrop {
+            background: rgba(0, 0, 0, 0.82);
+        }
+
+        .photo-viewer-content {
+            display: flex;
+            flex-direction: column;
+            max-height: 94vh;
+        }
+
+        .photo-viewer-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 14px 18px;
+            color: #ffffff;
+            background: #12345a;
+        }
+
+        .photo-viewer-instruction {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .photo-viewer-close {
+            min-height: 46px;
+            padding: 10px 16px;
+            color: #12345a;
+            background: #ffffff;
+            border: none;
+            border-radius: 7px;
+            font: inherit;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .enlarged-photo {
+            display: block;
+            width: 100%;
+            max-height: calc(94vh - 78px);
+            object-fit: contain;
+            background: #111111;
+        }
+
+        @media (max-width: 600px) {
+
+            .group-photo {
+                height: 280px;
+            }
+
+            .reunion-content {
+                padding: 19px;
+            }
+
+            .reunion-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .reunion-member-grid {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+
+            .reunion-member {
+                padding: 14px 8px;
+            }
+
+            .reunion-member img {
+                width: 88px;
+                height: 88px;
+            }
+
+            .photo-viewer-header {
+                flex-direction: column;
+                align-items: stretch;
+                text-align: center;
+            }
+
+            .photo-viewer-close {
+                width: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        Madras Veterinary College 1974 Batch
+    </h1>
+
+    <p>
+         Reunions celebrating enduring friendships,
+    shared journeys and professional service
+    </p>
+
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+    <div class="breadcrumb">
+
+        <a href="../../index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="../../gallery.html">
+            Gallery
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Together Again
+        </span>
+
+    </div>
+
+
+    <p class="reunion-introduction">
+
+        These photographs preserve treasured reunions of former
+        students, colleagues and friends. TTPA members appearing
+        in each group photograph are identified through their
+        portraits beneath the event.
+
+    </p>
+
+
+    <section class="reunion-list">
+      <!-- ===================================================
+     MVC 1974 Batch Mamallapuram Reunion — 2011
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-mamallapuram-2011.jpeg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-mamallapuram-2011.jpeg"
+             alt="MVC 1974 Batch Reunion at Mamallapuram in 2011"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            23–24 April 2011
+        </span>
+
+        <h2>
+            Thirty-Seven Years of Friendship:
+            MVC 1974 Batch Mamallapuram Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Thirty-Seventh-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                23–24 April 2011
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Mamallapuram
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            at Mamallapuram to commemorate thirty-seven years
+            of friendship, shared learning and professional
+            service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+                <p>Dr. B. Ramesh Kumar</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. N. Sivaselvam"
+                     loading="lazy">
+                <p>Dr. S. N. Sivaselvam</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-prabakaran.jpg"
+                     alt="Dr. R. Prabakaran"
+                     loading="lazy">
+                <p>Dr. R. Prabakaran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-ravi.jpg"
+                     alt="Dr. R. Ravi"
+                     loading="lazy">
+                <p>Dr. R. Ravi</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+                <p>Dr. C. Balachandran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-murugan.jpg"
+                     alt="Dr. M. Murugan"
+                     loading="lazy">
+                <p>Dr. M. Murugan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-mohan-poultry.jpg"
+                     alt="Dr. B. Mohan"
+                     loading="lazy">
+                <p>Dr. B. Mohan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-veerapandian.jpg"
+                     alt="Dr. C. Veerapandian"
+                     loading="lazy">
+                <p>Dr. C. Veerapandian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-r-srinivasan.jpg"
+                     alt="Dr. S. R. Srinivasan"
+                     loading="lazy">
+                <p>Dr. S. R. Srinivasan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/padma-shri-dr-n-punniamurthy.jpg"
+                     alt="Dr. N. Punniamurthy"
+                     loading="lazy">
+                <p>Dr. N. Punniamurthy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-k-a-doraisamy.jpg"
+                     alt="Dr. K. A. Doraisamy"
+                     loading="lazy">
+                <p>Dr. K. A. Doraisamy</p>
+            </div>
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-chandrahasan.jpg"
+                     alt="Dr. C. Chandrahasan"
+                     loading="lazy">
+                <p>Dr. C. Chandrahasan</p>
+            </div>
+
+              <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-babu.jpg"
+                     alt="Dr. M. Babu"
+                     loading="lazy">
+                <p>Dr. M. Babu</p>
+            </div>   
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-k-viswanathan.jpg"
+                     alt="Dr. K. Viswanathan"
+                     loading="lazy">
+                <p>Dr. K. Viswanathan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-dhanan_jaya_rao.jpg"
+                     alt="Dr. Dhanan Jaya Rao"
+                     loading="lazy">
+                <p>Dr. Dhanan Jaya Rao</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>  
+
+    <!-- ===================================================
+     MVC 1974 Batch Yercaud Reunion — 2015
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-yercaud.jpeg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-yercaud.jpeg"
+             alt="MVC 1974 Batch Reunion at Yercaud in 2015"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            24–25 January 2015
+        </span>
+
+        <h2>
+            Forty-One Years of Friendship:
+            MVC 1974 Batch Yercaud Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Forty-First-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                24–25 January 2015
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Yercaud
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            at Yercaud to commemorate forty-one years of
+            friendship, shared learning and professional service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+                <p>Dr. B. Ramesh Kumar</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. N.Sivaselvam"
+                     loading="lazy">
+                <p>Dr. S. N. Sivaselvam</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-subramanian.jpg"
+                     alt="Dr. M. Subramanian"
+                     loading="lazy">
+                <p>Dr. M. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+                <p>Dr. C. Balachandran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-k-a-doraisamy.jpg"
+                     alt="Dr. K. A. Doraisamy"
+                     loading="lazy">
+                <p>Dr. K. A. Doraisamy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-g-karunamoorthy.jpg"
+                     alt="Dr. G. Karunamoorthy"
+                     loading="lazy">
+                <p>Dr. G. Karunamoorthy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+
+    <!-- ===================================================
+     MVC 1974 Batch Yelagiri Reunion — 2016
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-yelagiri-2016.jpeg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-yelagiri-2016.jpeg"
+             alt="MVC 1974 Batch Reunion at Yelagiri in 2016"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            6–7 February 2016
+        </span>
+
+        <h2>
+            Forty-Two Years Together:
+            MVC 1974 Batch Yelagiri Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Forty-Second-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                6–7 February 2016
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Yelagiri
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            at Yelagiri to commemorate forty-two years of
+            friendship, shared learning and professional service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+                <p>Dr. B. Ramesh Kumar</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-prathaban.jpg"
+                     alt="Dr. S. Prathaban"
+                     loading="lazy">
+                <p>Dr. S. Prathaban</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/late-dr-b-muruganandan.jpg"
+                     alt="Late Dr. B. Muruganantham"
+                     loading="lazy">
+                <p>Late Dr. B. Muruganantham</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-prabakaran.jpg"
+                     alt="Dr. R. Prabakaran"
+                     loading="lazy">
+                <p>Dr. R. Prabakaran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-murugan.jpg"
+                     alt="Dr. M. Murugan"
+                     loading="lazy">
+                <p>Dr. M. Murugan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-babu.jpg"
+                     alt="Dr. M. Babu"
+                     loading="lazy">
+                <p>Dr. M. Babu</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. Sivaselvam"
+                     loading="lazy">
+                <p>Dr. S. N.Sivaselvam</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+
+    <!-- ===================================================
+     MVC 1974 Batch Pondicherry Reunion — 2017
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-pondicherry.jpeg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-pondicherry.jpeg"
+             alt="MVC 1974 Batch Reunion at Pondicherry in 2017"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            16–17 September 2017
+        </span>
+
+        <h2>
+            Forty-Three Years of Friendship:
+            MVC 1974 Batch Pondicherry Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Forty-Third-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                16–17 September 2017
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Pondicherry
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            in Pondicherry to commemorate forty-three years
+            of friendship, shared learning and professional service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+                <p>Dr. B. Ramesh Kumar</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/padma-shri-dr-n-punniamurthy.jpg"
+                     alt="Dr. N. Punniamurthy"
+                     loading="lazy">
+                <p>Dr. N. Punniamurthy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+                <p>Dr. C. Balachandran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+             <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-veerapandian.jpg"
+                     alt="Dr. C. Veerapandian"
+                     loading="lazy">
+                <p>Dr. C. Veerapandian</p>
+            </div>
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-prathaban.jpg"
+                     alt="Dr. S. Prathaban"
+                     loading="lazy">
+                <p>Dr. S. Prathaban</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+
+    <!-- ===================================================
+     MVC 1974 Batch Mahabalipuram Reunion — 2023
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-mahabalipuram-2023.jpeg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-mahabalipuram-2023.jpeg"
+             alt="MVC 1974 Batch Reunion at Mahabalipuram in 2023"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            9–10 September 2023
+        </span>
+
+        <h2>
+            Forty-Nine Years of Friendship:
+            MVC 1974 Batch Mahabalipuram Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Forty-Ninth-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                9–10 September 2023
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Mahabalipuram
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            at Mahabalipuram to commemorate forty-nine years
+            of friendship, shared learning and professional service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. N. Sivaselvam"
+                     loading="lazy">
+                <p>Dr. S. N.Sivaselvam</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-prabakaran.jpg"
+                     alt="Dr. R. Prabakaran"
+                     loading="lazy">
+                <p>Dr. R. Prabakaran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/padma-shri-dr-n-punniamurthy.jpg"
+                     alt="Dr. N. Punniamurthy"
+                     loading="lazy">
+                <p>Dr. N. Punniamurthy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-subramanian.jpg"
+                     alt="Dr. M. Subramanian"
+                     loading="lazy">
+                <p>Dr. M. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+                <p>Dr. C. Balachandran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-dhanan_jaya_rao.jpg"
+                     alt="Dr. Dhanan Jaya Rao"
+                     loading="lazy">
+                <p>Dr. Dhanan Jaya Rao</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-murugan.jpg"
+                     alt="Dr. M. Murugan"
+                     loading="lazy">
+                <p>Dr. M. Murugan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-mohan-poultry.jpg"
+                     alt="Dr. B. Mohan"
+                     loading="lazy">
+                <p>Dr. B. Mohan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-k-venkateswaran.jpg"
+                     alt="Dr. K. Venkateswaran"
+                     loading="lazy">
+                <p>Dr. K. Venkateswaran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-veerapandian.jpg"
+                     alt="Dr. C. Veerapandian"
+                     loading="lazy">
+                <p>Dr. C. Veerapandian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-babu.jpg"
+                     alt="Dr. M. Babu"
+                     loading="lazy">
+                <p>Dr. M. Babu</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-d-thyagarajan.jpg"
+                     alt="Dr. D. Thyagarajan"
+                     loading="lazy">
+                <p>Dr. D. Thyagarajan</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+    <!-- ===================================================
+     MVC 1974 Batch Puducherry Reunion — 2025
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-pondicherry.jpg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-pondicherry.jpg"
+             alt="MVC 1974 Batch Reunion at Puducherry in 2025"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            22–23 September 2025
+        </span>
+
+        <h2>
+            Fifty-One Years of Friendship:
+            MVC 1974 Batch Puducherry Reunion
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Fifty-First-Year Reunion
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                22–23 September 2025
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Puducherry
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch reunited
+            in Puducherry to commemorate fifty-one years of
+            friendship, shared learning and professional service.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The reunion photograph includes batchmates who served
+            in TTPA, government departments and other organisations.
+            The portraits below identify the TTPA members featured
+            in the group photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+                <p>Dr. B. Ramesh Kumar</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. N. Sivaselvam"
+                     loading="lazy">
+                <p>Dr. S. N.Sivaselvam</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-subramanian.jpg"
+                     alt="Dr. M. Subramanian"
+                     loading="lazy">
+                <p>Dr. M. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+                <p>Dr. C. Balachandran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-a-asokan.jpg"
+                     alt="Dr. S. A. Asokan"
+                     loading="lazy">
+                <p>Dr. S. A. Asokan</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-a-subramanian.jpg"
+                     alt="Dr. A. Subramanian"
+                     loading="lazy">
+                <p>Dr. A. Subramanian</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-m-babu.jpg"
+                     alt="Dr. M. Babu"
+                     loading="lazy">
+                <p>Dr. M. Babu</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-dhanan_jaya_rao.jpg"
+                     alt="Dr. Dhanan Jaya Rao"
+                     loading="lazy">
+                <p>Dr. Dhanan Jaya Rao</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-prabakaran.jpg"
+                     alt="Dr. R. Prabakaran"
+                     loading="lazy">
+                <p>Dr. R. Prabakaran</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-s-prathaban.jpg"
+                     alt="Dr. S. Prathaban"
+                     loading="lazy">
+                <p>Dr. S. Prathaban</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/padma-shri-dr-n-punniamurthy.jpg"
+                     alt="Dr. N. Punniamurthy"
+                     loading="lazy">
+                <p>Dr. N. Punniamurthy</p>
+            </div>
+
+
+            <div class="reunion-member">
+                <img src="../../images/portraits/dr-r-ravi.jpg"
+                     alt="Dr. R. Ravi"
+                     loading="lazy">
+                <p>Dr. R. Ravi</p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+
+        <!-- ===================================================
+     MVC 1974 Batch Felicitation
+     =================================================== -->
+
+<article class="reunion-card">
+
+    <a class="group-photo-link"
+       href="../../images/gallery/together-again/1974-batch-felicitation-dr-punniamurthy.jpg">
+
+        <img class="group-photo"
+             src="../../images/gallery/together-again/1974-batch-felicitation-dr-punniamurthy.jpg"
+             alt="MVC 1974 Batch felicitating Padma Shri Dr. N. Punniamurthy"
+             loading="lazy">
+
+    </a>
+
+
+    <div class="reunion-content">
+
+        <span class="reunion-date">
+            29 April 2026
+        </span>
+
+        <h2>
+            A Proud Tribute: MVC 1974 Batch Felicitates
+            Padma Shri Dr. N. Punniamurthy
+        </h2>
+
+
+        <div class="reunion-information">
+
+            <span>
+                <strong>Batch:</strong>
+                Madras Veterinary College 1974 Batch
+            </span>
+
+            <span>
+                <strong>Event:</strong>
+                Felicitation of Padma Shri Dr. N. Punniamurthy
+            </span>
+
+            <span>
+                <strong>Date:</strong>
+                29 April 2026
+            </span>
+
+            <span>
+                <strong>Venue:</strong>
+                Anna University Alumni Club
+            </span>
+
+        </div>
+
+
+        <p class="reunion-description">
+
+            The Madras Veterinary College 1974 Batch expressed
+            immense pride in felicitating their distinguished
+            batchmate, Padma Shri Dr. N. Punniamurthy, in recognition
+            of his exceptional service and contributions to veterinary
+            science and animal welfare.
+
+        </p>
+
+
+        <p class="reunion-clarification">
+
+            The group photograph includes batchmates and invited
+            colleagues. The portraits below identify the TTPA members
+            featured in the photograph.
+
+        </p>
+
+
+        <h3 class="member-section-title">
+            TTPA Members in This Reunion Photograph
+        </h3>
+
+
+        <div class="reunion-member-grid">
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/padma-shri-dr-n-punniamurthy.jpg"
+                     alt="Padma Shri Dr. N. Punniamurthy"
+                     loading="lazy">
+
+                <p>
+                    Padma Shri Dr. N. Punniamurthy
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-c-balachandran.jpg"
+                     alt="Dr. C. Balachandran"
+                     loading="lazy">
+
+                <p>
+                    Dr. C. Balachandran
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-r-prabakaran.jpg"
+                     alt="Dr. R. Prabakaran"
+                     loading="lazy">
+
+                <p>
+                    Dr. R. Prabakaran
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-s-prathaban.jpg"
+                     alt="Dr. S. Prathaban"
+                     loading="lazy">
+
+                <p>
+                    Dr. S. Prathaban
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-c-veerapandian.jpg"
+                     alt="Dr. C. Veerapandian"
+                     loading="lazy">
+
+                <p>
+                    Dr. C. Veerapandian
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-k-venkateswaran.jpg"
+                     alt="Dr. K. Venkateswaran"
+                     loading="lazy">
+
+                <p>
+                    Dr. K. Venkateswaran
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-s-sivaselvam.jpg"
+                     alt="Dr. S. N. Sivaselvam"
+                     loading="lazy">
+
+                <p>
+                    Dr. S. N. Sivaselvam
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-m-murugan.jpg"
+                     alt="Dr. M. Murugan"
+                     loading="lazy">
+
+                <p>
+                    Dr. M. Murugan
+                </p>
+
+            </div>
+
+
+            <div class="reunion-member">
+
+                <img src="../../images/portraits/dr-b-ramesh-kumar.jpg"
+                     alt="Dr. B. Ramesh Kumar"
+                     loading="lazy">
+
+                <p>
+                    Dr. B. Ramesh Kumar
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</article>
+
+</section>
+
+
+<div class="page-actions">
+
+    <a href="../together-again.html"
+       class="btn">
+        ← Back to Reunion Batches
+    </a>
+        
+
+        <a href="#top"
+           class="btn">
+            ↑ Back to Top
+        </a>
+
+    </div>
+
+</main>
+
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+
+                View the enlarged reunion photograph, then select
+                “Close and Return” to resume browsing.
+
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Reunions
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged reunion photograph">
+
+    </div>
+
+</dialog>
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/engagement.js"></script>
+
+
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+    const groupPhotoLinks =
+        document.querySelectorAll(".group-photo-link");
+
+
+    groupPhotoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const selectedPhoto =
+                photoLink.querySelector(".group-photo");
+
+            enlargedPhoto.src =
+                photoLink.getAttribute("href");
+
+            enlargedPhoto.alt =
+                selectedPhoto.alt;
+
+            photoViewer.showModal();
+
+        });
+
+    });
+
+
+    closePhotoViewer.addEventListener("click", function () {
+
+        photoViewer.close();
+
+    });
+
+
+    photoViewer.addEventListener("click", function (event) {
+
+        if (event.target === photoViewer) {
+
+            photoViewer.close();
+
+        }
+
+    });
+
+
+    photoViewer.addEventListener("close", function () {
+
+        enlargedPhoto.src = "";
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

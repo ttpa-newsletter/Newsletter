@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Celebrating Family Milestones | TTPA Multimedia Newsletter
+    </title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <style>
+
+        .gallery-introduction {
+            max-width: 850px;
+            margin: 0 auto 32px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 30px;
+        }
+
+        .milestone-card {
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d7e0e8;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px
+                        rgba(18, 52, 90, 0.12);
+        }
+
+        .event-photo-link {
+            display: block;
+            background: #eef3f7;
+        }
+
+       .event-photo {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
+
+        .milestone-content {
+            padding: 22px;
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: #ffffff;
+            background: #246b85;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .milestone-content h2 {
+            margin: 4px 0 16px;
+            color: #12345a;
+            font-size: 1.35rem;
+            line-height: 1.35;
+        }
+
+        .couple-names {
+            margin: 0 0 18px;
+            color: #263746;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .qualification {
+            font-size: 0.84em;
+            font-weight: 400;
+        }
+
+        .member-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+            padding: 14px;
+            background: #f2f7fa;
+            border-radius: 10px;
+        }
+
+        .member-portrait {
+            width: 78px;
+            height: 78px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 7px
+                        rgba(18, 52, 90, 0.18);
+        }
+
+        .member-label {
+            margin: 0 0 3px;
+            color: #5b6874;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .member-name {
+            margin: 0;
+            color: #12345a;
+            font-weight: 700;
+        }
+
+        .greeting {
+            margin: 18px 0 0;
+            padding-top: 15px;
+            border-top: 1px solid #d7e0e8;
+            color: #334a5f;
+            line-height: 1.6;
+        }
+
+        .gallery-note {
+            margin: 35px auto 10px;
+            padding: 18px;
+            max-width: 850px;
+            color: #30475b;
+            background: #eef6f9;
+            border-left: 5px solid #246b85;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+.photo-viewer {
+    width: min(94%, 1100px);
+    max-height: 94vh;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px
+                rgba(0, 0, 0, 0.35);
+}
+
+.photo-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.photo-viewer-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 94vh;
+}
+
+.photo-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    color: #ffffff;
+    background: #12345a;
+}
+
+.photo-viewer-instruction {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.photo-viewer-close {
+    min-height: 46px;
+    padding: 10px 16px;
+    color: #12345a;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enlarged-photo {
+    display: block;
+    width: 100%;
+    max-height: calc(94vh - 78px);
+    object-fit: contain;
+    background: #111111;
+}
+        @media (max-width: 600px) {
+
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+
+         .event-photo {
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+            .milestone-content {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../archives.html">
+                Archives
+            </a>
+
+            <a href="../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../videos.html">
+                Videos
+            </a>
+
+            <a href="../pdf.html">
+                PDF
+            </a>
+
+            <a href="../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        Celebrating Family Milestones
+    </h1>
+
+    <p>
+        Sharing joyful occasions and proud achievements
+        from the families of TTPA members
+    </p>
+
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+    <div class="breadcrumb">
+
+        <a href="../index.html">
+            Home
+        </a>
+
+        <span>›</span>
+
+        <a href="../gallery.html">
+            Gallery
+        </a>
+
+        <span>›</span>
+
+        <span>
+            Celebrating Family Milestones
+        </span>
+
+    </div>
+
+
+    <p class="gallery-introduction">
+
+        This collection records weddings, family celebrations
+        and notable achievements shared by TTPA members.
+        The entries are arranged chronologically.
+
+    </p>
+
+
+    <section class="milestone-grid">
+
+
+        <!-- 01: 10 December 2023 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-l-gunaseelan-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-l-gunaseelan-son-wedding-reception.jpg"
+                     alt="Wedding reception of Harsha and Varsha"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    10 December 2023
+                </span>
+
+                <h2>
+                    Harsha &amp; Varsha Begin a New Journey
+                </h2>
+
+                <p class="couple-names">
+                    Mr. Harsha and Ms. Varsha
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-l-gunaseelan.jpg"
+                         alt="Dr. L. Gunaseelan"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. L. Gunaseelan
+                        </p>
+
+                        <p>
+                            Son’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 02: 18 June 2024 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-k-shanthi-daughter-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-k-shanthi-daughter-wedding-reception.jpg"
+                     alt="Wedding reception of Nivedha and Jaganathan"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    18 June 2024
+                </span>
+
+                <h2>
+                    Nivedha &amp; Jaganathan Celebrate Their Union
+                </h2>
+
+                <p class="couple-names">
+
+                    Ms. R. Nivedha
+                    <span class="qualification">M.Sc.</span>
+
+                    and
+
+                    Mr. V. Jaganathan
+                    <span class="qualification">B.E.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-shanthi.jpg"
+                         alt="Dr. K. Shanthi"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. K. Shanthi
+                        </p>
+
+                        <p>
+                            Daughter’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 03: 4 February 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-m-sekar-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-m-sekar-son-wedding-reception.jpg"
+                     alt="Wedding reception of Vaibhavan and Brindtha"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    4 February 2025
+                </span>
+
+                <h2>
+                    Vaibhavan &amp; Brindtha Begin Their Married Life
+                </h2>
+
+                <p class="couple-names">
+
+                    Mr. S. Vaibhavan
+                    <span class="qualification">B.E.</span>
+
+                    and
+
+                    Ms. Brindtha
+                    <span class="qualification">B.E.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-m-sekar.jpg"
+                         alt="Dr. M. Sekar"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. M. Sekar
+                        </p>
+
+                        <p>
+                            Son’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 04: 9 February 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-s-vairamuthu-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-s-vairamuthu-son-wedding-reception.jpg"
+                     alt="Wedding of Dr. Bala Subash and Dr. Aishwarya Lakshmi"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    9 February 2025
+                </span>
+
+                <h2>
+                    Dr. Bala Subash &amp; Dr. Aishwarya Lakshmi
+                    Celebrate Their Wedding
+                </h2>
+
+                <p class="couple-names">
+                    Dr. V. Bala Subash and Dr. B. Aishwarya Lakshmi
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-s-vairamuthu.jpg"
+                         alt="Dr. S. Vairamuthu"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. S. Vairamuthu
+                        </p>
+
+                        <p>
+                            Son’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 05: 2 March 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-palanisammi-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-palanisammi-son-wedding-reception.jpg"
+                     alt="Wedding of Vijayakarthikeyan and Elamathi"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    2 March 2025
+                </span>
+
+                <h2>
+                    Vijayakarthikeyan &amp; Elamathi Celebrate Their Union
+                </h2>
+
+                <p class="couple-names">
+
+                    Mr. R. P. Vijayakarthikeyan
+                    <span class="qualification">B.E.</span>
+
+                    and
+
+                    Ms. S. Elamathi
+                    <span class="qualification">B.E., M.B.A.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-a-palanisammi.jpg"
+                         alt="Dr. A. Palanisammi"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. A. Palanisammi
+                        </p>
+
+                        <p>
+                            Son’s wedding
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 06: 18 March 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-s-ayyappan-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-s-ayyappan-son-wedding-reception.jpg"
+                     alt="Wedding reception of Dr. Karthik and Nivetida"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    18 March 2025
+                </span>
+
+                <h2>
+                    Dr. Karthik &amp; Nivetida Begin a New Journey
+                </h2>
+
+                <p class="couple-names">
+
+                    Dr. A. Karthik
+                    <span class="qualification">M.V.Sc.</span>
+
+                    and
+
+                    Ms. V. Nivetida
+                    <span class="qualification">M.Tech.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-s-ayyappan.jpg"
+                         alt="Dr. S. Ayyappan"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. S. Ayyappan
+                        </p>
+
+                        <p>
+                            Son’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 07: 7 July 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-kumanan-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-kumanan-son-wedding-reception.jpg"
+                     alt="Wedding of Vishnu Arungilan and Rohini"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    7 July 2025
+                </span>
+
+                <h2>
+                    Vishnu Arungilan &amp; Rohini Celebrate Their Wedding
+                </h2>
+
+                <p class="couple-names">
+
+                    Mr. K. Vishnu Arungilan
+                    <span class="qualification">M.E. (Australia)</span>
+
+                    and
+
+                    Ms. J. Rohini
+                    <span class="qualification">B.E.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-k-kumanan.jpg"
+                         alt="Dr. K. Kumanan"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. K. Kumanan
+                        </p>
+
+                        <p>
+                            Son’s wedding
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 08: 18 December 2025 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/s-jayaraj-nathaniel-grandson-wedding.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/s-jayaraj-nathaniel-grandson-wedding.jpg"
+                     alt="Wedding of Joseph Abhishek and Anies Rebeca"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    18 December 2025
+                </span>
+
+                <h2>
+                    Joseph Abhishek &amp; Anies Rebeca
+                    Celebrate Their Wedding
+                </h2>
+
+                <p class="couple-names">
+                    Mr. Joseph Abhishek and Ms. Anies Rebeca
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/s-jayaraj-nathaniel.jpg"
+                         alt="Mr. J. Jayaraj Nathaniel"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Mr. J. Jayaraj Nathaniel
+                        </p>
+
+                        <p>
+                            Grandson’s wedding
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 09: 6 February 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-cecilia-joseph-daughter-wedding.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-cecilia-joseph-daughter-wedding.jpg"
+                     alt="Wedding of Dr. Anna Magdalene and Dr. Manoj"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    6 February 2026
+                </span>
+
+                <h2>
+                    Dr. Anna Magdalene &amp; Dr. Manoj
+                    Celebrate Their Wedding
+                </h2>
+
+                <p class="couple-names">
+                    Dr. Anna Magdalene and Dr. A. Manoj
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-cecilia-joseph.jpg"
+                         alt="Dr. Cecilia Joseph"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. Cecilia Joseph
+                        </p>
+
+                        <p>
+                            Daughter’s wedding
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 10: 10 February 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-s-vairamuthu-daughter-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-s-vairamuthu-daughter-wedding-reception.jpg"
+                     alt="Wedding reception of Sowmya and Nithin Kumar"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    10 February 2026
+                </span>
+
+                <h2>
+                    Sowmya &amp; Nithin Kumar Begin Their Married Life
+                </h2>
+
+                <p class="couple-names">
+                    Ms. V. Sowmya and Mr. N. Nithin Kumar
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-s-vairamuthu.jpg"
+                         alt="Dr. S. Vairamuthu"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. S. Vairamuthu
+                        </p>
+
+                        <p>
+                            Daughter’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 11: 30 April 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-a-subramanian-son-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-a-subramanian-son-wedding-reception.jpg"
+                     alt="Wedding reception of Harish and Sowmya"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    30 April 2026
+                </span>
+
+                <h2>
+                    Harish &amp; Sowmya Celebrate Their Union
+                </h2>
+
+                <p class="couple-names">
+
+                    Mr. S. Harish
+                    <span class="qualification">B.E., M.S.</span>
+
+                    and
+
+                    Ms. S. Sowmya
+                    <span class="qualification">B.Arch.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-a-subramanian.jpg"
+                         alt="Dr. A. Subramanian"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. A. Subramanian
+                        </p>
+
+                        <p>
+                            Son’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 12: 17 June 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-s-balasubramanian-daughter-wedding.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-s-balasubramanian-daughter-wedding.jpg"
+                     alt="Wedding of Lavanya Balasubramanian and Vignesh Rajan"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    17 June 2026
+                </span>
+
+                <h2>
+                    Lavanya Balasubramanian &amp; Vignesh Rajan
+                    Celebrate Their Wedding
+                </h2>
+
+                <p class="couple-names">
+
+                    Ms. Lavanya Balasubramanian
+                    <span class="qualification">
+                        B.Tech., M.Sc. (UK)
+                    </span>
+
+                    and
+
+                    Mr. Vignesh Rajan
+                    <span class="qualification">
+                        B.Tech., M.Sc. (UK)
+                    </span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-s-balasubramanian.jpg"
+                         alt="Dr. S. Balasubramanian"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. S. Balasubramanian
+                        </p>
+
+                        <p>
+                            Daughter’s wedding reception
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 13: 4 July 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/dr-sekar-daughter-wedding-reception.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/dr-sekar-daughter-wedding-reception.jpg"
+                     alt="Wedding of Dr. Niranjini and Kamalnath"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    4 July 2026
+                </span>
+
+                <h2>
+                    Dr. Niranjini &amp; Kamalnath Begin a New Journey
+                </h2>
+
+                <p class="couple-names">
+
+                    Dr. S. Niranjini
+                    <span class="qualification">M.Sc., Ph.D.</span>
+
+                    and
+
+                    Mr. V. Kamalnath
+                    <span class="qualification">B.E., M.B.A.</span>
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-m-sekar.jpg"
+                         alt="Dr. M. Sekar"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. M. Sekar
+                        </p>
+
+                        <p>
+                            Daughter’s wedding
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA conveys its warm wishes to the couple
+                    and their family.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- 14: 11 August 2026 -->
+
+        <article class="milestone-card">
+
+            <a class="event-photo-link"
+               href="../images/gallery/family-milestones/sundararaj-g-son.jpg"
+               target="_blank">
+
+                <img class="event-photo"
+                     src="../images/gallery/family-milestones/sundararaj-g-son.jpg"
+                     alt="Mr. Joash receiving recognition for his athletic achievement"
+                     loading="lazy">
+
+            </a>
+
+            <div class="milestone-content">
+
+                <span class="event-date">
+                    11 August 2026
+                </span>
+
+                <h2>
+                    Mr. Joash Shines on the Track
+                </h2>
+
+                <p class="couple-names">
+
+                    Mr. Joash secured Silver Medals in the
+                    Under-19 Boys’ 800-metre and 1500-metre events.
+
+                </p>
+
+                <div class="member-profile">
+
+                    <img class="member-portrait"
+                         src="../images/portraits/dr-d-sundararaj-pd.jpg"
+                         alt="Dr. D. Sundararaj"
+                         loading="lazy">
+
+                    <div>
+
+                        <p class="member-label">
+                            TTPA Member
+                        </p>
+
+                        <p class="member-name">
+                            Dr. D. Sundararaj
+                        </p>
+
+                        <p>
+                            Grandfather of Mr. Joash
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p class="greeting">
+                    TTPA congratulates and blesses Mr. Joash
+                    on his remarkable achievement.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </section>
+
+
+    <p class="gallery-note">
+
+        Select any event photograph to view it in its
+        original enlarged form.
+
+    </p>
+
+
+    <div class="page-actions">
+
+        <a href="../gallery.html"
+           class="btn">
+            ← Back to Gallery
+        </a>
+
+        <a href="#top"
+           class="btn">
+            ↑ Back to Top
+        </a>
+
+    </div>
+
+</main>
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+                View the enlarged photograph, then select
+                “Close and Return to Gallery” to resume browsing.
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Gallery
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged Gallery photograph">
+
+    </div>
+
+</dialog>
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../js/engagement.js"></script>
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+    const eventPhotoLinks =
+        document.querySelectorAll(".event-photo-link");
+
+
+    eventPhotoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const selectedPhoto =
+                photoLink.querySelector(".event-photo");
+
+            enlargedPhoto.src =
+                photoLink.getAttribute("href");
+
+            enlargedPhoto.alt =
+                selectedPhoto.alt;
+
+            photoViewer.showModal();
+
+        });
+
+    });
+
+
+    closePhotoViewer.addEventListener("click", function () {
+
+        photoViewer.close();
+
+    });
+
+
+    photoViewer.addEventListener("click", function (event) {
+
+        if (event.target === photoViewer) {
+
+            photoViewer.close();
+
+        }
+
+    });
+
+
+    photoViewer.addEventListener("close", function () {
+
+        enlargedPhoto.src = "";
+
+    });
+
+</script>
+</body>
+
+</html>
