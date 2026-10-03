@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+   TTPA EC Archives - TANUVAS Teachers Pensioners' Association
+</title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+   <style>
+
+        .gallery-introduction {
+            max-width: 850px;
+            margin: 0 auto 32px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .milestone-grid {
+    display: block;
+    max-width: 1100px;
+    margin: 30px auto 0;
+        }
+
+        .milestone-card {
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d7e0e8;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px
+                        rgba(18, 52, 90, 0.12);
+        }
+
+        .event-photo-link {
+            display: block;
+            background: #eef3f7;
+        }
+
+            .event-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+        .agm-card {
+            grid-column: 1 / -1;
+        }
+
+        .meeting-photo-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            padding: 14px;
+            background: #eef3f7;
+        }
+
+        .meeting-photo-item {
+            margin: 0;
+        }
+
+        .meeting-photo-grid .event-photo {
+            width: 100%;
+            height: 310px;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .meeting-photo-caption {
+            margin: 8px 0 0;
+            color: #42566a;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+
+            .meeting-photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-photo-grid .event-photo {
+                height: 260px;
+            }
+        }
+        .milestone-content {
+            padding: 22px;
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: #ffffff;
+            background: #246b85;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .milestone-content h2 {
+            margin: 4px 0 16px;
+            color: #12345a;
+            font-size: 1.35rem;
+            line-height: 1.35;
+        }
+
+        .couple-names {
+            margin: 0 0 18px;
+            color: #263746;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .qualification {
+            font-size: 0.84em;
+            font-weight: 400;
+        }
+
+        .member-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+            padding: 14px;
+            background: #f2f7fa;
+            border-radius: 10px;
+        }
+
+        .member-portrait {
+            width: 78px;
+            height: 78px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 7px
+                        rgba(18, 52, 90, 0.18);
+        }
+
+        .member-label {
+            margin: 0 0 3px;
+            color: #5b6874;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .member-name {
+            margin: 0;
+            color: #12345a;
+            font-weight: 700;
+        }
+
+        .greeting {
+            margin: 18px 0 0;
+            padding-top: 15px;
+            border-top: 1px solid #d7e0e8;
+            color: #334a5f;
+            line-height: 1.6;
+        }
+
+        .gallery-note {
+            margin: 35px auto 10px;
+            padding: 18px;
+            max-width: 850px;
+            color: #30475b;
+            background: #eef6f9;
+            border-left: 5px solid #246b85;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+.photo-viewer {
+    width: min(94%, 1100px);
+    max-height: 94vh;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px
+                rgba(0, 0, 0, 0.35);
+}
+
+.photo-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.photo-viewer-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 94vh;
+}
+
+.photo-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    color: #ffffff;
+    background: #12345a;
+}
+
+.photo-viewer-instruction {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.photo-viewer-close {
+    min-height: 46px;
+    padding: 10px 16px;
+    color: #12345a;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enlarged-photo {
+    display: block;
+    width: 100%;
+    max-height: calc(94vh - 78px);
+    object-fit: contain;
+    background: #111111;
+}
+        @media (max-width: 600px) {
+
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+
+         .event-photo {
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+            .milestone-content {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos &amp; Links
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Breadcrumb
+     =================================================== -->
+     
+<nav class="breadcrumb">
+
+    <a href="../../index.html">🏠 Home</a>
+
+    <span>›</span>
+
+    <a href="../../gallery.html">Gallery</a>
+
+    <span>›</span>
+
+    <a href="../../gallery/ttpa-meetings/ttpa-cards.html">TTPA EC & AGM Archives</a>
+
+    <span>›</span>
+
+    <a href="../../gallery/ttpa-meetings/ttpa-ec-cards.html">Ececutive Committee Archives</a>
+
+    <span>›</span>
+
+    <span>Fourteenth TTPA EC</span>
+
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        TANUVAS Teachers Pensioners' Association Meeting
+    </h1>
+    <h2>
+        Executive Committee Meeting — 13 June 2026
+    </h2>
+</section>
+
+ <!-- ===================================================
+         Executive Committee Meeting  — 13 June 2026
+         =================================================== -->
+<main class="container">
+<h2 class="activity-section-title"
+    id="executive-committee-meetings">
+    Executive Committee Meeting info
+</h2>
+<section class="milestone-grid"
+         aria-labelledby="executive-committee-meetings">
+
+<article class="milestone-card">
+          
+<a class="event-photo-link"
+   href="../../images/gallery/ttpa-in-action/ec-meeting-13-6-26.png"
+   target="_blank">
+
+    <img class="event-photo"
+         src="../../images/gallery/ttpa-in-action/ec-meeting-13-6-26.png"
+         alt="TTPA Executive Committee Meeting photo Held at Seminar Hall, Bioinformatics Seminar Hall, Madras Veterinary College, Chennai"
+         loading="lazy">
+
+</a>
+        <div class="milestone-content">
+
+            <span class="event-date">
+                13 June 2026
+            </span>
+
+            <h2>
+                    Strengthening Pensioner Support and
+                    Advancing Newsletter Initiatives
+                </h2>
+
+                <p class="couple-names">
+                    Bioinformatics Seminar Hall,
+                    Madras Veterinary College, Chennai
+                </p>
+
+                <p>
+                    Dr. N. Natarajan, President, presided over
+                    the meeting and welcomed the recently retired
+                    members. The minutes of the Executive Committee
+                    meeting held on 26 April 2026 were confirmed.
+                </p>
+
+                <p>
+                    The committee discussed measures to assist senior
+                    pensioners with life-certificate requirements,
+                    strengthen communication with family pensioners
+                    through the WhatsApp forum and complete the TTPA
+                    pensioners’ directory.
+                </p>
+
+                <p>
+                    Members considered relocating the TTPA office to
+                    the renovated main building of Madras Veterinary
+                    College. Dr. D. Kathiresan was nominated as
+                    Chairman of the Grievance Committee.
+                </p>
+
+                <p>
+                    A committee chaired by Dr. V. Balakrishnan, with
+                    Dr. L. Gunaseelan and Dr. P. Sriram as members,
+                    was constituted to recommend suitable recipients
+                    for the STAR of TTPA 2026 award.
+                </p>
+
+                <p>
+                    Plans were outlined for a bilingual,
+                    graphics-supported newsletter featuring the
+                    contributions of distinguished former faculty.
+                    Medical-insurance guidance for pensioners will
+                    also be included in a forthcoming issue.
+                </p>
+
+                <p>
+                    The financial position and audit of the
+                    Association were reviewed. The committee decided
+                    to consolidate its fixed deposits and savings
+                    account with Union Bank of India, Madras
+                    Veterinary College branch.
+                </p>
+
+                <p class="greeting">
+                    Recently retired members were felicitated.
+                    The meeting concluded with a vote of thanks
+                    proposed by Dr. S. Gomathinayagam.
+                </p>
+
+            </div>
+
+        </article>
+    
+<p class="gallery-note">
+
+        Select the photograph to view it in its
+        original enlarged form.
+
+    </p>
+
+
+<div class="page-actions">
+
+    <a href="ttpa-cards.html"
+       class="btn">
+        ← TTPA EC & AGM Archives
+    </a>
+    
+    <a href="ttpa-ec-cards.html"
+       class="btn">
+        ← Back to Executive Committee Archives
+    </a>
+
+
+    <a href="#top"
+       class="btn">
+        ↑ Back to Top
+    </a>
+
+</div>
+</main>
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+                View the enlarged photograph, then select
+                “Close and Return to Gallery” to resume browsing.
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Gallery
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged Gallery photograph">
+
+    </div>
+
+</dialog>
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/engagement.js"></script>
+
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+
+    /* ===================================================
+       Find photographs that can be enlarged
+       Works for BOTH:
+       1. Reunion photographs
+       2. TTPA meeting/event photographs
+       =================================================== */
+
+    const photoLinks =
+        document.querySelectorAll(
+            ".group-photo-link, .event-photo-link"
+        );
+
+
+    photoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /* Find the image inside the clicked link */
+
+                const selectedPhoto =
+                    photoLink.querySelector(
+                        ".group-photo, .event-photo"
+                    );
+
+
+                /* Use href as the enlarged photograph */
+
+                enlargedPhoto.src =
+                    photoLink.getAttribute("href");
+
+
+                /* Preserve the photograph description */
+
+                if (selectedPhoto) {
+
+                    enlargedPhoto.alt =
+                        selectedPhoto.alt;
+
+                }
+
+
+                /* Open enlarged photograph */
+
+                photoViewer.showModal();
+
+            }
+        );
+
+    });
+
+
+    /* ===================================================
+       Close button
+       =================================================== */
+
+    closePhotoViewer.addEventListener(
+        "click",
+        function () {
+
+            photoViewer.close();
+
+        }
+    );
+
+
+    /* ===================================================
+       Clicking outside photograph also closes viewer
+       =================================================== */
+
+    photoViewer.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === photoViewer) {
+
+                photoViewer.close();
+
+            }
+
+        }
+    );
+
+
+    /* ===================================================
+       Clear photograph after closing
+       =================================================== */
+
+    photoViewer.addEventListener(
+        "close",
+        function () {
+
+            enlargedPhoto.src = "";
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>

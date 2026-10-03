@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+    TTPA Meetings |
+    TTPA Multimedia Newsletter
+</title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos &amp; Links
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Breadcrumb
+     =================================================== -->
+     
+<nav class="breadcrumb">
+
+    <a href="../../index.html">🏠 Home</a>
+ <span>›</span>
+
+    <a href="../../gallery.html">Gallery</a>
+
+    
+    <span>TTPA EC & AGM Archives</span>
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        Meetings of theTANUVAS Teachers Pensioners' Association
+    </h1>
+    
+
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+    <h2 class="reunion-introduction">
+
+        TTPA EC & AGM Archives
+
+    </h2>
+
+
+    <!-- ===================================================
+     AGM Article Cards
+     =================================================== -->
+
+<div class="contents-grid">
+
+    <!-- Article 01 -->
+
+    <a href="ttpa-ec-cards.html"
+       class="contents-card">
+
+        <span>01</span>
+
+        <h3>
+            TTPA Executive Committee Meeting
+        </h3>
+
+        <p>
+            This section presents highlights from the Executive Committee Meetings of TTPA, documenting key proceedings, decisions, participation and memorable moments from each meeting.
+        </p>
+
+    </a>
+
+
+    <!-- Article 02 -->
+
+    <a href="ttpa-agm-cards.html"
+       class="contents-card">
+
+        <span>02</span>
+
+        <h3>
+            TTPA Annual General Body Meetings
+        </h3>
+
+        <p>
+            This section documents the proceedings and decisions made during the various Annual General Body meetings of TTPA.
+        </p>
+
+    </a>
+
+</div>
+
+
+<div class="page-actions">
+
+     <a href="../../index.html"
+       class="btn">
+        ← 🏠 Home
+    </a>
+
+        <a href="../../gallery.html"
+       class="btn">
+        ← Back to Gallery
+    </a>
+
+    </div>
+
+</main>
+
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+
+                View the enlarged reunion photograph, then select
+                “Close and Return” to resume browsing.
+
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Reunions
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged reunion photograph">
+
+    </div>
+
+</dialog>
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/engagement.js"></script>
+
+
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+    const groupPhotoLinks =
+        document.querySelectorAll(".group-photo-link");
+
+
+    groupPhotoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const selectedPhoto =
+                photoLink.querySelector(".group-photo");
+
+            enlargedPhoto.src =
+                photoLink.getAttribute("href");
+
+            enlargedPhoto.alt =
+                selectedPhoto.alt;
+
+            photoViewer.showModal();
+
+        });
+
+    });
+
+
+    closePhotoViewer.addEventListener("click", function () {
+
+        photoViewer.close();
+
+    });
+
+
+    photoViewer.addEventListener("click", function (event) {
+
+        if (event.target === photoViewer) {
+
+            photoViewer.close();
+
+        }
+
+    });
+
+
+    photoViewer.addEventListener("close", function () {
+
+        enlargedPhoto.src = "";
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

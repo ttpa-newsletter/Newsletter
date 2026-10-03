@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+    TTPA Meetings |
+    TTPA Multimedia Newsletter
+</title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos &amp; Links
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ===================================================
+     Breadcrumb
+     =================================================== -->
+     
+<nav class="breadcrumb">
+
+    <a href="../../index.html">🏠 Home</a>
+ <span>›</span>
+
+    <a href="../../gallery.html">Gallery</a>
+
+    <span>›</span>
+    
+    <span>TTPA AGM Archives</span>
+</nav>
+
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        Annual General Body Meetings of the TANUVAS Teachers Pensioners' Association
+    </h1>
+
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+    <h2 class="reunion-introduction">
+
+        TTPA AGM Archives
+
+    </h2>
+
+
+    <!-- ===================================================
+     AGM Article Cards
+     =================================================== -->
+
+<div class="contents-grid">
+
+    <!-- Article 01 -->
+
+    <a href="ttpa-agm-1.html"
+       class="contents-card">
+
+        <span>01</span>
+
+        <h3>
+            First TTPA AGM
+        </h3>
+
+        <p>
+            The First Annual General Body Meeting was held at the
+            Conference Hall, Madras Veterinary College, on 15 April 2023.
+        </p>
+
+    </a>
+
+
+    <!-- Article 02 -->
+
+    <a href="ttpa-agm-2.html"
+       class="contents-card">
+
+        <span>02</span>
+
+        <h3>
+            Second TTPA AGM
+        </h3>
+
+        <p>
+            The Second Annual General Body Meeting was held at the
+            Conference Hall, Madras Veterinary College, on 3 February 2024.
+        </p>
+
+    </a>
+
+
+    <!-- Article 03 -->
+
+    <a href="ttpa-agm-3.html"
+       class="contents-card">
+
+        <span>03</span>
+
+        <h3>
+            Third TTPA AGM
+        </h3>
+
+        <p>
+            The Third Annual General Body Meeting was held at
+            Veterinary College and Research Institute, Namakkal,
+            on 16 August 2024.
+        </p>
+
+    </a>
+
+
+    <!-- Article 04 -->
+
+    <a href="ttpa-agm-4.html"
+       class="contents-card">
+
+        <span>04</span>
+
+        <h3>
+            Fourth TTPA AGM
+        </h3>
+
+        <p>
+            The Fourth Annual General Body Meeting was held at the
+            Conference Hall, Madras Veterinary College,
+            on 13 September 2025.
+        </p>
+
+    </a>
+    <!-- Article 05 -->
+
+    <a href="ttpa-agm-5.html"
+       class="contents-card">
+
+        <span>05</span>
+
+        <h3>
+            Fifth TTPA AGM
+        </h3>
+
+        <p>
+            The Fifthth Annual General Body Meeting was held at the
+            Conference Hall, Madras Veterinary College,
+            on 26 April 2026.
+        </p>
+
+    </a>
+
+</div>
+
+
+<div class="page-actions">
+
+     <a href="../../index.html"
+       class="btn">
+        ← 🏠 Home
+    </a>
+
+    <a href="ttpa-cards.html"
+       class="btn">
+        ← Back to EC & AGM Archives
+    </a>
+
+    </div>
+
+</main>
+
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+
+                View the enlarged reunion photograph, then select
+                “Close and Return” to resume browsing.
+
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Reunions
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged reunion photograph">
+
+    </div>
+
+</dialog>
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/engagement.js"></script>
+
+
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+    const groupPhotoLinks =
+        document.querySelectorAll(".group-photo-link");
+
+
+    groupPhotoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener("click", function (event) {
+
+            event.preventDefault();
+
+            const selectedPhoto =
+                photoLink.querySelector(".group-photo");
+
+            enlargedPhoto.src =
+                photoLink.getAttribute("href");
+
+            enlargedPhoto.alt =
+                selectedPhoto.alt;
+
+            photoViewer.showModal();
+
+        });
+
+    });
+
+
+    closePhotoViewer.addEventListener("click", function () {
+
+        photoViewer.close();
+
+    });
+
+
+    photoViewer.addEventListener("click", function (event) {
+
+        if (event.target === photoViewer) {
+
+            photoViewer.close();
+
+        }
+
+    });
+
+
+    photoViewer.addEventListener("close", function () {
+
+        enlargedPhoto.src = "";
+
+    });
+
+</script>
+
+
+</body>
+
+</html>

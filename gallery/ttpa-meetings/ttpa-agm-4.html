@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+   TTPA AGM Archives - TANUVAS Teachers Pensioners' Association
+</title>
+
+    <link rel="stylesheet"
+          href="../../css/style.css">
+
+   <style>
+
+        .gallery-introduction {
+            max-width: 850px;
+            margin: 0 auto 32px;
+            text-align: center;
+            line-height: 1.7;
+        }
+
+        .milestone-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+            margin-top: 30px;
+        }
+
+        .milestone-card {
+            overflow: hidden;
+            background: #ffffff;
+            border: 1px solid #d7e0e8;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px
+                        rgba(18, 52, 90, 0.12);
+        }
+
+        .event-photo-link {
+            display: block;
+            background: #eef3f7;
+        }
+
+       .event-photo {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
+}
+        /* Annual General Body Meeting photo layout */
+
+        .agm-card {
+            grid-column: 1 / -1;
+        }
+
+        .meeting-photo-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            padding: 14px;
+            background: #eef3f7;
+        }
+
+        .meeting-photo-item {
+            margin: 0;
+        }
+
+        .meeting-photo-grid .event-photo {
+            width: 100%;
+            height: 310px;
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .meeting-photo-caption {
+            margin: 8px 0 0;
+            color: #42566a;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+
+            .meeting-photo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .meeting-photo-grid .event-photo {
+                height: 260px;
+            }
+        }
+        .milestone-content {
+            padding: 22px;
+        }
+
+        .event-date {
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            color: #ffffff;
+            background: #246b85;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .milestone-content h2 {
+            margin: 4px 0 16px;
+            color: #12345a;
+            font-size: 1.35rem;
+            line-height: 1.35;
+        }
+
+        .couple-names {
+            margin: 0 0 18px;
+            color: #263746;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .qualification {
+            font-size: 0.84em;
+            font-weight: 400;
+        }
+
+        .member-profile {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+            padding: 14px;
+            background: #f2f7fa;
+            border-radius: 10px;
+        }
+
+        .member-portrait {
+            width: 78px;
+            height: 78px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: top center;
+            border: 3px solid #ffffff;
+            border-radius: 50%;
+            box-shadow: 0 2px 7px
+                        rgba(18, 52, 90, 0.18);
+        }
+
+        .member-label {
+            margin: 0 0 3px;
+            color: #5b6874;
+            font-size: 0.84rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .member-name {
+            margin: 0;
+            color: #12345a;
+            font-weight: 700;
+        }
+
+        .greeting {
+            margin: 18px 0 0;
+            padding-top: 15px;
+            border-top: 1px solid #d7e0e8;
+            color: #334a5f;
+            line-height: 1.6;
+        }
+
+        .gallery-note {
+            margin: 35px auto 10px;
+            padding: 18px;
+            max-width: 850px;
+            color: #30475b;
+            background: #eef6f9;
+            border-left: 5px solid #246b85;
+            border-radius: 8px;
+            line-height: 1.6;
+        }
+.photo-viewer {
+    width: min(94%, 1100px);
+    max-height: 94vh;
+    padding: 0;
+    overflow: hidden;
+    background: #ffffff;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px
+                rgba(0, 0, 0, 0.35);
+}
+
+.photo-viewer::backdrop {
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.photo-viewer-content {
+    display: flex;
+    flex-direction: column;
+    max-height: 94vh;
+}
+
+.photo-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    color: #ffffff;
+    background: #12345a;
+}
+
+.photo-viewer-instruction {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.photo-viewer-close {
+    min-height: 46px;
+    padding: 10px 16px;
+    color: #12345a;
+    background: #ffffff;
+    border: none;
+    border-radius: 7px;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.enlarged-photo {
+    display: block;
+    width: 100%;
+    max-height: calc(94vh - 78px);
+    object-fit: contain;
+    background: #111111;
+}
+        @media (max-width: 600px) {
+
+            .milestone-grid {
+                grid-template-columns: 1fr;
+            }
+
+         .event-photo {
+    height: 280px;
+    object-fit: cover;
+    object-position: center;
+}
+
+            .milestone-content {
+                padding: 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body id="top">
+
+
+<!-- ===================================================
+     Navigation
+     =================================================== -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <div class="logo">
+
+            <img src="../../images/ttpa-logo.png"
+                 alt="TTPA Logo"
+                 class="logo-image">
+
+            <div class="logo-text">
+
+                <strong>
+                    TTPA Multimedia Newsletter
+                </strong>
+
+                <br>
+
+                <span>
+                    Teachers Pensioners' Association
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-menu">
+
+            <a href="../../index.html">
+                Home
+            </a>
+
+            <a href="../../issue.html">
+                Current Issue
+            </a>
+
+            <a href="../../archives.html">
+                Archives
+            </a>
+
+            <a href="../../gallery.html"
+               class="active">
+                Gallery
+            </a>
+
+            <a href="../../videos.html">
+                Videos &amp; Links
+            </a>
+
+            <a href="../../pdf.html">
+                PDF
+            </a>
+
+            <a href="../../about.html">
+                About
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ===================================================
+     Breadcrumb
+     =================================================== -->
+     
+<nav class="breadcrumb">
+
+    <a href="../../index.html">🏠 Home</a>
+
+    <span>›</span>
+
+    <a href="../../gallery.html">Gallery</a>
+
+    <span>›</span>
+
+    <a href="../../gallery/ttpa-meetings/ttpa-cards.html">TTPA EC & AGM Archives</a>
+
+    <span>›</span>
+
+    <a href="../../gallery/ttpa-meetings/ttpa-agm-cards.html">Annual General Archives</a>
+
+    <span>›</span>
+
+    <span>Fourth TTPA AGM</span>
+
+</nav>
+
+<!-- ===================================================
+     Hero
+     =================================================== -->
+
+<section class="hero">
+
+    <h1>
+        TANUVAS Teachers Pensioners' Association Meetings
+    </h1>
+    <h2>
+        Fourth Annual General Body Meeting — 13 September 2025
+    </h2>
+</section>
+
+
+<!-- ===================================================
+     Main Content
+     =================================================== -->
+
+<main class="container">
+
+           <!-- ===================================================
+Fourth Annual General Body Meeting — 13 September 2025
+         =================================================== -->
+
+    <article class="milestone-card agm-card">
+
+        <div class="meeting-photo-grid">
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../../images/gallery/ttpa-in-action/dais-25.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../../images/gallery/ttpa-in-action/dais-25.jpg"
+                         alt="Dais at the Fourth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Dais
+                </figcaption>
+
+            </figure>
+
+
+            <figure class="meeting-photo-item">
+
+                <a class="event-photo-link"
+                   href="../../images/gallery/ttpa-in-action/participants-25.jpg"
+                   target="_blank">
+
+                    <img class="event-photo"
+                         src="../../images/gallery/ttpa-in-action/participants-25.jpg"
+                         alt="Participants at the Fourth Annual General Body Meeting of TTPA"
+                         loading="lazy">
+
+                </a>
+
+                <figcaption class="meeting-photo-caption">
+                    Members participating in the meeting
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+
+        <div class="milestone-content">
+
+            <span class="event-date">
+13 September 2025
+            </span>
+
+            <h2>
+                Growing Together, Serving Better:
+                Fourth TTPA Annual General Body Meeting
+            </h2>
+
+            <p class="couple-names">
+                Fourth Annual General Body Meeting •
+                Conference Hall, Madras Veterinary College, Chennai
+            </p>
+
+      <p>
+                Dr. N. Natarajan, President, presided over the
+                Fourth Annual General Body Meeting. Sixty-three
+                pensioners, including seven family pensioners,
+                participated in the programme.
+            </p>
+
+            <p>
+                The gathering was enriched by the presence of senior
+                nonagenarian members. The President appreciated the
+                Association’s growth and thanked members for their
+                sustained cooperation and participation.
+            </p>
+
+            <p>
+                The annual report and audited accounts were presented
+                and approved. Members were informed that TTPA had
+                grown to include 236 pensioners and 95 family
+                pensioners.
+            </p>
+
+            <p>
+                The General Body reviewed assistance provided in
+                pension, family-pension, health-insurance and
+                life-certificate matters. The functioning of the
+                Grievance Committee and its role in representing
+                common pensioner concerns were also explained.
+            </p>
+
+            <p>
+                The successful implementation of the Digital Life
+                Certificate was highlighted, with nearly 200
+                pensioners and family pensioners having used the
+                facility. Its importance for senior members with
+                mobility limitations was particularly recognised.
+            </p>
+
+            <p>
+                Dr. V. Balakrishnan, Editor, presented the progress
+                of the bimonthly TTPA Newsletter and invited
+                suggestions for improving its content and usefulness.
+            </p>
+
+            <p>
+                Dr. N. Daniel Joy Chandran was nominated as Returning
+                Officer for the forthcoming selection of office-bearers.
+                The General Body also welcomed the proposal to
+                distribute a TTPA calendar to members.
+            </p>
+
+            <p class="greeting">
+                The contributions and services of senior members
+                were gratefully acknowledged. Following remembrance
+                of departed members, the meeting concluded with a
+                vote of thanks proposed by Dr. D. Kathiresan and
+                the National Anthem.
+            </p>
+
+        </div>
+
+    </article>
+
+<p class="gallery-note">
+
+        Select any event photograph to view it in its
+        original enlarged form.
+
+    </p>
+
+
+<div class="page-actions">
+
+      <a href="ttpa-cards.html"
+       class="btn">
+        ← TTPA EC & AGM Archives
+    </a>
+
+    <a href="ttpa-agm-cards.html"
+       class="btn">
+        ← Back to Annual General Archives
+    </a>
+
+    <a href="#top"
+       class="btn">
+        ↑ Back to Top
+    </a>
+
+</div>
+</main>
+
+<!-- ===================================================
+     Enlarged Photograph Viewer
+     =================================================== -->
+
+<dialog id="photoViewer"
+        class="photo-viewer">
+
+    <div class="photo-viewer-content">
+
+        <div class="photo-viewer-header">
+
+            <p class="photo-viewer-instruction">
+                View the enlarged photograph, then select
+                “Close and Return to Gallery” to resume browsing.
+            </p>
+
+            <button type="button"
+                    id="closePhotoViewer"
+                    class="photo-viewer-close">
+
+                ✕ Close and Return to Gallery
+
+            </button>
+
+        </div>
+
+        <img id="enlargedPhoto"
+             class="enlarged-photo"
+             src=""
+             alt="Enlarged Gallery photograph">
+
+    </div>
+
+</dialog>
+
+
+
+<footer>
+
+    <p>
+        © 2026 TANUVAS Teachers Pensioners' Association
+    </p>
+
+</footer>
+
+
+<script src="../../js/engagement.js"></script>
+
+<script>
+
+    const photoViewer =
+        document.getElementById("photoViewer");
+
+    const enlargedPhoto =
+        document.getElementById("enlargedPhoto");
+
+    const closePhotoViewer =
+        document.getElementById("closePhotoViewer");
+
+
+    /* ===================================================
+       Find photographs that can be enlarged
+       Works for BOTH:
+       1. Reunion photographs
+       2. TTPA meeting/event photographs
+       =================================================== */
+
+    const photoLinks =
+        document.querySelectorAll(
+            ".group-photo-link, .event-photo-link"
+        );
+
+
+    photoLinks.forEach(function (photoLink) {
+
+        photoLink.addEventListener(
+            "click",
+            function (event) {
+
+                event.preventDefault();
+
+
+                /* Find the image inside the clicked link */
+
+                const selectedPhoto =
+                    photoLink.querySelector(
+                        ".group-photo, .event-photo"
+                    );
+
+
+                /* Use href as the enlarged photograph */
+
+                enlargedPhoto.src =
+                    photoLink.getAttribute("href");
+
+
+                /* Preserve the photograph description */
+
+                if (selectedPhoto) {
+
+                    enlargedPhoto.alt =
+                        selectedPhoto.alt;
+
+                }
+
+
+                /* Open enlarged photograph */
+
+                photoViewer.showModal();
+
+            }
+        );
+
+    });
+
+
+    /* ===================================================
+       Close button
+       =================================================== */
+
+    closePhotoViewer.addEventListener(
+        "click",
+        function () {
+
+            photoViewer.close();
+
+        }
+    );
+
+
+    /* ===================================================
+       Clicking outside photograph also closes viewer
+       =================================================== */
+
+    photoViewer.addEventListener(
+        "click",
+        function (event) {
+
+            if (event.target === photoViewer) {
+
+                photoViewer.close();
+
+            }
+
+        }
+    );
+
+
+    /* ===================================================
+       Clear photograph after closing
+       =================================================== */
+
+    photoViewer.addEventListener(
+        "close",
+        function () {
+
+            enlargedPhoto.src = "";
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
