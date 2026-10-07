@@ -245,6 +245,21 @@ Preserving Memories • Sharing Knowledge • Celebrating Lives
 
 </div>
 <script src="js/engagement.js"></script>
+
+<!-- Enable the TTPA offline message -->
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("./sw.js")
+                .catch((error) => {
+                    console.error(
+                        "TTPA service worker registration failed:",
+                        error
+                    );
+                });
+        });
+    }
+</script>
 </body>
 
 </html>
